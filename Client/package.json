@@ -1,5 +1,5 @@
 {
-  "name": "sample-app0602",
+  "name": "M@AClient",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -26,7 +26,7 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "1.6.7",
+    "@angular/cli": "1.6.8",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",
@@ -43,6 +43,8 @@
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "~2.5.3",
+    "copy-webpack-plugin": "4.3.0"
   }
 }
+
