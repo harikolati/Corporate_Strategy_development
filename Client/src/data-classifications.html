@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8" />
+    <title>Data Classification Policy Brief</title>
+    <style>
+      body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; }
+      table { border-collapse: collapse; }
+      thead { font-weight: bold; font-size: 16px; }
+      td { padding: 10px; border: 1px solid #CCC; }
+      button#close { padding: 10px; float: right; margin: 10px 0; cursor: pointer; font-weight: bold; }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td width="200">CLASSIFICATION</td>
+          <td width="300">EXAMPLES (including but not limited to)</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Cisco Public</b> data can be redistributed within or outside of Cisco. It is neither sensitive nor controlled; however, the integrity of Cisco Public data must be protected and comply with Cisco policies and the Data Protection Standard. Cisco maintains trademark and copyright protection for all Cisco Public data. Third parties are not permitted to copy or redistribute without permission or proper licensing agreements.</td>
+          <td>
+            <ul>
+              <li>Annual reports</li>
+              <li>Press releases</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Cisco Confidential</b> data is not in the public domain; therefore, it is private or proprietary information that is protected from disclosure, but generally available within Cisco<br/><br/>
+            Cisco Confidential is the most common type of data created and shared within Cisco and is the default classification if one has not been explicitly defined. Cisco Confidential data is available to Cisco employees, and authorized non-employees (temporary worker, contractor, consultant, or vendor), with a legitimate business purpose. The unauthorized disclosure or loss of information could be expected to have a limited adverse effect on organizational operations, organizational assets, or individuals.</td>
+          <td>
+            <ul>
+              <li>Internal memos</li>
+              <li>Meeting minutes</li>
+              <li>Internal project reports</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Cisco Highly Confidential–Controlled Access</b> data includes sensitive data that requires access limitations. Cisco Highly Confidential–Controlled Access data is available to a limited number of Cisco employees, and authorized non-employees (temporary worker, contractor, consultant, or vendor), with a legitimate business purpose and must be protected at all times.<br/><br/> The data is highly sensitive or critical to ongoing operations. The unauthorized disclosure or loss of information could be expected to have a serious adverse effect on organizational operations, organizational assets, or individuals.</td>
+          <td>
+            <ul>
+              <li>Personally identifiable information (PII)</li>
+              <li>Employee records</li>
+              <li>Business plans</li>
+              <li>Customer data</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Cisco Restricted–Redistribution Prohibited</b> data includes the most sensitive data to Cisco, which requires the highest degree of restricted access and security protection.<br/><br/>Cisco Restricted-Redistribution Prohibited data is restricted to selected and enumerated individuals with a legitimate business purpose and must be protected at all times. The unauthorized disclosure or loss of information could be expected to have a severe adverse effect on organizational operations, organizational assets, or individuals.</td>
+          <td>
+            <ul>
+              <li>Impending mergers or acquisitions</li>
+              <li>Product design documents</li>
+              <li>New product roadmaps</li>
+              <li>Financial data</li>
+              <li>Investment strategies</li>
+              <li>Specified protected categories of PII</li>
+            </ul>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <button id="close">CLOSE</button>
+    <script>
+      document.getElementById('close').addEventListener('click', function () {
+        window.close();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+
+<h3>{{errorMsg}}</h3>
+
+
+<!-- Active Deals -->
+<div class="container">
+    <div class="panel-group" style="width: 125%">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><strong>ACTIVE DEALS({{activeDealsCount}})</strong></div>
+      <div class="panel-body">
+          <div class="row">
+
+
+              <div  *ngFor="let deal of deals; let i =index">
+                  
+              <div class="col">
+          <div class="panel panel-default">
+              <div class="panel-heading"><p> Deal Name</p></div>              
+              <div class="panel-body">
+                  <div class="row">
+                    <div class="col">  <p class="fontsmall">BU Name :{{deal.targetCompanyName}}  </p></div>
+                    <div class="col">  <p class="fontsmall">Deal Type : {{deal.dealType}}</p> </div>
+                    <div class="col">  <p class="fontsmall">Deal Archetype : {{deal.marketSegment}}</p> </div>
+                  </div>
+
+                  <div><p class="fontsmall">Stage 1 :{{deal.transactionStage}} </p></div>
+
+                  <div class="row">
+                      <div class="col">  <p class="fontsmall">GTM/OFFER</p>  </div>
+                      <div class="col">  <p class="fontsmall">CULTURE/CALLAB</p>  </div>
+                      <div class="col">  <p class="fontsmall">CAPABILITIES</p>  </div>
+                      <div class="col">  <p class="fontsmall" >ROADMAP</p>  </div>
+                      <div class="col">  <p class="fontsmall">VDDS</p>  </div>
+                      <div class="col">  <p class="fontsmall">END STATE</p>  </div>
+                    </div>
+
+                    <div class="row cui">                        
+                            <div class="col"><button class="btn btn--primary btn--small">{{btnDNAText}}</button></div>
+                            <div class="col"><button class="btn btn--primary-ghost btn--small">{{btnDetailsText}}</button></div>
+                        
+                        </div>
+
+              
+            </div>
+
+
+            </div>
+            </div>
+          
+          </div>
+          
+
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" >
+<div class="row" style="width: 128%">
+
+  <!-- followed Deals -->
+    <div class="col-md-6">
+    <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><strong>FOLLOWED DEALS({{followedDealsCount}})</strong></div>
+      <div class="panel-body">
+          <div class="row">
+
+
+              <div  *ngFor="let followedDeal of followedDeals; let i =index">
+                  
+              <div class="col">
+          <div class="panel panel-default">
+              <div class="panel-heading">Deal Name</div>              
+              <div class="panel-body">
+                  <div class="row">
+                    <div class="col">  <p class="fontsmall">BU Name :{{followedDeal.targetCompanyName}}  </p></div>
+                    <div class="col">  <p class="fontsmall">Deal Type : {{followedDeal.dealType}}</p> </div>
+                    <div class="col">  <p class="fontsmall">Deal Archetype : {{followedDeal.marketSegment}}</p> </div>
+                  </div>
+
+                  <div><p class="fontsmall">Stage 1 :{{followedDeal.transactionStage}} </p></div>
+
+                  <div class="row">
+                      <div class="col">  <p class="fontsmall">GTM/OFFER</p>  </div>
+                      <div class="col">  <p class="fontsmall">CULTURE/CALLAB</p>  </div>
+                      <div class="col">  <p class="fontsmall">CAPABILITIES</p>  </div>
+                      <div class="col">  <p class="fontsmall" >ROADMAP</p>  </div>
+                      <div class="col">  <p class="fontsmall">VDDS</p>  </div>
+                      <div class="col">  <p class="fontsmall">END STATE</p>  </div>
+                    </div>
+
+                    <div class="row cui">                        
+                            <div class="col"><button class="btn btn--primary btn--small">{{btnDNAText}}</button></div>
+                            <div class="col"><button class="btn btn--primary-ghost btn--small">{{btnDetailsText}}</button></div>
+                        
+                        </div>
+
+              
+            </div>
+
+            </div>
+            </div>
+          
+          </div>
+                  </div>
+
+      </div>
+</div>
+      </div>          
+      </div>
+
+      <!-- Inactive Deals -->
+      <div class="col-md-6">
+          <div class="panel-group">
+          <div class="panel panel-primary">
+            <div class="panel-heading"><strong>INACTIVE DEALS({{inactiveDealsCount}})</strong></div>
+            <div class="panel-body">
+                <div class="row">
+      
+      
+                    <div  *ngFor="let InactiveDeal of InactiveDeals; let i =index">
+                        
+                    <div class="col">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Deal Name</div>              
+                    <div class="panel-body">
+                        <div class="row">
+                          <div class="col">  <p class="fontsmall">BU Name :{{InactiveDeal.targetCompanyName}}  </p></div>
+                          <div class="col">  <p class="fontsmall">Deal Type : {{InactiveDeal.dealType}}</p> </div>
+                          <div class="col">  <p class="fontsmall">Deal Archetype : {{InactiveDeal.marketSegment}}</p> </div>
+                        </div>
+      
+                        <div><p class="fontsmall">Stage 1 :{{InactiveDeal.transactionStage}} </p></div>
+      
+                        <div class="row">
+                            <div class="col">  <p class="fontsmall">GTM/OFFER</p>  </div>
+                            <div class="col">  <p class="fontsmall">CULTURE/CALLAB</p>  </div>
+                            <div class="col">  <p class="fontsmall">CAPABILITIES</p>  </div>
+                            <div class="col">  <p class="fontsmall" >ROADMAP</p>  </div>
+                            <div class="col">  <p class="fontsmall">VDDS</p>  </div>
+                            <div class="col">  <p class="fontsmall">END STATE</p>  </div>
+                          </div>
+      
+                          <div class="row cui">                        
+                                  <div class="col"><button class="btn btn--primary btn--small">{{btnDNAText}}</button></div>
+                                  <div class="col"><button class="btn btn--primary-ghost btn--small">{{btnDetailsText}}</button></div>
+                              
+                              </div>
+      
+                    
+                  </div>
+      
+      
+                  </div>
+                  </div>
+                
+                </div>
+                
+                        </div>
+      
+            </div>
+            </div>
+
+    </div>
+  </div>
+
+</div>
+</div>

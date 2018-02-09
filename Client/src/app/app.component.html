@@ -1,0 +1,34 @@
+<div class="container-fluid" style="height:90%">
+    <!-- begin: header component -->
+    <app-header class="clearfix"></app-header>
+    <!-- end: header component -->
+    <!--<app-searchbox></app-searchbox>-->
+    <div class="row">
+      <div class="col-sm-2 side_nav left-side-content" style="margin-top: -75px;margin-bottom: -100px;">
+        <div class="header-bar__logo">
+          <span class="icon-cisco cisco_icon_style" ></span>
+        </div>
+          <div class="navbar" style="margin-top: 32px;">
+              <ul class="nav nav-pills nav-stacked navPills">
+                  <li [routerLinkActive]="['active']"><a [routerLink] = "['/MyDeals']">My Deals</a></li>
+                  <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllDeals']">All Deals</a></li>
+                  <li [routerLinkActive]="['active']"><a [routerLink] = "['/Methodology']">Methodology</a></li>
+                  <li [routerLinkActive]="['active']"><a [routerLink] = "['/LearningandDevelopment']">Learning & Development</a></li>
+                  <li [routerLinkActive]="['active']"><a [routerLink] = "['/Initiatives']">Initiatives</a></li>
+                  <li [routerLinkActive]="['active']"><a [routerLink] = "['/QuickTools']">Quick Tools</a></li>
+                  <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllTools']">All Tools</a></li>
+              </ul>      
+            </div>
+	  </div>
+	  <div class="col-sm-8 right-main-content">
+      <app-headline></app-headline>
+			<router-outlet></router-outlet>
+	  </div>
+    </div>
+  </div>
+
+  <div >
+    <!-- begin: legal footer -->
+     <app-footer></app-footer>
+    <!-- end: legal footer -->
+  </div>

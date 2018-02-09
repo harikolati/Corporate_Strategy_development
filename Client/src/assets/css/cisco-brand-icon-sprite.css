@@ -1,0 +1,104 @@
+.cisco-brand-sprite-16 { top: 1px; line-height: 1px; position: relative; background-image: url(../img/cisco-icon-16-sprite.png); display: inline-block; }
+.cisco-font-16-back { background-position: 0 0; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-back { background-position: -16px 0; width:16px; height:16px; }
+.cisco-font-16-document { background-position: 0 -16px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-document { background-position: -16px -16px; width:16px; height:16px; }
+.cisco-font-16-download-container { background-position: 0 -32px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-download-container { background-position: -16px -32px; width:16px; height:16px; }
+.cisco-font-16-download-no-container { background-position: 0 -48px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-download-no-container { background-position: -16px -48px; width:16px; height:16px; }
+.cisco-font-16-error { background-position: 0 -64px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-error { background-position: -16px -64px; width:16px; height:16px; }
+.cisco-font-16-folder-add { background-position: 0 -80px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-folder-add { background-position: -16px -80px; width:16px; height:16px; }
+.cisco-font-16-folder { background-position: 0 -96px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-folder { background-position: -16px -96px; width:16px; height:16px; }
+.cisco-font-16-help { background-position: 0 -112px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-help { background-position: -16px -112px; width:16px; height:16px; }
+.cisco-font-16-image { background-position: 0 -128px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-image { background-position: -16px -128px; width:16px; height:16px; }
+.cisco-font-16-info { background-position: 0 -144px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-info { background-position: -16px -144px; width:16px; height:16px; }
+.cisco-font-16-link { background-position: 0 -160px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-link { background-position: -16px -160px; width:16px; height:16px; }
+.cisco-font-16-maximize { background-position: 0 -176px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-maximize { background-position: -16px -176px; width:16px; height:16px; }
+.cisco-font-16-minimize { background-position: 0 -192px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-minimize { background-position: -16px -192px; width:16px; height:16px; }
+.cisco-font-16-month { background-position: 0 -208px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-month { background-position: -16px -208px; width:16px; height:16px; }
+.cisco-font-16-more { background-position: 0 -224px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-more { background-position: -16px -224px; width:16px; height:16px; }
+.cisco-font-16-recent-apps { background-position: 0 -240px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-recent-apps { background-position: -16px -240px; width:16px; height:16px; }
+.cisco-font-16-report { background-position: 0 -256px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-report { background-position: -16px -256px; width:16px; height:16px; }
+.cisco-font-16-search { background-position: 0 -272px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-search { background-position: -16px -272px; width:16px; height:16px; }
+.cisco-font-16-trash { background-position: 0 -288px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-trash { background-position: -16px -288px; width:16px; height:16px; }
+.cisco-font-16-upload-container { background-position: 0 -304px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-upload-container { background-position: -16px -304px; width:16px; height:16px; }
+.cisco-font-16-upload-no-container { background-position: 0 -320px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-upload-no-container { background-position: -16px -320px; width:16px; height:16px; }
+.cisco-font-16-user-blocked { background-position: 0 -336px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-user-blocked { background-position: -16px -336px; width:16px; height:16px; }
+.cisco-font-16-video-preview-telepresence { background-position: 0 -352px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-video-preview-telepresence { background-position: -16px -352px; width:16px; height:16px; }
+.cisco-font-16-video { background-position: 0 -368px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-video { background-position: -16px -368px; width:16px; height:16px; }
+.cisco-font-16-warning { background-position: 0 -384px; width:16px; height:16px; }
+.action-icon.disabled .cisco-font-16-warning { background-position: -16px -384px; width:16px; height:16px; }
+
+
+.cisco-brand-sprite-24 { top: 1px; line-height: 1px; position: relative; background-image: url(../img/cisco-icon-24-sprite.png); display: inline-block; }
+.cisco-font-24-back { background-position: 0 0; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-back { background-position: -24px 0; width:24px; height:24px; }
+.cisco-font-24-document { background-position: 0 -24px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-document { background-position: -24px -24px; width:24px; height:24px; }
+.cisco-font-24-download-container { background-position: 0 -48px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-download-container { background-position: -24px -48px; width:24px; height:24px; }
+.cisco-font-24-download-no-container { background-position: 0 -72px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-download-no-container { background-position: -24px -72px; width:24px; height:24px; }
+.cisco-font-24-error { background-position: 0 -96px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-error { background-position: -24px -96px; width:24px; height:24px; }
+.cisco-font-24-folder-add { background-position: 0 -120px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-folder-add { background-position: -24px -120px; width:24px; height:24px; }
+.cisco-font-24-folder { background-position: 0 -144px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-folder { background-position: -24px -144px; width:24px; height:24px; }
+.cisco-font-24-help { background-position: 0 -168px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-help { background-position: -24px -168px; width:24px; height:24px; }
+.cisco-font-24-image { background-position: 0 -192px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-image { background-position: -24px -192px; width:24px; height:24px; }
+.cisco-font-24-info { background-position: 0 -216px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-info { background-position: -24px -216px; width:24px; height:24px; }
+.cisco-font-24-link { background-position: 0 -240px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-link { background-position: -24px -240px; width:24px; height:24px; }
+.cisco-font-24-maximize { background-position: 0 -264px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-maximize { background-position: -24px -264px; width:24px; height:24px; }
+.cisco-font-24-minimize { background-position: 0 -288px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-minimize { background-position: -24px -288px; width:24px; height:24px; }
+.cisco-font-24-month { background-position: 0 -312px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-month { background-position: -24px -312px; width:24px; height:24px; }
+.cisco-font-24-more { background-position: 0 -336px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-more { background-position: -24px -336px; width:24px; height:24px; }
+.cisco-font-24-recent-apps { background-position: 0 -360px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-recent-apps { background-position: -24px -360px; width:24px; height:24px; }
+.cisco-font-24-report { background-position: 0 -384px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-report { background-position: -24px -384px; width:24px; height:24px; }
+.cisco-font-24-search { background-position: 0 -408px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-search { background-position: -24px -408px; width:24px; height:24px; }
+.cisco-font-24-trash { background-position: 0 -432px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-trash { background-position: -24px -432px; width:24px; height:24px; }
+.cisco-font-24-upload-container { background-position: 0 -456px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-upload-container { background-position: -24px -456px; width:24px; height:24px; }
+.cisco-font-24-upload-no-container { background-position: 0 -480px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-upload-no-container { background-position: -24px -480px; width:24px; height:24px; }
+.cisco-font-24-user-blocked { background-position: 0 -504px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-user-blocked { background-position: -24px -504px; width:24px; height:24px; }
+.cisco-font-24-video-preview-telepresence { background-position: 0 -528px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-video-preview-telepresence { background-position: -24px -528px; width:24px; height:24px; }
+.cisco-font-24-video { background-position: 0 -552px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-video { background-position: -24px -552px; width:24px; height:24px; }
+.cisco-font-24-warning { background-position: 0 -576px; width:24px; height:24px; }
+.action-icon.disabled .cisco-font-24-warning { background-position: -24px -576px; width:24px; height:24px; }
