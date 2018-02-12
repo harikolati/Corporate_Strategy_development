@@ -6,7 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { SearchboxComponent } from './searchbox/searchbox.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MyDealsComponent } from './my-deals/my-deals.component';
@@ -16,12 +15,15 @@ import { LearninganddevelopmentComponent } from './learninganddevelopment/learni
 import { InitiativesComponent } from './initiatives/initiatives.component';
 import { QuickToolsComponent } from './quick-tools/quick-tools.component';
 import { AllToolsComponent } from './all-tools/all-tools.component';
-import { DealService } from './deal.service';
-import { FollowedDealService } from './followed-deal.service';
-import { InactiveDealService } from './inactive-deal.service';
+import { DealService } from './services/deal.service';
+import { FollowedDealService } from './services/followed-deal.service';
+import { InactiveDealService } from './services/inactive-deal.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HeadlineComponent } from './headline/headline.component';
 
+/**
+ * Routing and navigation configurations
+ */
 const appRoutes: Routes = [
   
  { path: '', redirectTo : 'MyDeals', pathMatch : 'full'},

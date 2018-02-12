@@ -1,5 +1,5 @@
 {
-  "name": "sample-app0602",
+  "name": "M@AClient",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -47,3 +47,4 @@
     "copy-webpack-plugin": "4.3.0"
   }
 }
+

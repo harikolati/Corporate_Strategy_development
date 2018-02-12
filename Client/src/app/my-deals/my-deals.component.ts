@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DealService } from '../deal.service';
-import { FollowedDealService } from '../followed-deal.service';
-import { InactiveDealService } from '../inactive-deal.service';
+import { DealService } from '../services/deal.service';
+import { FollowedDealService } from '../services/followed-deal.service';
+import { InactiveDealService } from '../services/inactive-deal.service';
 
 
 @Component({
