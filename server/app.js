@@ -8,6 +8,8 @@ var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
 var dealRoutes = require('./routes/deals');
 var app = express();
+var fileupload=require('express-fileupload');
+app.use(fileupload());
 mongoose.connect('mongodb://localhost/M&A');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

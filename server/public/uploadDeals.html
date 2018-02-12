@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Upload Deals</title>
+</head>
+<body>
+    <p>Use the form below to upload a list of Deals.
+        Click <a href="/deals/template">here</a> for an example template.</p>
+    <form action="/deals/uploadDeals" method="POST" encType="multipart/form-data">
+        <input type="file" name="file" accept="*.csv" /><br/><br/>
+        <input type="submit" value="Upload Deals" />
+    </form>
+</body>
+</html>
