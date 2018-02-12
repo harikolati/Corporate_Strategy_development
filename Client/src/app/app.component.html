@@ -2,8 +2,9 @@
     <!-- begin: header component -->
     <app-header class="clearfix"></app-header>
     <!-- end: header component -->
-    <!--<app-searchbox></app-searchbox>-->
+    
     <div class="row">
+      <!-- begin: left navigation component -->
       <div class="col-sm-2 side_nav left-side-content" style="margin-top: -75px;margin-bottom: -100px;">
         <div class="header-bar__logo">
           <span class="icon-cisco cisco_icon_style" ></span>
@@ -19,7 +20,8 @@
                   <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllTools']">All Tools</a></li>
               </ul>      
             </div>
-	  </div>
+    </div>
+    <!-- end: left navigation component -->
 	  <div class="col-sm-8 right-main-content">
       <app-headline></app-headline>
 			<router-outlet></router-outlet>
