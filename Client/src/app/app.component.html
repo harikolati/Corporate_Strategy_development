@@ -5,7 +5,7 @@
     
     <div class="row">
       <!-- begin: left navigation component -->
-      <div class="col-sm-2 side_nav left-side-content" style="margin-top: -75px;margin-bottom: -100px;">
+      <div class="col-sm-2 side_nav left-side-content">
         <div class="header-bar__logo">
           <span class="icon-cisco cisco_icon_style" ></span>
         </div>
@@ -24,7 +24,9 @@
     <!-- end: left navigation component -->
 	  <div class="col-sm-8 right-main-content">
       <app-headline></app-headline>
-			<router-outlet></router-outlet>
+      <!-- begin: body component-->
+      <router-outlet></router-outlet>
+      <!-- end: body component-->
 	  </div>
     </div>
   </div>
