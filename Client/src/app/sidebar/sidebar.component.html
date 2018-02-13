@@ -1,5 +1,3 @@
-
-<!-- begin:to display sidebar component -->
 <div class="side_nav left-side-content" style="margin-top: -75px;margin-bottom: -100px; height: 100% ;width:245px">
         <div class="header-bar__logo">
           <span class="icon-cisco cisco_icon_style" ></span>
@@ -11,10 +9,13 @@
                   <li [routerLinkActive]="['active']"><a [routerLink] = "['/Methodology']">Methodology</a></li>
                   <li [routerLinkActive]="['active']"><a [routerLink] = "['/LearningandDevelopment']">Learning & Development</a></li>
                   <li [routerLinkActive]="['active']"><a [routerLink] = "['/Initiatives']">Initiatives</a></li>
-                  <li [routerLinkActive]="['active']"><a [routerLink] = "['/QuickTools']">Quick Tools</a></li>
+                  <li [routerLinkActive]="['active']" (click)="toggleDropDown()"><a [routerLink] = "['/QuickTools']">Quick Tools</a>
+                    <ul class="navItem"  *ngIf="showDropDown">
+                        <li [routerLinkActive]="['active']"><a class="item" [routerLink] = "['/Tool']">ToolA</a></li>
+                          <li [routerLinkActive]="['active']"><a class="item" [routerLink] = "['/Tool']">ToolB</a></li>
+                    </ul>
+                  </li>
                   <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllTools']">All Tools</a></li>
               </ul>      
             </div>
     </div>
-
-    <!-- end:to display sidebar component -->

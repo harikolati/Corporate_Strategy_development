@@ -1,1 +1,19 @@
- 
+
+.navItem {
+    position: relative;
+    color: #049FD9;
+    font-weight: bold;
+    padding: 20px 15px;
+    border-bottom: 1px solid #ccc;
+} 
+.nav{
+    margin-bottom: 18em;
+}
+
+.navItem a:link{
+    padding: 0px 24px;
+
+}
+.item{
+    color: #049FD9;
+}
