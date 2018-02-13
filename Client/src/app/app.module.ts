@@ -20,7 +20,7 @@ import { FollowedDealService } from './services/followed-deal.service';
 import { InactiveDealService } from './services/inactive-deal.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HeadlineComponent } from './headline/headline.component';
-
+import { SidebarComponent } from './sidebar/sidebar.component';
 /**
  * Routing and navigation configurations
  */
@@ -41,8 +41,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-     HeaderComponent, FooterComponent, MyDealsComponent, AllDealsComponent, MethodologyComponent, LearninganddevelopmentComponent, InitiativesComponent, QuickToolsComponent, AllToolsComponent, HeadlineComponent
-  ],
+     HeaderComponent, FooterComponent, MyDealsComponent, AllDealsComponent, MethodologyComponent, LearninganddevelopmentComponent, InitiativesComponent, QuickToolsComponent, AllToolsComponent, HeadlineComponent,SidebarComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
@@ -53,3 +52,4 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
