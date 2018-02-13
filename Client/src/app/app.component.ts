@@ -11,8 +11,5 @@ import { FooterComponent } from './footer/footer.component';
 })
 
 export class AppComponent {
-   constructor(private router: Router) {}
-  
-
-  
+     
 }

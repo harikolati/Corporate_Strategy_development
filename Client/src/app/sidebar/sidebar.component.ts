@@ -5,6 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
+
+/**
+ * @class: SidebarComponent 
+ */
+
 export class SidebarComponent implements OnInit {
 
   constructor() { }

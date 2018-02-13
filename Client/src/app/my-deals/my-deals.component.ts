@@ -17,8 +17,7 @@ export class MyDealsComponent implements OnInit {
   activeDealsCount:number;
   followedDealsCount:number;
   inactiveDealsCount:number;
-  btnDNAText: string='View Deal DNA';
-  btnDetailsText: string='View Deal Details';
+  
   public errorMsg;
 
   constructor(private _dealService: DealService,private _followedDealService: FollowedDealService,
