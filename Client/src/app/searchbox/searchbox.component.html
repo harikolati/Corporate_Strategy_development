@@ -1,1 +1,27 @@
-<p></p>
+<div class="row bodycomp">
+  <div class="col-md-6">
+      <form id="filter">
+          <div class="form-group">
+              <div class="form-group__text">
+                                  
+                 <input id="text1" [(ngModel)]="term" name="xxx" placeholder="Keywords , deal name , deal sector , artefact types , Deal Lead" (click)="toggleDropDown()">
+                  <label for="text1"></label>
+                  
+               <!--    <button type="button" class="link"> -->
+                      <span class="icon-search"></span>
+                      <div *ngIf="showDropDown" class="deal-container-dropdown">
+                          <div>
+                           <div class="deal" >
+                           <div class="title">DEAL TYPE TITLE
+                           <div class="dealItems" *ngFor='let cat of items | filter:term'  > 
+                            {{cat.title}}</div></div>
+                            </div> 
+                        </div>      
+                        </div>
+               <!--    </button>  -->
+                 
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
