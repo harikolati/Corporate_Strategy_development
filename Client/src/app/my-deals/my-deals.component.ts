@@ -9,6 +9,11 @@ import { InactiveDealService } from '../services/inactive-deal.service';
   templateUrl: './my-deals.component.html',
   styleUrls: ['./my-deals.component.css']
 })
+/**
+ * @class: MyDealsComponent
+ * Description : To get 'Mydeals data' - Active deals, followed deals and inactive deals
+ */
+
 export class MyDealsComponent implements OnInit {
 
   public activeDeals= [];
@@ -24,9 +29,10 @@ export class MyDealsComponent implements OnInit {
     private _inactiveDealService: InactiveDealService) { }
 
   ngOnInit() {
-
-    //To get Active deal info
-    
+    /**
+     *To get Active deal info through service
+     */
+       
     this._dealService.getDealDetails() .subscribe(data => {this.activeDeals = data;this.activeDealsCount=this.activeDeals.length;},      
                       error => this.errorMsg = error);
        
@@ -34,14 +40,18 @@ export class MyDealsComponent implements OnInit {
     console.log(this.activeDealsCount);
     console.log(this.activeDeals);
 
-    //To get Followed deal info
+    /**
+     *To get followed deal info 
+     */
     this.followedDeals = this._followedDealService.getFollowedDealDetails();
     this.followedDealsCount = this.followedDeals.length;
     
     console.log(this.followedDealsCount);
     console.log(this.followedDeals);
 
-    //To get InActive deal info
+    /**
+     *To get InActive deal info 
+     */
     this.InactiveDeals = this._inactiveDealService.getInactiveDealDetails();
     this.inactiveDealsCount = this.InactiveDeals.length;
     
