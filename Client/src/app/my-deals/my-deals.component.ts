@@ -11,7 +11,7 @@ import { InactiveDealService } from '../services/inactive-deal.service';
 })
 export class MyDealsComponent implements OnInit {
 
-  public deals= [];
+  public activeDeals= [];
   public followedDeals= [];
   public InactiveDeals= [];
   activeDealsCount:number;
@@ -27,12 +27,13 @@ export class MyDealsComponent implements OnInit {
   ngOnInit() {
 
     //To get Active deal info
-    this._dealService.getDealDetails() .subscribe(data => {this.deals = data;this.activeDealsCount=this.deals.length;},      
-                      error => this.errorMsg = error);
     
+    this._dealService.getDealDetails() .subscribe(data => {this.activeDeals = data;this.activeDealsCount=this.activeDeals.length;},      
+                      error => this.errorMsg = error);
+       
     
     console.log(this.activeDealsCount);
-    console.log(this.deals);
+    console.log(this.activeDeals);
 
     //To get Followed deal info
     this.followedDeals = this._followedDealService.getFollowedDealDetails();

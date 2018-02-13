@@ -41,7 +41,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SearchboxComponent, HeaderComponent, FooterComponent, MyDealsComponent, AllDealsComponent, MethodologyComponent, LearninganddevelopmentComponent, InitiativesComponent, QuickToolsComponent, AllToolsComponent, HeadlineComponent
+     HeaderComponent, FooterComponent, MyDealsComponent, AllDealsComponent, MethodologyComponent, LearninganddevelopmentComponent, InitiativesComponent, QuickToolsComponent, AllToolsComponent, HeadlineComponent
   ],
   imports: [
     BrowserModule,

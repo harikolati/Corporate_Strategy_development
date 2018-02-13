@@ -92,12 +92,19 @@
 <div class="container">
     <div class="panel-group" style="width: 125%">
     <div class="panel panel-primary">
-        <div class="panel-heading"><strong>ALL DEALS({{allDealsCount}})</strong></div>
+        <div class="panel-heading"><strong>ALL DEALS({{allDealsCount}})</strong>
+        <div class="btn-group pull-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-option-vertical"></span></a>                
+                <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" class="fontsmall">Edit</a></li>
+                        <li><a href="#" class="fontsmall">Customise</a></li>
+                        <li><a href="#" class="fontsmall">Reorder</a></li>                  
+                      </ul>
+              </div>
+            </div>
       <div class="panel-body">
           <div class="row">
-
-
-              <div  *ngFor="let deal of deals; let i =index">
+              <div  *ngFor="let deal of activeDeals; let i =index">
                   
               <div class="col">
           <div class="panel panel-default">
