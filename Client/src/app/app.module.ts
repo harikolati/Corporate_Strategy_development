@@ -21,6 +21,7 @@ import { InactiveDealService } from './services/inactive-deal.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HeadlineComponent } from './headline/headline.component';
 import { DealComponent } from './deal/deal.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 /**
  * Routing and navigation configurations
@@ -43,8 +44,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
      HeaderComponent, FooterComponent, MyDealsComponent, AllDealsComponent, MethodologyComponent, LearninganddevelopmentComponent, 
-     InitiativesComponent, QuickToolsComponent, AllToolsComponent, HeadlineComponent, DealComponent,
-  ],
+     InitiativesComponent, QuickToolsComponent, AllToolsComponent, HeadlineComponent,SidebarComponent,DealComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
@@ -55,3 +55,4 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
