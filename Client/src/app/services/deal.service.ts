@@ -16,8 +16,8 @@ constructor(private http: Http) {}
      * @function : To get active deal data thru service
      * @returns {Deal[]} transformedDeals
      */
-    getDealDetails(){
-    return this.http.get('http://localhost:3000/deals')
+   getDealDetails(): Observable<Deal[]> {
+    return  this.http.get('http://localhost:3000/deals')
             .map((response: Response) => {
                 const deals = response.json().obj;
                 let transformedDeals: Deal[] = [];
@@ -40,4 +40,6 @@ constructor(private http: Http) {}
              console.log(error);
                           return Observable.throw(error);});
     }
+
+    
 }

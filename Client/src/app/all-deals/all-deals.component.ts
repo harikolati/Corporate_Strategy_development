@@ -9,7 +9,7 @@ import { InactiveDealService } from '../services/inactive-deal.service';
   styleUrls: ['./all-deals.component.css']
 })
 export class AllDealsComponent implements OnInit {
-  public activeDeals= [];
+  public activeDeals$;
   public followedDeals= [];
   public InactiveDeals= [];
   public allDealsCount:number;
@@ -20,20 +20,17 @@ export class AllDealsComponent implements OnInit {
   constructor(private _dealService: DealService,private _followedDealService: FollowedDealService,
     private _inactiveDealService: InactiveDealService) { }
 
-  ngOnInit() {
+ async  ngOnInit() {
 
     //To get Active deal info
-    
-    this._dealService.getDealDetails() .subscribe(data => this.activeDeals = data,      
-      error => this.errorMsg = error);
-
+    this.activeDeals$ =  this._dealService.getDealDetails()
     //To get Followed deal info
     this.followedDeals = this._followedDealService.getFollowedDealDetails();
     
     //To get InActive deal info
     this.InactiveDeals = this._inactiveDealService.getInactiveDealDetails();
     //To get all deals count
-    this.allDealsCount = this.followedDeals.length + this.followedDeals.length + this.activeDeals.length;
+    this.allDealsCount = this.followedDeals.length + this.followedDeals.length + this.activeDeals$.length;
   }
 
 }
