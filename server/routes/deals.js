@@ -47,12 +47,46 @@ DealRole.
                     error: err
                 });
             }
+           var segregatedDeals= getSegregatedDeals(doc);
             res.status(200).json({
                 message: 'Success',
-                obj: doc
+                obj: segregatedDeals
             });
   });
 
 });
 
+var getSegregatedDeals=function(deals){
+    var dealsObj = JSON.parse(JSON.stringify(deals));
+
+     var segregatedDeals={
+        activeDeals:[],
+        inactiveDeals:[],
+        followedDeals :[]
+    };
+ for(var i=0; i<dealsObj.length; i++) {
+    var deal=dealsObj[i];
+    if(deal.deals){
+        if(deal.deals[0].transactionStage==='Project Closed'){
+            deal.deals[0].inactive={
+               completed:true 
+            }
+            segregatedDeals.inactiveDeals.push(deal.deals[0]);
+        }
+        else if(deal.deals[0].transactionStage==='Onhold'){
+             deal.deals[0].inactive={
+               Onhold:true 
+            }
+            segregatedDeals.inactiveDeals.push(deal.deals[0]);
+        }
+         else if(deal.deals[0].transactionStage==='Integration Closed'){
+            segregatedDeals.followedDeals.push(deal.deals[0]);
+        }
+        else{
+            segregatedDeals.activeDeals.push(deal.deals[0]);
+        }
+    }
+}
+return segregatedDeals;
+}
 module.exports = router;
