@@ -66,7 +66,7 @@ var getSegregatedDeals=function(deals){
     };
  for(var i=0; i<dealsObj.length; i++) {
     var deal=dealsObj[i];
-    if(deal.deals){
+    if(deal.deals && deal.deals.length){
         if(deal.deals[0].transactionStage==='Project Closed'){
             deal.deals[0].inactive={
                completed:true 
