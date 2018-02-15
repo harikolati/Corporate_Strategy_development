@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "test": "mocha",
     "start": "node --inspect ./bin/www",
     "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
     "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'assets/app/**/*.js' 'assets/app/**/*.ngsummary.json' 'assets/app/**/*.ngstyle.*'"
@@ -46,12 +47,17 @@
     "angular-router-loader": "^0.5.0",
     "angular2-template-loader": "^0.5.0",
     "awesome-typescript-loader": "^3.1.2",
+    "chai": "^4.1.2",
+    "chai-http": "^1.0.0",
     "del-cli": "^0.2.0",
     "html-loader": "^0.4.4",
+    "mocha": "^5.0.1",
     "raw-loader": "^0.5.1",
+    "request": "^2.83.0",
     "ts-loader": "^2.0.3",
     "typescript": "^2.4.2",
     "webpack": "^2.2.1",
     "webpack-merge": "^4.1.0"
   }
 }
+
