@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var AutoIncrement = require('mongoose-sequence')(mongoose);
 var Buffer = require('buffer/').Buffer
 var dealSchema = mongoose.Schema({
-companyLogo : Buffer,
+companyLogo : String,
 targetCompanyName : String,
 dealCode : String,
 transactionType : String,
