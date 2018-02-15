@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ChangeDetectionStrategy } from '@angular/core';
 import { DealService } from '../services/deal.service';
 import { FollowedDealService } from '../services/followed-deal.service';
 import { InactiveDealService } from '../services/inactive-deal.service';
-
+import { Deal } from '../services/Deal';
 
 @Component({
   selector: 'app-my-deals',
   templateUrl: './my-deals.component.html',
-  styleUrls: ['./my-deals.component.css']
+  styleUrls: ['./my-deals.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 /**
  * @class: MyDealsComponent
@@ -16,13 +17,17 @@ import { InactiveDealService } from '../services/inactive-deal.service';
 
 export class MyDealsComponent implements OnInit {
 
-  public activeDeals= [];
-  public followedDeals= [];
-  public InactiveDeals= [];
+  public activeDeals: Deal[]=[];
+  public followedDeals=[];
+  public InactiveDeals=[];
+
   activeDealsCount:number;
   followedDealsCount:number;
   inactiveDealsCount:number;
   
+  activeDealsCurrpg: number = 1;
+  followDealsCurrpg: number = 1;
+  inActiveDealsCurrpg: number = 1;
   public errorMsg;
 
   constructor(private _dealService: DealService,private _followedDealService: FollowedDealService,

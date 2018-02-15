@@ -75,17 +75,7 @@
 </div>
 </div>
 
-
-
-
-
-
-
-
-
-<br><br>
-
-
+<br>
 
 <!-- Active Deals -->
 <div class="container">
@@ -108,35 +98,21 @@
               <div class="col">
                     <app-deal [dealData]="deal"></app-deal>
             </div>
-          
           </div>
-          
-
-
-
           <div  *ngFor="let deal of followedDeals; let i =index">
-              
           <div class="col">
                 <app-deal [dealData]="deal"></app-deal>
+            </div>
         </div>
-      
-      </div>
-
 
       <div  *ngFor="let deal of InactiveDeals; let i =index">
-          
       <div class="col">
             <app-deal [dealData]="deal"></app-deal>
-    </div>
-  
-  </div>
-
-
-
-                  </div>
+            </div>
+        </div>
+       </div>
 
       </div>
     </div>
   </div>
 </div>
-

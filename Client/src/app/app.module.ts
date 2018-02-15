@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeadlineComponent } from './headline/headline.component';
 import { DealComponent } from './deal/deal.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 /**
  * Routing and navigation configurations
@@ -49,7 +50,8 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    HttpModule,HttpClientModule
+    HttpModule,HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [DealService,FollowedDealService,InactiveDealService],
   bootstrap: [AppComponent]

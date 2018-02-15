@@ -1,7 +1,5 @@
 
 <h3>{{errorMsg}}</h3>
-
-
 <!-- Active Deals -->
 
 <div class="container">
@@ -15,22 +13,28 @@
                         <li><a href="#" class="fontsmall">Edit</a></li>
                         <li><a href="#" class="fontsmall">Customise</a></li>
                         <li><a href="#" class="fontsmall">Reorder</a></li>                  
-                      </ul>
+                      </ul>cd
               </div>
         </div>
 
       <div class="panel-body">
           <div class="row">
-
-              <div  *ngFor="let deal of activeDeals; let i =index">
-                  
+              <div  *ngFor="let deal of activeDeals | paginate: { itemsPerPage: 4, currentPage: activeDealsCurrpg,id: 'active' }; let i =index ">                  
               <div class="col">
                     <app-deal [dealData]="deal"></app-deal>
             </div>          
-          </div>
-                  </div>
+            </div>
 
+
+       </div>
       </div>
+      <div class="text-center">
+            <pagination-controls (pageChange)="activeDealsCurrpg = $event" id= "active"></pagination-controls>
+     </div>
+     
+
+
+
     </div>
   </div>
 </div>
@@ -57,16 +61,18 @@
           <div class="row">
 
 
-              <div  *ngFor="let deal of followedDeals; let i =index">
+              <div  *ngFor="let deal of followedDeals | paginate: { itemsPerPage: 2, currentPage: followDealsCurrpg ,id:'followed'}; let i =index">
                   
               <div class="col">
                     <app-deal [dealData]="deal"></app-deal>
+                </div>          
             </div>
-          
-          </div>
-                  </div>
-
+           
+     </div>
       </div>
+      <div class="text-center">
+            <pagination-controls (pageChange)="followDealsCurrpg = $event" id="followed"></pagination-controls>
+        </div>
 </div>
       </div>          
       </div>
@@ -89,15 +95,17 @@
                 <div class="row">
       
       
-                    <div  *ngFor="let deal of InactiveDeals; let i =index">
-                        
+                    <div  *ngFor="let deal of InactiveDeals | paginate: { itemsPerPage: 2, currentPage: inActiveDealsCurrpg ,id:'inactive'}; let i =index">                        
                     <div class="col">
                             <app-deal [dealData]="deal"></app-deal>
-                  </div>                
-                </div>                
-                        </div>
-      
+                    </div>                
+                    </div>
+                                  
+                </div>      
             </div>
+            <div class="text-center">
+                    <pagination-controls (pageChange)="inActiveDealsCurrpg = $event" id="inactive"></pagination-controls>
+                </div> 
             </div>
 
     </div>

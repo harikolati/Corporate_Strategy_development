@@ -120,3 +120,10 @@ ul, ol {
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
+
+.header-custom-style{
+  background:#dfdfdf;
+  height:50px;
+  margin-top:2px;
+  margin-right: -15px;
+  }
