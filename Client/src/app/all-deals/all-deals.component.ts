@@ -9,9 +9,14 @@ import { InactiveDealService } from '../services/inactive-deal.service';
   styleUrls: ['./all-deals.component.css']
 })
 export class AllDealsComponent implements OnInit {
-  public activeDeals$;
-  public followedDeals= [];
-  public InactiveDeals= [];
+  activeDealsUrl:string ='http://localhost:3000/deals/dealRole?userName=Hiranmayi%20Thacker';
+  followedDealsUrl:string ='http://localhost:3000/deals/dealRole?userName=Hiranmayi%20Thacker';
+  inactiveDealsUrl:string ='http://localhost:3000/deals/dealRole?userName=Hiranmayi%20Thacker';
+
+
+  public activeDeals;
+  public followedDeals;
+  public InactiveDeals;
   public allDealsCount:number;
   btnDNAText: string='View Deal DNA';
   btnDetailsText: string='View Deal Details';
@@ -23,14 +28,14 @@ export class AllDealsComponent implements OnInit {
  async  ngOnInit() {
 
     //To get Active deal info
-    this.activeDeals$ =  this._dealService.getDealDetails()
+    this.activeDeals =  this._dealService.getDealDetails(this.activeDealsUrl);
     //To get Followed deal info
-    this.followedDeals = this._followedDealService.getFollowedDealDetails();
+    this.followedDeals =  this._dealService.getDealDetails(this.activeDealsUrl)
     
     //To get InActive deal info
-    this.InactiveDeals = this._inactiveDealService.getInactiveDealDetails();
+    this.InactiveDeals =  this._dealService.getDealDetails(this.activeDealsUrl);
     //To get all deals count
-    this.allDealsCount = this.followedDeals.length + this.followedDeals.length + this.activeDeals$.length;
+    this.allDealsCount = this.followedDeals.length + this.followedDeals.length + this.activeDeals.length;
   }
 
 }

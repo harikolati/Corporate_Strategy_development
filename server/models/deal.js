@@ -25,6 +25,7 @@ createdBy : String,
 updatedBy : String,
 createdAt : { type: Date},
 updatedAt :{ type: Date},
+followedUsers : [String],
 },
 { collection : 'Deals' }
 ).plugin(AutoIncrement, {inc_field: 'dealNumber'});;

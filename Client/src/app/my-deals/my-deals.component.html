@@ -6,7 +6,7 @@
     <div class="panel-group" style="width: 125%">
     <div class="panel panel-primary">
       <div class="panel-heading">
-          <strong>ACTIVE DEALS({{activeDealsCount}})</strong>
+          <strong>ACTIVE DEALS({{activeDealsCount | async}})</strong>
           <div class="btn-group pull-right">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-option-vertical"></span></a>                
                 <ul class="dropdown-menu" role="menu">
@@ -47,7 +47,7 @@
     <div class="col-md-6">
     <div class="panel-group">
     <div class="panel panel-primary">
-      <div class="panel-heading"><strong>FOLLOWED DEALS({{followedDealsCount}})</strong>
+      <div class="panel-heading"><strong>FOLLOWED DEALS({{followedDealsCount | async}})</strong>
       <div class="btn-group pull-right">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-option-vertical"></span></a>                
             <ul class="dropdown-menu" role="menu">
@@ -61,7 +61,7 @@
           <div class="row">
 
 
-              <div  *ngFor="let deal of followedDeals | paginate: { itemsPerPage: 2, currentPage: followDealsCurrpg ,id:'followed'}; let i =index">
+              <div  *ngFor="let deal of followedDeals$ | async | paginate: { itemsPerPage: 2, currentPage: followDealsCurrpg ,id:'followed'}; let i =index">
                   
               <div class="col">
                     <app-deal [dealData]="deal"></app-deal>
@@ -81,7 +81,7 @@
       <div class="col-md-6">
           <div class="panel-group">
           <div class="panel panel-primary">
-            <div class="panel-heading"><strong>INACTIVE DEALS({{inactiveDealsCount}})</strong>
+            <div class="panel-heading"><strong>INACTIVE DEALS({{inactiveDealsCount | async}})</strong>
             <div class="btn-group pull-right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-option-vertical"></span></a>                
                     <ul class="dropdown-menu" role="menu">
@@ -95,7 +95,7 @@
                 <div class="row">
       
       
-                    <div  *ngFor="let deal of InactiveDeals | paginate: { itemsPerPage: 2, currentPage: inActiveDealsCurrpg ,id:'inactive'}; let i =index">                        
+                    <div  *ngFor="let deal of InactiveDeals$ | async | paginate: { itemsPerPage: 2, currentPage: inActiveDealsCurrpg ,id:'inactive'}; let i =index">                        
                     <div class="col">
                             <app-deal [dealData]="deal"></app-deal>
                     </div>                
