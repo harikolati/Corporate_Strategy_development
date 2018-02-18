@@ -17,7 +17,7 @@ updatedAt :{ type: Date},
   ref: 'Deal', // The model to use
   localField: 'dealNumber', // Find deals where `localField`
   foreignField: 'dealNumber', // is equal to `foreignField`
-  // If `justOne` is true, 'members' will be a single doc as opposed to
+  // If `justOne` is true, 'deals' will be a single doc as opposed to
   // an array. `justOne` is false by default.
   justOne: false
 }); 
