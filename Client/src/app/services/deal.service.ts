@@ -4,11 +4,20 @@ import { Injectable} from "@angular/core";
 import 'rxjs/Rx';
 import { Observable } from "rxjs";
 @Injectable()
+/**
+ * @class: DealService
+ * Description : To get deal data thru service
+ */
+
 export class DealService{
 constructor(private http: Http) {}
     private deals : Deal[]=[];
-    getDealDetails(){
-    return this.http.get('http://localhost:3000/deals')
+    /**
+     * @function : To get active deal data thru service
+     * @returns {Deal[]} transformedDeals
+     */
+   getDealDetails(): Observable<Deal[]> {
+    return  this.http.get('http://localhost:3000/deals')
             .map((response: Response) => {
                 const deals = response.json().obj;
                 let transformedDeals: Deal[] = [];
@@ -31,4 +40,6 @@ constructor(private http: Http) {}
              console.log(error);
                           return Observable.throw(error);});
     }
+
+    
 }
