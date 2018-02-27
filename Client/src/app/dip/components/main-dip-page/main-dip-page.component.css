@@ -1,0 +1,9 @@
+/* CSS so that flex works with router-outlet */
+.cui app-main-dip-page{
+  flex:1;
+}
+
+/* This line makes sure the gray background fills the whole content section */
+.cui .content{
+  height: 100%;
+}

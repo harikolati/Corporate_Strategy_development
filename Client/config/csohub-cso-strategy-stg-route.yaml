@@ -1,0 +1,17 @@
+---
+kind: "Route"
+apiVersion: "v1"
+metadata:
+  name: "csohub"
+  labels:
+     component: "csohub"
+spec:
+   host: "cso-hub-stg.cisco.com"
+   to:
+     kind: "Service"
+     name: "csohub"
+   port:
+     targetPort: "web"
+   tls:
+     insecureEdgeTerminationPolicy: Allow
+     termination: edge

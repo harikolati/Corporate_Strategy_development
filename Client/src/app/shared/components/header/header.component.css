@@ -1,0 +1,69 @@
+.icon-backgrdcolor{
+    background-color: #dfdedf;
+  }
+  .icon-color{
+    color: #51a1da;
+  }
+
+  .icon-user-bg{
+    background-color: #dfdedf;
+  }
+   
+  .icon-user-image{
+      height: 26px;      
+      width: 26px;
+  }
+  .icons-pull-right{
+    margin-right: 53px;
+    margin-top: 13px;
+  }
+  
+  
+  .header-heading{
+    top:22px !important;
+  }
+  
+  .header-heading h3{
+    margin-top:10px;
+    margin-left:1em;
+    color:#58585b !important;
+    margin-top: 46px;
+    margin-left: -5px;
+    font-weight: 400;
+  }
+  
+  .header-toolbar{
+    text-align: right;
+    margin-top: 8px;
+  }
+
+  .header-custom-style{
+    background:#dfdfdf;
+    height:60px;
+    margin-top:2px;
+    margin-right: -15px;
+    }
+   .header-heading .page-title {
+      margin-top: 13px;
+      font-weight: 400;
+    }
+  
+
+
+    .icon-contact-card:before {
+      content: ""; }
+    
+    .icon-contact:before {
+      content: ""; }
+    
+    .icon-alert-blank:before {
+        content: ""; }
+      
+    .icon-alert:before {
+        content: ""; }
+      
+    .icon-alerting:before {
+        content: ""; }
+    .icon-cog:before {
+          content: ""; }
+        

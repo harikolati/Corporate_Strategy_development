@@ -1,0 +1,87 @@
+.header-bar__logo {
+  margin: 0 34px 45px 0;    
+}
+.header-bar__logo span.icon-cisco {
+font-size: 5rem;  
+}
+/* .header-bar__logo span.icon-cisco {
+  display: block;
+  color: #049fd9;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 10px;
+} */
+.cisco_icon_style {
+  font-size: 45px;
+  text-align: center;
+  margin-left: 14px;
+  color: #049FD9 !important;
+  margin-top: 25px;
+}
+.navPills>li.active>a{
+  background-color: #049FD9 !important;
+  color:white;
+}
+.navPills>li{
+  margin-top:0 !important;
+}
+.navPills>li>a{
+  padding: 20px 36px;
+  border-radius: 0;
+  color:#049FD9;
+  font-weight:bold;
+  border-bottom:1px solid #ccc;
+}
+.side_nav{
+  background-color: #fff;
+  padding-left:0;padding-right:0;
+  margin-top: -75px;
+  margin-left: 0px;
+  margin-bottom: -100px;
+
+}
+.side_nav .navbar{
+  margin-bottom:0;
+}
+.nav{
+  margin-bottom: 18em;
+  line-height: 50px;
+  margin-top: -1em;
+}
+.nav > li > div > a{
+  color: #049FD9;
+  font-weight: bold;
+}
+
+.navPills > li > div  {
+  padding: 20px 36px;
+  border-radius: 0;
+
+font-weight: bold;
+border-bottom: 1px solid #ccc;
+position: relative;
+display: block;
+}
+.navItem {
+  position: relative;
+  color: #049FD9;
+  font-weight: bold;
+} 
+.navItem a:link{
+  padding: 0px 24px;
+}
+.icon-chevron-right , .icon-chevron-down{
+  padding: 0px 0px 0px 20px;
+} 
+.header-bar__logo span.icon-cisco{
+  padding-top: 48px;  
+}
+.item{
+  color: #049FD9;
+} 
+
+
+ul, ol {
+list-style: none;
+padding-left: 0;
+}

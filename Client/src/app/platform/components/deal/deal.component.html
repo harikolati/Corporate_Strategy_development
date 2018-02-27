@@ -1,0 +1,58 @@
+<div class="panel panel-default">
+    <div class="panel-heading"><span style="color:#047fad"> {{deal.targetCompanyName}}</span>
+          <div class="btn-group pull-right">
+
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="icon-more icon-small"></span></a>                
+                  
+                  <div *ngIf="deal.dealtypeInfo == 'active';then activeDropdownTemp"></div>
+                  <div *ngIf="deal.dealtypeInfo == 'followed';then followedDropdownTemp"></div>                 
+                  <div *ngIf="deal.dealtypeInfo == 'allDeals';then allDealsDropdownTemp"></div>
+                  
+                    <ng-template #activeDropdownTemp >
+                        <ul class="dropdown-menu" role="menu">                         
+                            <li><a href="#" class="fontsmall">assign</a></li>                          
+                      </ul>
+                    </ng-template> 
+                    <ng-template #followedDropdownTemp >
+                        <ul class="dropdown-menu" role="menu">                         
+                            <li><a href="#" class="fontsmall">unfollow</a></li>                          
+                      </ul>
+                    </ng-template>                     
+                    <ng-template #allDealsDropdownTemp >
+                        <ul class="dropdown-menu" role="menu">                         
+                            <li><a href="#" class="fontsmall">follow</a></li>                          
+                      </ul>
+                    </ng-template>              
+
+                </div>            
+     
+  </div>              
+    <div class="panel-body">
+        <div class="row">
+          <div class="col">  <p class="fontsmall-bold">BU Name : <span> sponsoring GroupName</span> </p></div>
+          <div class="col">  <p class="fontsmall-bold">Deal Type :<span>deal dealType</span></p> </div>
+          <div class="col">  <p class="fontsmall-bold">Deal Archetype : <span class="archetype">  market Segment </span></p> </div>
+        </div>
+
+        <div><p class="fontsmall">Stage 1 :{{deal.transactionStage}} </p></div>
+
+        <div class="row panel-button">
+            <div class="col">  <p class="fontsmall">GTM/OFFER</p>  </div>
+            <div class="col">  <p class="fontsmall">CULTURE/CALLAB</p>  </div>
+            <div class="col">  <p class="fontsmall">CAPABILITIES</p>  </div>
+            <div class="col">  <p class="fontsmall" >ROADMAP</p>  </div>
+            <div class="col">  <p class="fontsmall">VDDS</p>  </div>
+            <div class="col">  <p class="fontsmall">END STATE</p>  </div>
+          </div>
+
+          <div class="row">                        
+                  <div class="col buttons-align-center">
+                    <button class="btn btn--primary btn--small">{{btnDNAText}}</button>
+                  <button class="btn btn--primary-ghost btn--small">{{btnDetailsText}}</button>
+                </div>
+              
+              </div>
+
+    
+  </div>
+  </div>

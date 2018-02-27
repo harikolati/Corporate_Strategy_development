@@ -1,0 +1,20 @@
+.show-on-hover:hover > ul.dropdown-menu {
+    display: block;    
+}
+
+@media (min-width: 1200px) {
+    .container {
+      width: 1440px;
+      max-width: 124%; } }
+
+     .my-class {
+        color:#047fad !important;
+        font-weight:bold;
+      }
+      
+      .toggleactive a{
+        color: #9ca4ab;  
+      }
+.icon-more:before {
+   content: ""; }
+      

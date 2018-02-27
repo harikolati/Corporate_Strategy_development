@@ -1,0 +1,9 @@
+.container-fluid{
+    height:auto !important; /* real browsers */
+    height:100%; /* IE6: treaded as min-height*/
+
+    min-height:100%;
+    position: relative;
+    padding-bottom: 100px;
+
+}

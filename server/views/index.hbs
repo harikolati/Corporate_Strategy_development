@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <base href="/">
-    <title>CISCO M&A </title>
-    
-    <link rel="stylesheet" href="/stylesheets/ciscoStyle/css/cui-standard.min.css">
-    <link rel="stylesheet" href="/stylesheets/style.css">
 
-</head>
-<body class="cui">
-<my-app>Loading...</my-app>
-</body>
-<script src="/js/app/bundle.js"></script>
-
-</html>
+    <p>Use the form below to upload a list of Deals.
+        Click <a href="/deals/template">here</a> for an example template.</p>
+    <form action="/deals/uploadDeals" method="POST" encType="multipart/form-data">
+        <input type="file" name="file" accept="*.csv" /><br/><br/>
+        <input type="submit" value="Upload Deals" />
+    </form>

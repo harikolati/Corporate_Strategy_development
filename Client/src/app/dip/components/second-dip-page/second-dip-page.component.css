@@ -1,0 +1,4 @@
+/* CSS so that flex works with router-outlet */
+.cui app-second-dip-page{
+  flex:1;
+}

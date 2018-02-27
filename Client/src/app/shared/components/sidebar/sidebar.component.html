@@ -1,0 +1,25 @@
+<div class="side_nav left-side-content" style="margin-top: -87pt;margin-bottom: -100px; height: 118% ;width:245px">
+    <div class="header-bar__logo">
+      <span class="icon-cisco cisco_icon_style" ></span>
+    </div>
+      <div class="navbar" style="margin-top: 24pt;">
+          <ul class="nav nav-pills nav-stacked navPills">
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/MyDeals']">My Deals</a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllDeals']">All Deals</a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/Methodology']">Methodology</a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/LearningandDevelopment']">Learning & Development</a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/Initiatives']">Initiatives</a></li>
+              <li [routerLinkActive]="['active']" (click)="toggleDropDown()">
+               <div> <a [routerLink] = "['/QuickTools']">
+                    <div *ngIf="toggleright;else toggledown">Quick Tools<span class="icon-chevron-right icon-small"></span></div>
+                    <ng-template #toggledown>Quick Tools<span class="icon-chevron-down icon-small"></span></ng-template></a>
+                    <div class="navItem"  *ngIf="showDropDown">
+                      <a class="item" (click)="toggleDropDown()" [routerLink] = "['/dip']">DIP</a>
+                        
+                    </div></div>
+                
+              </li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllTools']">All Tools</a></li>
+          </ul>      
+        </div>
+</div>

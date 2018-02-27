@@ -1,0 +1,32 @@
+<h3>{{errorMsg}}</h3>
+<app-announcement></app-announcement>
+<!-- Active Deals -->
+<div class="container">
+    <div class="panel-group" style="width: 125%">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+                <span class="panel-heading-style">ALL DEALS({{allDealsCount}})</span>
+        <div class="btn-group pull-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-more icon-small"></span></a>                
+                <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" class="fontsmall">Edit</a></li>
+                        <li><a href="#" class="fontsmall">Customise</a></li>
+                        <li><a href="#" class="fontsmall">Reorder</a></li>                  
+                      </ul>
+              </div>
+            </div>
+      <div class="panel-body">
+          <div class="row panel-three">
+              <div  *ngFor="let deal of allDeals ; let i =index">
+                  
+              <div class="col">
+                    <app-deal [dealData]="deal"></app-deal>
+            </div>
+          </div>
+      
+       </div>
+
+      </div>
+    </div>
+  </div>
+</div>
