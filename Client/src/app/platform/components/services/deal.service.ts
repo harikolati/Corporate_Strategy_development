@@ -7,34 +7,17 @@ import { Observable } from "rxjs";
 @Injectable()
 export class DealService{
 
-constructor(private http: Http) {}
+private _url: string = "/assets/data/activeDealInfo.json"; 
+  
+    constructor(private http:HttpClient) { }
 
-    private deals : Deal[]=[];
-    
-    getDealDetails(url:string,dealtypeInfo : string){
-    return this.http.get(url)
-            .map((response: Response) => {
-                const deals = response.json().obj;
-
-                let transformedDeals: Deal[] = [];
-                for (let deal of deals) {
-                    console.log(deal);
-                    transformedDeals.push(new Deal(
-                     deal.transactionType,
-                     deal.transactionStage,
-                     deal.dealCode,
-                     deal.dealType,
-                     deal.marketSegment,
-                     deal.targetMarketSegment,
-                     deal.targetCompanyName,
-                     deal.purchasePrice,
-                    deal.sponsoringGroupName,
-                    dealtypeInfo));
-                }
-                return transformedDeals;
-            })
-            .catch((error: Response) => {console.log(error)
-             console.log(error);
-                          return Observable.throw(error);});
+    getDealDetails(): Observable<Deal[]>{
+  
+      return this.http.get<Deal[]>(this._url)  
+                      .catch(this.errorHandler);
+  
+    }
+    errorHandler(error: HttpErrorResponse){  
+      return Observable.throw(error.message || "Server Error");  
     }
 }

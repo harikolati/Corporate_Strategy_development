@@ -16,6 +16,7 @@ import { Deal } from '../services/Deal';
 
 export class MyDealsComponent implements OnInit {
 
+  
   activeDealsUrl:string ='http://localhost:3000/deals/dealRole/active?userName=Hiranmayi%20Thacker';
   followedDealsUrl:string ='http://localhost:3000/deals/dealRole/followed?userName=Hiranmayi%20Thacker';
   inactiveDealsUrl:string ='http://localhost:3000/deals/dealRole/inActive?userName=Hiranmayi%20Thacker';
