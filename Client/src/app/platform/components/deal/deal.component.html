@@ -28,11 +28,21 @@
      
   </div>              
     <div class="panel-body">
-        <div class="row">
-          <div class="col">  <p class="fontsmall-bold">BU Name : <span> sponsoring GroupName</span> </p></div>
-          <div class="col">  <p class="fontsmall-bold">Deal Type :<span>deal dealType</span></p> </div>
-          <div class="col">  <p class="fontsmall-bold">Deal Archetype : <span class="archetype">  market Segment </span></p> </div>
-        </div>
+      <div class="row">
+        <div *ngIf="deal.dealtypeInfo == 'active';then activeCol"></div>
+        <div *ngIf="deal.dealtypeInfo == 'followed';then defaultCol"></div>                 
+        <div *ngIf="deal.dealtypeInfo == 'inactive';then defaultCol"></div>
+        <ng-template #activeCol >
+            <div class="col">  <p class="fontsmall-bold">BU Name : <span>{{deal.sponsoringGroupName}}</span> </p></div>
+            <div class="col">  <p class="fontsmall-bold">Deal Type : <span>{{deal.dealType}}</span></p> </div>
+            <div class="col">  <p class="fontsmall-bold">Deal Archetype : <span class="archetype">{{deal.marketSegment}}</span></p> </div>
+        </ng-template> 
+        <ng-template #defaultCol >
+            <div class="col">  <p class="fontsmall-bold">BU Name : <span class="defaultCol">{{deal.sponsoringGroupName}}</span> </p></div>
+            <div class="col">  <p class="fontsmall-bold">Deal Type : <span class="defaultCol">{{deal.dealType}}</span></p> </div>
+            <div class="col">  <p class="fontsmall-bold">Deal Archetype : <span class="archetype">{{deal.marketSegment}}</span></p> </div>
+        </ng-template> 
+      </div>
 
         <div><p class="fontsmall">Stage 1 :{{deal.transactionStage}} </p></div>
 

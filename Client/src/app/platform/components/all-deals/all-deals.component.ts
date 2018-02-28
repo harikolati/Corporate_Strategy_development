@@ -16,6 +16,7 @@ export class AllDealsComponent implements OnInit {
   btnDNAText: string='View Deal DNA';
   btnDetailsText: string='View Deal Details';
   public errorMsg;
+  childExists: boolean = true;
 
   constructor(private _dealService: DealService) { }
 
@@ -28,6 +29,10 @@ export class AllDealsComponent implements OnInit {
       this.allDealsCount = allDeals.length;
     });
    
+  }//end ngOnInit
+
+  private deleteHandler(): void {
+    this.childExists = false;
   }
 
 }

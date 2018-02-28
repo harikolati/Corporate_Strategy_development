@@ -1,0 +1,20 @@
+.save-icon
+{
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: -85px;
+
+
+}
+.save-btn{
+    border:none;
+    background: transparent;
+}
+.save-btn span{
+    font-size: 30px;
+    cursor: pointer;
+}
+.cui .panel--dkblue > h6{
+    text-align: center !important;
+}

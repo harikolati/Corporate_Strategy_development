@@ -27,5 +27,6 @@ left: 0;
   }
   .footer ul{
     margin-bottom:0;
+    list-style-type:none;
   }
   

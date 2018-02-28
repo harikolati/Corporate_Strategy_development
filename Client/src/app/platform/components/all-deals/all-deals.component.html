@@ -1,5 +1,6 @@
+
+<app-announcement *ngIf="childExists" (pleaseDeleteMeEvent)="deleteHandler()"></app-announcement>
 <h3>{{errorMsg}}</h3>
-<app-announcement></app-announcement>
 <!-- Active Deals -->
 <div class="container">
     <div class="panel-group" style="width: 125%">

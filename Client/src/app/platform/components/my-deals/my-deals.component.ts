@@ -37,6 +37,7 @@ export class MyDealsComponent implements OnInit {
   public errorMsg;
   public showCompletedDealsFlg:boolean;
   public isClassVisible: boolean;
+  childExists: boolean = true;
   
   constructor(private _dealService: DealService) { 
     this.showCompletedDealsFlg = true; 
@@ -86,5 +87,9 @@ export class MyDealsComponent implements OnInit {
     this.isClassVisible = flagVal;  
   }//end func
   
+  
+  private deleteHandler(): void {
+    this.childExists = false;
+  }
  
 }

@@ -1,0 +1,16 @@
+/* CSS so that flex works with router-outlet */
+.cui app-dip-view{
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+}
+
+.content{
+    height:100%
+}
+/* This line makes sure the gray background fills the whole content section */
+.span-divider{
+    border-bottom: 5px solid #049fd9;
+    width: 35%;
+    display: inline-block;
+}

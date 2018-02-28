@@ -26,12 +26,14 @@ font-size: 5rem;
   margin-top:0 !important;
 }
 .navPills>li>a{
-  padding: 20px 36px;
+  padding: 20px 25px;
   border-radius: 0;
   color:#049FD9;
   font-weight:bold;
-  border-bottom:1px solid #ccc;
+  border-bottom: #ccc;
+  box-shadow: 0px 24px 4px -24px #ccc;
 }
+
 .side_nav{
   background-color: #fff;
   padding-left:0;padding-right:0;
@@ -58,7 +60,8 @@ font-size: 5rem;
   border-radius: 0;
 
 font-weight: bold;
-border-bottom: 1px solid #ccc;
+border-bottom:  #ccc;
+box-shadow: 0px 24px 4px -24px #ccc;;
 position: relative;
 display: block;
 }

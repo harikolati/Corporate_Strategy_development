@@ -1,0 +1,90 @@
+<div class="container container-wrapper">
+	<div class="row justify-content-center">
+		<div class="col-7 panel panel--raised">
+			<div class="row justify-content-center">
+				<div class="col-8">
+					
+					<div class="row justify-content-center">
+						<div class="col-6 text-center dip-margin-top-bottom">
+							<h3>Upload</h3>
+							<span class="span-divider"></span>
+						</div>
+						<div class="col-12 dip-margin-top-bottom">
+							<div class="row">
+								<div class="col-12">
+									<div class="form-group">
+										<div class="form-group__text">
+											<input id="text1" type="text">
+											<label for="text1">Transaction Name</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-12 dip-margin-top-bottom">
+							<div class="row">
+								<div class="col-8 custom-select-css">
+									<cui-select [items]="items" label=" " [(ngModel)]="selectedTemplate"
+									            (ngModelChange)="onTemplateTypeSelection($event)" optionsKey="name"
+									            optionsValue="value"></cui-select>
+								</div>
+								<div class="col-4">
+								<span class="label float-right label--circle label--blue label--large label--success">
+									<span class="icon-download" (click)="downloadTemplate()"></span>
+								</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 dip-margin-top-bottom">
+							
+							<div class="row">
+								<div class="col-9">
+									<div class="form-group">
+										<div class="form-group__text disabled-input">
+											<input #fileUploadInput id="fileUpload" [(ngModel)]="selectedFileName"
+											       type="text">
+											<label for="fileUpload">Upload File</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-3">
+									<button class="btn float-right btn--small browse-button" (click)="browseFiles()">Browse</button>
+									<input type="file" id="fileInput" style="display:none" name="fileUploadExcelDomTagg"
+									       accept=".xlsx" size="20" (change)="fileSelected($event)"
+									       class="btn-default pull-left">
+								</div>
+							</div>
+						
+						</div>
+						<div class="col-12 col-md-12 dip-margin-top-bottom">
+							<div class="row">
+								<div class="col-12 col-sm-12 col-md-6">
+									<button [disabled]="!selectedTemplate"
+									        class="btn float-md-left btn--primary btn--default"
+											(click)="defineFields()">Define Fields
+									</button>
+								</div>
+								<div class="col-12 col-sm-12 col-md-6">
+									<button class="btn float-md-right btn--success btn--default">Submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<app-define-fields-modal></app-define-fields-modal>
+
+
+
+
+
+
+
+

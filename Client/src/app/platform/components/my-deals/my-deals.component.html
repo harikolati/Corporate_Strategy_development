@@ -1,6 +1,13 @@
-<app-announcement></app-announcement>
+<app-announcement *ngIf="childExists" (pleaseDeleteMeEvent)="deleteHandler()"></app-announcement>
 <h3>{{errorMsg}}</h3>
 <!-- Active Deals -->
+
+<div class="col-md-6 panel-group panel-group--compressed">
+        <div class="panel panel--dkblue">
+            <h6>ACTIVE DEALS</h6>
+        </div>
+</div>
+
 
 <div class="container">
     <div class="panel-group" >

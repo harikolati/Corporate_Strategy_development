@@ -1,0 +1,74 @@
+.button-margin{
+  margin:5px;
+}
+
+.container-wrapper{
+  margin-top:20px;
+}
+.myTable td:nth-child(1) {
+  width:300px;
+  color:blue;
+}
+:host /deep/ .ui-datatable .ui-datatable-thead > tr > th{
+  background-color: #dddddd;
+}
+:host /deep/ tr > td, tr > th{
+  border: 1px solid #dfdfdf !important;
+}
+
+:host /deep/ .ui-widget-content {
+  height:34px;
+}
+
+:host /deep/ .ui-datatable{
+  border-bottom:1px solid #dfdfdf !important;
+}
+
+:host /deep/  .ui-state-default {
+  border: 1px solid #dfdfdf00  !important;
+  background: white;
+  color: black ;
+}
+
+:host /deep/ .ui-datatable .ui-datatable-data>tr>td{
+  //padding: 10px 20px !important;
+  //font-size: 1.4em;
+  font-size:0.85em;
+}
+
+:host /deep/ .ui-state-highlight {
+  border: 1px solid #049fd9;
+  background: rgba(4,159,217,.2);
+  color: #222222;
+}
+
+:host /deep/ tr.ui-state-highlight>td:first-child {
+  border-left: 4px solid #049fd9 !important;
+}
+
+:host /deep/ tr.ui-state-highlight>td {
+  border-top-color: #049fd9 !important;
+  border-bottom-color: #049fd9 !important;
+}
+
+:host /deep/ .ui-datatable .ui-datatable-thead>tr>th{
+  //padding: 10px 20px !important;
+  //font-size: 1.4em;
+  font-size:0.85em;
+}
+
+:host /deep/ .ui-widget-header{
+  background:white;
+}
+
+:host /deep/ .ui-inputtext:focus {
+  box-shadow: none !important;
+}
+
+:host /deep/ .ui-chkbox-box{
+  border: 1px solid #dfdfdf !important;
+}
+
+:host /deep/ .ui-widget{
+  font-family: "CiscoSans", "Arial", sans-serif;
+}

@@ -1,0 +1,48 @@
+<div #moduleTable class="col-12">
+  <p-dataTable [value]="moduleData" [editable]="true" [(selection)]="selectedModules" (onEditComplete) = "onEditComplete($event)" scrollable="true" showHeaderCheckbox="false" scrollHeight="400px">
+    <p-column [style]="{'width':'50px'}" header="#">
+      <ng-template let-col let-module="rowData" let-i="rowIndex" pTemplate="body">
+        <span>{{i + 1}}</span>
+      </ng-template>
+    </p-column>
+    <p-column field="module_name" header="Module Name" [editable]="true">
+      <ng-template let-col let-module="rowData" pTemplate="body">
+        <span [id]="module.rowId?.toString() + 'module'">{{module.module_name.toUpperCase()}}</span>
+      </ng-template>
+    </p-column>
+    <!--<p-column field="last_updated_by" header="Last Updated By" [style]="{'width':'170px'}"></p-column>
+	<p-column field="last_updated_on" header="Last Updated On" [style]="{'width':'250px'}"></p-column>-->
+    <!--<p-column header="Action" [style]="{'width':'70px'}">
+	  <ng-template let-col let-module="rowData" pTemplate="body">
+		<button  class="btn btn&#45;&#45;icon btn&#45;&#45;primary-ghost" (click)="deleteSelectedModule(module)">
+		  <span class="icon-trash"></span>
+		</button>
+	  </ng-template>
+	</p-column>-->
+    <p-column header="Active" [style]="{'width':'50px'}">
+      <ng-template let-col let-status="rowData" pTemplate="body">
+        <p-checkbox [(ngModel)]="status.active_flag" binary="true" (onChange)="statusChanged(status, $event)"></p-checkbox>
+      </ng-template>
+    </p-column>
+    <p-column [style]="{'width':'50px'}" header="Cancel" *ngIf="newlyAddedOrUpdatedModules.length">
+      <ng-template pTemplate="body" let-col let-module="rowData">
+        <span class="icon-trash" (click)="deleteSelectedModule(module)" *ngIf="module.newlyAdded"></span>
+      </ng-template>
+    </p-column>
+    <p-column [style]="{'width':'50px'}">
+      <ng-template pTemplate="body" let-col let-module="rowData">
+        <span class="icon-info-circle" [pTooltip]="'Last updated by ' + module.last_updated_by + ' on ' + module.last_updated_on"></span>
+      </ng-template>
+    </p-column>
+  </p-dataTable>
+</div>
+<div class="col-12">
+  <div class="row justify-content-start" style="padding:15px">
+    <!--<button class="btn btn&#45;&#45;negative btn&#45;&#45;small" [ngClass]="{'disabled':!selectedModules.length}" (click)="deleteSelectedModule()">Delete Selected</button>-->
+    <button title="Add Module" class="btn btn--icon btn--primary" (click)="addNewModule()"><span class="icon-add"></span></button>
+    <button title="Save Modules" class="btn btn--icon btn--save" [ngClass]="{'disabled':!newlyAddedOrUpdatedModules.length}" (click)="saveModules()"><span class="icon-save"></span></button>
+  </div>
+</div>
+<div class="col-12">
+  <cui-alert [(options)]="alertOptions"></cui-alert>
+</div>

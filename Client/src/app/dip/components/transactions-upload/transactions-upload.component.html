@@ -1,0 +1,47 @@
+<!--
+
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
+                 opened="true"
+                 (open)="openOrClose()"
+                 (close)="openOrClose()">
+      
+      <div>
+        <div *ngFor="let nav of fillerNav">
+	        <div class="col-md-12 transaction-card">
+		        <div class="col-md-6 card-info">
+			        <p class="col-md-12 title-transaction">Logo</p>
+			        <span class="col-md-12">Logo</span>
+		        </div>
+		        <div class="col-md-6 card-info">
+			        <p class="col-md-12 title-transaction">Transaction Name</p>
+			        <span class="col-md-12">Transaction 1
+			        </span>
+		        </div>
+		        <div class="col-md-6 card-info">
+			        <p class="col-md-12 title-transaction">Transaction Type</p>
+			        <span class="col-md-12">Type 1
+			        </span>
+		        </div>
+	        </div>
+        </div>
+      </div>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+      <div class="toggle" (click)="snav.toggle()"><i class="fas icon-sidenav-open-close" [ngClass]="{'fa-angle-right':navOpened, 'fa-angle-left':!navOpened}"></i></div>
+      <div style ="padding:35px">
+	      <mat-toolbar>Viptela</mat-toolbar>
+      </div>
+      
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+
+-->

@@ -49,18 +49,18 @@ spec:
           securityContext:
             capabilities: {}
             privileged: false
-          #readinessProbe:
-          #  httpGet:
-          #    path: "/"
-          #    port: 8080
-          #  initialDelaySeconds: 15
-          #  timeoutSeconds: 1
-          #livenessProbe:
-          #  exec:
-          #    command:
-          #      - "/bin/true"
-          #  initialDelaySeconds: 15
-          #  timeoutSeconds: 1
+          readinessProbe:
+           httpGet:
+             path: "/favicon.png"
+             port: 8080
+           initialDelaySeconds: 15
+           timeoutSeconds: 1
+          livenessProbe:
+           httpGet:
+             path: "/favicon.png"
+             port: 8080
+           initialDelaySeconds: 15
+           timeoutSeconds: 1
       volumes:
         -
           name: podinfo

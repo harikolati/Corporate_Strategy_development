@@ -1,0 +1,24 @@
+<!--<div class="sub-tabs sub-tab-bar">
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" *ngFor="let tab of individualTab" routerLinkActive="active"><a [routerLink]='tab.url'
+		                                                                                       [queryParams]="tab.param"
+		                                                                                       role="tab"
+		                                                                                       aria-controls="overview"
+		                                                                                       routerLinkActive="active">{{tab.label}}</a>
+		</li>
+	</ul>
+</div>-->
+
+<div class="secondary-tabs">
+	<ul class="tabs">
+		<li class="tab" *ngFor="let tab of individualTab" routerLinkActive="active">
+			<a [routerLink]='tab.url'
+			   [queryParams]="tab.param"
+			   role="tab"
+			   aria-controls="overview"
+			   routerLinkActive="active">
+				<div class="tab__heading" title="{{tab.title}}">{{tab.label}}</div>
+			</a>
+		</li>
+	</ul>
+</div>

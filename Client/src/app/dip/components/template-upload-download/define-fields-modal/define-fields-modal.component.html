@@ -1,0 +1,44 @@
+<div [ngClass]="{'hide':!modalBackdrop}" class="modal-backdrop"></div>
+<div #modal class="modal modal--animated"  id="modal-login">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__header">
+        <h1 class="modal__title">Define Flex Fields</h1>
+        <span class="span-divider"></span>
+        <p class="p-text-style">Rename each flex field used in case</p>
+      </div>
+      <div class="modal__body">
+        <form>
+          <div class="form-group">
+            <div class="form-group__text">
+              <input type="text" required>
+              <label>dip_flex_1</label>
+              <div class="required-block">
+                <span class="icon-asterisk"></span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group__text">
+              <input type="password" required>
+              <label>dip_flex_2</label>
+              <div class="required-block">
+                <span class="icon-asterisk"></span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal__footer">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <button class="btn btn--small btn--default" (click)="closeModal()">Close</button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn--small btn--success">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

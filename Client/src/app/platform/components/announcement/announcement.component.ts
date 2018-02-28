@@ -1,5 +1,5 @@
 import { Component, OnInit , Inject} from '@angular/core';
-
+import { Output, EventEmitter} from '@angular/core';
 @Component({
   selector: 'app-announcement',
   templateUrl: './announcement.component.html',
@@ -7,7 +7,8 @@ import { Component, OnInit , Inject} from '@angular/core';
 })
 export class AnnouncementComponent implements OnInit {
 
-  public newsfeed=[];
+  public newsfeed;
+  @Output() pleaseDeleteMeEvent = new EventEmitter();
   constructor(@Inject('Configuration') private Config) { }
 
   ngOnInit():void {
@@ -17,5 +18,7 @@ news()
 {
   this.newsfeed=this.Config;
 }
+destroy() : void{
+  this.pleaseDeleteMeEvent.emit();
 }
-
+}

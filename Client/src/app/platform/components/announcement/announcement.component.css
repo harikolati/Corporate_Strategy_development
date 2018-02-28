@@ -1,35 +1,16 @@
-a.link{
+ a.link{
     color:white;
 }
 a:hover{
     color: #2d5895;
 }
-
-.marquee {
-    height: 25px;
-    width: 420px;
-  
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .marquee p {
+a .icon-close{
+    margin-left: 102rem;
+    color:white;
+}
+.newsfeed{ 
     display: block;
-    width: 200%;
-    height: 30px;
-  
-    position: absolute;
-    overflow: hidden;
-  
-    animation: marquee 5s linear infinite;
-  }
-  
-  .marquee span {
-    float: left;
-    width: 50%;
-  }
-  
-  @keyframes marquee {
-    0% { left: 0; }
-    100% { left: -100%; }
-  }
+    word-break: break-all;
+    width: 100%;
+    padding: 9px 0px 8px 0px;
+}

@@ -9,7 +9,7 @@ import { Deal } from '../services/Deal';
 export class DealComponent implements OnInit {
 
   @Input('dealData')
-  private deal : Deal;
+  public deal : Deal;
   btnDNAText: string='View Deal DNA';
   btnDetailsText: string='View Deal Details';
   

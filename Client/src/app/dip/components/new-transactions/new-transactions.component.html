@@ -1,0 +1,162 @@
+
+<div class="panel">
+  <div class="panel panel--dkblue">
+    <h6 style="text-align: center">New Transaction</h6>
+  </div>
+  <div class="container">
+   
+    
+      <form class="row col-15" [formGroup]="transactionForm" (ngSubmit)="submitForm(transactionForm.value)">
+        <div class="row col-11">
+          <div class="col-4">
+            <div>
+              <div class="form-group form-group--helper">
+                <div class="form-group__text">
+                  <input id="trans_name" formControlName="transName" type="text">
+                  <label for="trans_name">Transaction Name</label>
+                  <div class="required-block">
+                    <span class="icon-asterisk" title="This is a required field"></span>
+                  </div>
+                </div>
+                <div class="help-block text-danger" *ngIf="transactionForm.controls['transName'].hasError('required') && transactionForm.controls['transName'].touched">
+                  <span class="icon-error"></span>
+                  <span>Please Enter Transaction Name</span>
+                </div>
+              </div>
+              <div class="form-group form-group--helper">
+                <div class="form-group__text">
+                  <input id="trans_code" formControlName="transCode" type="text">
+                  <label for="trans_code">Transaction Code</label>
+                  <div class="required-block">
+                    <span class="icon-asterisk" title="This is a required field"></span>
+                  </div>
+                </div>
+                <div class="help-block text-danger" *ngIf="transactionForm.controls['transCode'].hasError('required') && transactionForm.controls['transCode'].touched">
+                  <span class="icon-error"></span>
+                  <span>Please Enter Transactions Code</span>
+                </div>
+              </div>
+              <div class="form-group form-group--helper">
+                <div class="form-group__text select">
+                  <select name="trans_type" formControlName="transType">
+                    <option value="0" selected>Select an Option</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                  </select>
+                  <label for="trans_type">Transaction Type</label>
+                  <div class="required-block">
+                    <span class="icon-asterisk" title="This is a required field"></span>
+                  </div>
+                </div>
+                <div class="help-block text-danger" *ngIf="transactionForm.controls['transType'].hasError('required') && transactionForm.controls['transType'].touched">
+                  <span class="icon-error"></span>
+                  <span>Please Enter Transaction Type</span>
+                </div>
+              </div>
+              <div class="form-group form-group--helper">
+                <div class="form-group__text">
+                  <input id="public_announce" type="text"formControlName="publicAnnounce"  required>
+                  <label for="public_announce">Public Announce</label>
+                  <div class="required-block">
+                    <span class="icon-asterisk" title="This is a required field"></span>
+                  </div>
+                </div>
+                <div class="help-block text-danger" *ngIf="transactionForm.controls['publicAnnounce'].hasError('required') && transactionForm.controls['publicAnnounce'].touched">
+                  <span class="icon-error"></span>
+                  <span>Please Select Public Announce</span>
+                </div>
+              </div>
+              <div class="form-group form-group--helper">
+                <div class="form-group__text select">
+                  <select name="select2" formControlName="segment">
+                    <option value="0" selected>Select an Option</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                  </select>
+                  <label for="select2">Segment</label>
+                  <div class="required-block">
+                    <span class="icon-asterisk" title="This is a required field"></span>
+                  </div>
+                </div>
+                <div class="help-block text-danger" *ngIf="transactionForm.controls['segment'].hasError('required') && transactionForm.controls['segment'].touched">
+                  <span class="icon-error"></span>
+                  <span>Please Select Segment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+              <div class="form-group__text">
+                <input id="address1" type="text" formControlName="address1">
+                <label for="address1">Address 1</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-group__text">
+                <input id="address2" type="text" formControlName="address2">
+                <label for="address2">Address 2</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-group__text">
+                <input id="address3" type="text" formControlName="address3">
+                <label for="address3">Address 3</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-group__text">
+                <input id="city" type="text" formControlName="city">
+                <label for="city">City</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-group__text">
+                <input id="county" type="text" formControlName="county">
+                <label for="county">County</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+              <div class="form-group__text">
+                <input id="state" type="text" formControlName="state">
+                <label for="state">State</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-group__text">
+                <input id="country" type="text" formControlName="country">
+                <label for="country">Country</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-group__text">
+                <input id="pin_code" type="text" formControlName="pincode">
+                <label for="pin_code">ZIP</label>
+              </div>
+            </div>
+            <div class="form-group form-group--helper">
+              <div class="form-group__text">
+                <input id="contact" type="text" formControlName="primaryContact">
+                <label for="contact">Primary Contact</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-group__text">
+                <input id="created_on" type="text" formControlName="createdOn">
+                <label for="created_on">Created On</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1">
+          <button type="submit" class="save-btn"><span class="icon-save"></span></button>
+        </div>
+      </form>
+    </div>
+</div>
+  
+

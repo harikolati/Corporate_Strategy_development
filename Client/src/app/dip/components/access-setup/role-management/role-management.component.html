@@ -1,0 +1,69 @@
+<div class=" container-wrapper">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <div class="col-12">
+       
+        <p-dataTable [value]="accessData"  scrollable="true" showHeaderCheckbox="false" scrollHeight="400px" [editable]="true">
+          <p-column [style]="{'width':'50px'}" header="#">
+            <ng-template let-col let-access="rowData" pTemplate="body">
+              <span >{{access.rowId + 1}}</span>
+            </ng-template>
+          </p-column>
+          <p-column field="user_id" header="User ID" [editable]="true">
+            <ng-template let-col let-access="rowData" pTemplate="body">
+              <span [ngClass]="{'disabled-class':access.module_name && access.role_name && access.acquisition_name && access.user_id }" [id]="access.rowId?.toString() + 'access'">{{access.user_id}}</span>
+            </ng-template>
+            <ng-template let-col let-access="rowData" pTemplate="editor">
+              <input [value]="access.user_id" class="no-border" *ngIf ="!(access.user_id && access.module_name && access.role_name && access.acquisition_name)" (blur)="onEditComplete($event.target.value, access.module_name , access.role_name, access.acquisition_name, access.rowId)">
+              <span *ngIf ="(access.user_id && access.module_name && access.role_name && access.acquisition_name)" >{{access.user_id}}</span>
+            </ng-template>
+          </p-column>
+          <p-column field="role_name" header="Role Name" [editable]="true">
+            <ng-template let-col let-role="rowData" pTemplate="editor">
+              <select *ngIf ="!(role.user_id && role.module_name && role.role_name && role.acquisition_name)" [(ngModel)]="role.role_name" (ngModelChange)="onEditComplete(role.user_id, role.module_name, $event, role.acquisition_name, role.rowId)" name="select1" class="custom-select">
+                <option [value]="role.role_name" *ngFor="let role of roleData">{{role.role_name}}</option>
+              </select>
+              <span *ngIf="role.user_id && role.module_name && role.role_name && role.acquisition_name">{{role.role_name}}</span>
+            </ng-template>
+          </p-column>
+          <p-column field="module_name" header="Module Name" [editable]="true">
+            <ng-template let-col let-module="rowData" pTemplate="editor">
+              <select *ngIf ="!(module.role_name?.toLowerCase() == 'super user' || (module.user_id && module.module_name && module.role_name && module.acquisition_name))" [(ngModel)]="module.module_name" (ngModelChange)="onEditComplete(module.user_id, $event, module.role_name, module.acquisition_name, module.rowId)" name="select1" class="custom-select">
+                <option [value]="module.module_name" *ngFor="let module of moduleData">{{module.module_name}}</option>
+              </select>
+              <span *ngIf="(module.role_name?.toLowerCase() == 'super user' || (module.user_id && module.module_name && module.role_name && module.acquisition_name))" >{{module.module_name}}</span>
+            </ng-template>
+          </p-column>
+          <p-column field="acquisition_name" header="Company Name" [editable]="true">
+            <ng-template let-col let-company="rowData" pTemplate="editor">
+              <select *ngIf="!(company.role_name?.toLowerCase() == 'super user' || (company.user_id && company.module_name && company.role_name && company.acquisition_name))" [(ngModel)]="company.acquisition_name" name="select1" class="custom-select" (ngModelChange)="onEditComplete(company.user_id, company.module_name, company.role_name, $event, company.rowId)">
+                <option [value]="company.acquisition_name" *ngFor="let company of companyData">{{company.acquisition_name}}</option>
+              </select>
+              <span *ngIf="company.role_name?.toLowerCase() == 'super user' || (company.user_id && company.module_name && company.role_name && company.acquisition_name)">{{company.acquisition_name}}</span>
+            </ng-template>
+          </p-column>
+          <p-column field="status" [style]="{'width':'100px'}" header="Status">
+            <ng-template let-col let-status="rowData" pTemplate="body">
+              
+              <p-checkbox [(ngModel)]="status.active_flag" binary="true" (onChange)="statusChanged(status, $event)"></p-checkbox>
+            </ng-template>
+          </p-column>
+        </p-dataTable>
+      </div>
+      <div class="col-12">
+        <div class="row justify-content-start" style="padding:15px">
+          <button title="Add user access" class="btn btn--icon btn--primary" (click)="addUserAccess()"><span class="icon-add"></span></button>
+          <button title="Save Changes" class="btn btn--icon btn--save" [ngClass]="{'disabled':!newlyAddedOrUpdatedAccessData.length}" (click)="saveUserAccess()"><span class="icon-save"></span></button>
+        </div>
+      </div>
+      <div class="col-12">
+        <cui-alert [(options)]="alertOptions"></cui-alert>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--
+<app-static-modal></app-static-modal>
+-->

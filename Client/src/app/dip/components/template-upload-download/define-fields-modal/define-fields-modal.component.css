@@ -1,0 +1,17 @@
+:host /deep/ .modal__body{
+    max-height:250px;
+}
+
+:host /deep/ .modal__title {
+    font-size: 2rem !important;
+    font-weight: 500 !important;
+}
+
+.p-text-style{
+    font-style: italic;
+    font-size: smaller;
+}
+
+:host /deep/ .modal .modal__dialog {
+    max-width: 500px !important;
+}

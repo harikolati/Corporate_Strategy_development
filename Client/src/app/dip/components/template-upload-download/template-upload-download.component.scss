@@ -1,0 +1,50 @@
+.col-xs-3{
+  padding-left: 0px;
+}
+.cui .form-group__text input ~ label, .cui .form-group__text select ~ label, .cui .form-group__text textarea ~ label, .cui .form-group__text.select input ~ label, .cui .form-group__text.select select ~ label, .cui .form-group__text.select textarea ~ label{
+  font-style: normal;
+}
+.icon-download{
+  cursor: pointer;
+}
+
+.blue-accent-divider{
+  border-top: 5px solid #049fd9;
+  width: 50%;
+  margin-top: 5px;
+}
+
+:host /deep/ .panel {
+  margin:10px !important;
+}
+
+:host /deep/ .custom-select-css  .form-group{
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+}
+
+:host /deep/ .custom-select-css .cui-select-dropdown{
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+:host /deep/ .custom-select-css input ~ label::after{
+  background: transparent;
+}
+
+.browse-button{
+  //margin-top:0.8em;
+  //margin-left: -1.8em;
+  min-width:0px;
+}
+
+.dip-margin-top-bottom {
+  margin-top:0.7em;
+  margin-bottom:0.7em;
+}
+
+
+
+.disabled-input{
+  pointer-events: none;
+}

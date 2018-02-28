@@ -4,22 +4,22 @@
     </div>
       <div class="navbar" style="margin-top: 24pt;">
           <ul class="nav nav-pills nav-stacked navPills">
-              <li [routerLinkActive]="['active']"><a [routerLink] = "['/MyDeals']">My Deals</a></li>
-              <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllDeals']">All Deals</a></li>
-              <li [routerLinkActive]="['active']"><a [routerLink] = "['/Methodology']">Methodology</a></li>
-              <li [routerLinkActive]="['active']"><a [routerLink] = "['/LearningandDevelopment']">Learning & Development</a></li>
-              <li [routerLinkActive]="['active']"><a [routerLink] = "['/Initiatives']">Initiatives</a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/MyDeals']">MY DEALS</a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllDeals']">ALL DEALS</a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/Methodology']">METHODOLOGY</a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/LearningandDevelopment']">LEARNING & DEVELOPMENT</a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/Initiatives']">INITIATIVES</a></li>
               <li [routerLinkActive]="['active']" (click)="toggleDropDown()">
                <div> <a [routerLink] = "['/QuickTools']">
-                    <div *ngIf="toggleright;else toggledown">Quick Tools<span class="icon-chevron-right icon-small"></span></div>
-                    <ng-template #toggledown>Quick Tools<span class="icon-chevron-down icon-small"></span></ng-template></a>
+                    <div *ngIf="toggleright;else toggledown">QUICK TOOLS<span class="icon-chevron-right icon-small"></span></div>
+                    <ng-template #toggledown>QUICK TOOLS<span class="icon-chevron-down icon-small"></span></ng-template></a>
                     <div class="navItem"  *ngIf="showDropDown">
                       <a class="item" (click)="toggleDropDown()" [routerLink] = "['/dip']">DIP</a>
                         
                     </div></div>
                 
               </li>
-              <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllTools']">All Tools</a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllTools']">ALL TOOLS</a></li>
           </ul>      
         </div>
 </div>
