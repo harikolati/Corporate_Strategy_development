@@ -8,28 +8,28 @@
     <ul>
         
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/MyDeals']">MY DEALS</a></li>
-        <div class="dropdown-divider"></div>
+        
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/AllDeals']">ALL DEALS</a></li>
-        <div class="dropdown-divider"></div>
+        
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/Methodology']">METHODOLOGY</a></li>
-        <div class="dropdown-divider"></div>
+        
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/LearningandDevelopment']">LEARNING & DEVELOPMENT</a></li>
-        <div class="dropdown-divider"></div>
+        
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/Initiatives']">INITIATIVES</a></li>
-        <div class="dropdown-divider"></div>
+        
         <li class="sidebar__item" (click)="toggleDropDown()">
-          <a [routerLinkActive]="['active']" [routerLink] = "['/QuickTools']">
-              <div *ngIf="toggleright;else toggledown">QUICK TOOLS<span class="icon-chevron-right icon-small"></span></div>
-              <ng-template #toggledown>QUICK TOOLS<span class="icon-chevron-down icon-small"></span></ng-template></a>
-              <div class="navItem"  *ngIf="showDropDown">
-                <a class="item" (click)="toggleDropDown()" [routerLinkActive]="['active']" [routerLink] = "['/dip']">DIP</a>
-                  
-              </div>
+          <div> <a [routerLink] = "['/QuickTools']">
+            <div *ngIf="toggleright;else toggledown">QUICK TOOLS<span class="icon-chevron-right icon-small"></span></div>
+            <ng-template #toggledown>QUICK TOOLS<span class="icon-chevron-down icon-small"></span></ng-template></a>
+            <div class="navItem"  *ngIf="showDropDown">
+              <a class="item" (click)="toggleDropDown()" [routerLink] = "['/dip']">DIP</a>
+                
+            </div></div>
           
         </li>
-        <div class="dropdown-divider"></div>
+        
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/AllTools']">ALL TOOLS</a></li>
-        <div class="dropdown-divider"></div>
+        
     </ul>
   </div>
 
@@ -39,7 +39,8 @@
       <!-- begin: body component-->
       <router-outlet></router-outlet>
       <!-- end: body component-->
-      <app-footer></app-footer>
+    
     </div>
+    <app-footer></app-footer>
   </main>
 </div>
