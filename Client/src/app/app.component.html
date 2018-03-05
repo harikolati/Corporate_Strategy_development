@@ -8,15 +8,15 @@
     <ul>
         
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/MyDeals']">MY DEALS</a></li>
-        
+        <div class="dropdown-divider"></div>
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/AllDeals']">ALL DEALS</a></li>
-        
+        <div class="dropdown-divider"></div>
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/Methodology']">METHODOLOGY</a></li>
-        
+        <div class="dropdown-divider"></div>
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/LearningandDevelopment']">LEARNING & DEVELOPMENT</a></li>
-        
+        <div class="dropdown-divider"></div>
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/Initiatives']">INITIATIVES</a></li>
-        
+        <div class="dropdown-divider"></div>
         <li class="sidebar__item" (click)="toggleDropDown()">
           <div> <a [routerLink] = "['/QuickTools']">
             <div *ngIf="toggleright;else toggledown">QUICK TOOLS<span class="icon-chevron-right icon-small"></span></div>
@@ -27,9 +27,9 @@
             </div></div>
           
         </li>
-        
+        <div class="dropdown-divider"></div>
         <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/AllTools']">ALL TOOLS</a></li>
-        
+        <div class="dropdown-divider"></div>
     </ul>
   </div>
 
