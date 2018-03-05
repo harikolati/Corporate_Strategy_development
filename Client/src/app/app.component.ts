@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  
+  showDropDown=false;
+  toggleright=true;
+  toggleDropDown(){
+    this.showDropDown=!this.showDropDown;
+    this.toggleright=!this.toggleright;
+  }
+  toolClick(){
+    this.showDropDown=true;
+  }
+
 }

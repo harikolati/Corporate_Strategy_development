@@ -10,13 +10,13 @@
               <li [routerLinkActive]="['active']"><a [routerLink] = "['/LearningandDevelopment']">LEARNING & DEVELOPMENT</a></li>
               <li [routerLinkActive]="['active']"><a [routerLink] = "['/Initiatives']">INITIATIVES</a></li>
               <li [routerLinkActive]="['active']" (click)="toggleDropDown()">
-               <div> <a [routerLink] = "['/QuickTools']">
+                <a [routerLink] = "['/QuickTools']">
                     <div *ngIf="toggleright;else toggledown">QUICK TOOLS<span class="icon-chevron-right icon-small"></span></div>
                     <ng-template #toggledown>QUICK TOOLS<span class="icon-chevron-down icon-small"></span></ng-template></a>
                     <div class="navItem"  *ngIf="showDropDown">
                       <a class="item" (click)="toggleDropDown()" [routerLink] = "['/dip']">DIP</a>
                         
-                    </div></div>
+                    </div>
                 
               </li>
               <li [routerLinkActive]="['active']"><a [routerLink] = "['/AllTools']">ALL TOOLS</a></li>

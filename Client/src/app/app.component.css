@@ -1,9 +1,42 @@
-.container-fluid{
-    height:auto !important; /* real browsers */
-    height:100%; /* IE6: treaded as min-height*/
+.sidebar__header {
+    padding: 10px;
+    text-align: center;
+    width: 220px;
+}
+.sidebar{
+    background-color: white;
+    width: 230px;
+    
+}
+.content-fluid .sidebar ~ main {
+    margin-left: 230px;
+}
+.custom-hdr {
+    background-color: #f8f9fa;
 
-    min-height:100%;
-    position: relative;
-    padding-bottom: 100px;
-
+}
+.sidebar li a.active {
+    color: #fff;
+    background-color: #1f97c7;
+    -webkit-box-shadow: 5px 0 0 #fff inset;
+    box-shadow: 5px 0 0 #fff inset;
+}
+.sidebar a {
+    color: #34adde;
+    font-weight: bold;
+    padding: 40px;
+    font-size: 12px;
+}
+.header-bar__logo span.icon-cisco {
+    display: block;
+    color: #049fd9;
+    font-size: 5.5rem;
+    line-height: 1;
+}
+.dropdown-divider {
+    margin: 1px 15px;
+    border-top: 2px solid #d1d9e0;
+}
+main {
+    overflow-x: hidden!important;
 }

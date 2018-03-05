@@ -4,3 +4,8 @@
 .panel-group .panel{
      margin-top: 1em;
    }
+   .panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #2b5592;
+    border-color: #2b5592;
+  }

@@ -1,3 +1,4 @@
+
 <div class="panel panel-default">
     <div class="panel-heading"><span style="color:#047fad"> {{deal.targetCompanyName}}</span>
           <div class="btn-group pull-right">
@@ -27,7 +28,7 @@
                 </div>            
      
   </div>              
-    <div class="panel-body">
+    <div class="panel-body">      
       <div class="row">
         <div *ngIf="deal.dealtypeInfo == 'active';then activeCol"></div>
         <div *ngIf="deal.dealtypeInfo == 'followed';then defaultCol"></div>                 
@@ -63,6 +64,6 @@
               
               </div>
 
-    
+            
   </div>
   </div>

@@ -2,14 +2,8 @@
 <h3>{{errorMsg}}</h3>
 <!-- Active Deals -->
 
-<div class="col-md-6 panel-group panel-group--compressed">
-        <div class="panel panel--dkblue">
-            <h6>ACTIVE DEALS</h6>
-        </div>
-</div>
-
-
-<div class="container">
+<div class="row">
+        <div class="col-md-12">
     <div class="panel-group" >
     <div class="panel panel-primary">
       <div class="panel-heading">
@@ -35,6 +29,7 @@
 
        </div>
       </div>
+
       <div class="text-center">
             <pagination-controls (pageChange)="activeDealsCurrpg = $event" id= "active"></pagination-controls>
      </div>
@@ -103,9 +98,12 @@
                 <div class="row">
                  <div class="toggleactive" *ngIf="InactiveDeals.length">
                          
-                      <a [ngClass]="{'my-class': isClassVisible }" (click)="showCompletedDealsDiv(true)">COMPLETED <span> |</span></a>
+                      <div class="inactive-toggle-text">
+                        <a [ngClass]="{'my-class': isClassVisible }" (click)="showCompletedDealsDiv(true)"> 
+                              COMPLETED </a>
+                              <span class="my-class">|</span>
                       <a [ngClass]="{'my-class': !isClassVisible }"  (click)="showCompletedDealsDiv(false)">ON HOLD</a>
-                
+                   </div>
                     <div *ngIf="showCompletedDealsFlg;then showCompletedTemplate else showOnHoldTemplate"></div>
                     
                       <ng-template #showCompletedTemplate >
@@ -136,5 +134,6 @@
     </div>
   </div>
 
+</div>
 </div>
 </div>
