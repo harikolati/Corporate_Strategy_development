@@ -11,3 +11,9 @@
 .header .page-title {
   margin-left: 10px;
 }
+.btn--small .icon-cog{
+  padding: 0px 5px 0px 25px;
+}
+.btn--small .icon-contact{
+padding: 0px 20px 0px 0px;
+} 
