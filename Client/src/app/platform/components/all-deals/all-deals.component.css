@@ -9,3 +9,10 @@
     background-color: #2b5592;
     border-color: #2b5592;
   }
+  #cspio-headline {
+    font-family: 'Pacifico';
+    font-weight: 400;
+    font-size: 40px;
+    color: hsl(214, 74%, 43%);
+    line-height: 1.00em;
+  }
