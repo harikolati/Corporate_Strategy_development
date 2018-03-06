@@ -2,65 +2,87 @@
     padding: 10px;
     text-align: center;
     width: 220px;
-}
-.sidebar{
+  }
+  
+  .sidebar {
     background-color: white;
-    width: 230px;
-    
-}
-.content-fluid .sidebar ~ main {
-    margin-left: 230px;
-}
-.custom-hdr {
+    width: 260px;
+  }
+  
+  .content-fluid .sidebar~main {
+    margin-left: 260px;
+  }
+  
+  .custom-hdr {
     background-color: #f8f9fa;
-
-}
-.sidebar li a.active {
+  }
+  
+  .sidebar li a.active {
     color: #fff;
     background-color: #1f97c7;
-}
-.sidebar a {
+  }
+  
+  .sidebar li a:hover{
+    box-shadow: 0px 0px 10px -4px #fff inset;
+  }
+  
+  .sidebar a {
     color: #34adde;
     font-weight: bold;
-    padding: 40px;
+    padding: 30px;
     font-size: 12px;
-}
-.header-bar__logo span.icon-cisco {
+  }
+  
+  .header-bar__logo span.icon-cisco {
     display: block;
     color: #049fd9;
     font-size: 5.5rem;
     line-height: 1;
-}
-.dropdown-divider {
-    margin: 1px 15px;
+    padding: 24px;
+  }
+  
+  .dropdown-divider {
+    margin: 0px 7px;
     border-top: 1px solid #ccc;
-}
-main {
-    overflow-x: hidden!important;
-}
-.navItem {
+  }
+  
+  main {
+    overflow-x: hidden !important;
+  }
+  
+  .navItem {
     position: relative;
     color: #049FD9;
     font-weight: bold;
-  } 
-  .navItem a:link{
-    padding: 0px 24px;
   }
-  .sidebar__item > div  {
+  
+  .navItem a:link {
+    padding: 0px 53px;
+    margin: -4px -36px -8px -35px;
+  }
+  
+  .sidebar__item>div {
     padding: 8px 36px;
     border-radius: 0;
-  font-weight: bold;
-  position: relative;
-  display: block;
+    font-weight: bold;
+    position: relative;
+    display: block;
   }
-  .sidebar__item > div > a:hover{
+  
+  .sidebar__item>div>a:hover {
     background-color: initial;
-     color: #049fd9;
+    color: #049fd9;
   }
-  .sidebar__item > div > a{
-      margin-left:-40px;
+  
+  .sidebar__item>div>a {
+    margin-left: -40px;
   }
-  .sidebar .navItem a:hover{
+  
+ /*  .sidebar .navItem a:hover {
     background-color: initial;
-  color: #049fd9;
-  }
+    color: #049fd9;
+  } */
+  .icon-chevron-right , .icon-chevron-down{
+    padding: 0px 0px 0px 20px;
+    font-size: 20px;
+  } 

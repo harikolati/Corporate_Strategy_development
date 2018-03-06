@@ -1,46 +1,47 @@
 <div class="content-fluid">
-  <div class="sidebar">
-    <div class="sidebar__header">
-      <a class="header-bar__logo">
-        <span class="icon-cisco"></span>
-      </a>
-    </div>
-    <ul>
-        
-        <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/MyDeals']">MY DEALS</a></li>
-        <div class="dropdown-divider"></div>
-        <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/AllDeals']">ALL DEALS</a></li>
-        <div class="dropdown-divider"></div>
-        <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/Methodology']">METHODOLOGY</a></li>
-        <div class="dropdown-divider"></div>
-        <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/LearningandDevelopment']">LEARNING & DEVELOPMENT</a></li>
-        <div class="dropdown-divider"></div>
-        <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/Initiatives']">INITIATIVES</a></li>
-        <div class="dropdown-divider"></div>
-        <li class="sidebar__item" (click)="toggleDropDown()">
-          <div> <a [routerLink] = "['/QuickTools']">
-            <div *ngIf="toggleright;else toggledown">QUICK TOOLS<span class="icon-chevron-right icon-small"></span></div>
-            <ng-template #toggledown>QUICK TOOLS<span class="icon-chevron-down icon-small"></span></ng-template></a>
-            <div class="navItem"  *ngIf="showDropDown">
-              <a class="item" (click)="toggleDropDown()" [routerLink] = "['/dip']">DIP</a>
-                
-            </div></div>
+    <div class="sidebar">
+      <div class="sidebar__header">
+        <a class="header-bar__logo">
+          <span class="icon-cisco"></span>
+        </a>
+      </div>
+      <ul>
           
-        </li>
-        <div class="dropdown-divider"></div>
-        <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/AllTools']">ALL TOOLS</a></li>
-        <div class="dropdown-divider"></div>
-    </ul>
-  </div>
-
-  <main>
-    <app-header></app-header>
-    <div class="content">
-      <!-- begin: body component-->
-      <router-outlet></router-outlet>
-      <!-- end: body component-->
-    
+          <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/MyDeals']">MY DEALS</a></li>
+          <div class="dropdown-divider"></div>
+          <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/AllDeals']">ALL DEALS</a></li>
+          <div class="dropdown-divider"></div>
+          <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/Methodology']">METHODOLOGY</a></li>
+          <div class="dropdown-divider"></div>
+          <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/LearningandDevelopment']">LEARNING & DEVELOPMENT</a></li>
+          <div class="dropdown-divider"></div>
+          <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/Initiatives']">INITIATIVES</a></li>
+          <div class="dropdown-divider"></div>
+          <li class="sidebar__item" (click)="toggleDropDown()">
+            <div> <a [routerLink] = "['/QuickTools']">
+              <div *ngIf="toggleright;else toggledown">QUICK TOOLS<span class="icon-chevron-right icon-small"></span></div>
+              <ng-template #toggledown>QUICK TOOLS<span class="icon-chevron-down icon-small"></span></ng-template></a>
+              <div class="navItem"  *ngIf="showDropDown">
+                <a class="item" [routerLinkActive]="['active']" (click)="toggleDropDown()" [routerLink] = "['/dip']">DIP</a>
+                  
+              </div></div>
+            
+          </li>
+          <div class="dropdown-divider"></div>
+          <li class="sidebar__item" ><a [routerLinkActive]="['active']" [routerLink] = "['/AllTools']">ALL TOOLS</a></li>
+          <div class="dropdown-divider"></div>
+      </ul>
     </div>
-    <app-footer></app-footer>
-  </main>
-</div>
+  
+    <main>
+      <app-header></app-header>
+      <div class="content">
+        <!-- begin: body component-->
+        <router-outlet></router-outlet>
+        <!-- end: body component-->
+      
+      </div>
+      <app-footer></app-footer>
+    </main>
+  </div>
+  
