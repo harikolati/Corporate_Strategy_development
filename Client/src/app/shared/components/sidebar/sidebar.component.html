@@ -1,4 +1,4 @@
-<div>
+
   <div class="side--nav">
    <ul class="side--content">
           
@@ -13,15 +13,17 @@
       <li class="side--item" ><a [routerLinkActive]="['active']" [routerLink] = "['/Initiatives']">Initiatives</a></li>
       <div class="dropdown-divider"></div>
       <li class="side--item" (click)="toggleDropDown()">
-        <div  class="toggle-content"> <a [routerLink] = "['/QuickTools']">
-          <div *ngIf="toggleright;else toggledown">Quick Tools<span class="icon-chevron-right icon-small"></span></div>
-          <ng-template #toggledown>Quick Tools<span class="icon-chevron-down icon-small"></span></ng-template></a>
-          <div class="toggle-item"  *ngIf="showDropDown">
-            <a class="item" [routerLinkActive]="['active']" (click)="toggleDropDown()" [routerLink] = "['/dip']">DIP</a>
+          <div  class="toggle-content"> 
+            <div class="togright" *ngIf="toggleright;else toggledown"><a [routerLink] = "['/QuickTools']">Quick Tools<span class="icon-chevron-right icon-small"></span></a></div>
+            <ng-template #toggledown><div class="togdown"><a [routerLink] = "['/QuickTools']">Quick Tools<span class="icon-chevron-down icon-small"></span></a></div>
+              <div class="toggle-item"  *ngIf="showDropDown">
+                  <a class="item" [routerLinkActive]="['active']" (click)="toggleDropDown()" [routerLink] = "['/dip']">DIP</a>
+                </div>
+            </ng-template>
+            
           </div>
-        </div>
-        
-      </li>
+          
+        </li>
       <div class="dropdown-divider"></div>
       <li class="side--item" ><a [routerLinkActive]="['active']" [routerLink] = "['/AllTools']">All Tools</a></li>
       

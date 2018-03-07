@@ -1,7 +1,7 @@
 .side--nav{
   background-color: #FFFFFF;
     width: 177px;
-   
+   height:487px;
 }
 .side--item{
   height: 62px;
@@ -13,8 +13,17 @@
   color:#049FD9;
   
   font-size:16px;
-  padding: 10px;
+  padding: 11px;
   position: absolute;
+}
+
+.side--item a:hover{
+background-color: #64BBE3;
+color:#FFFFFF;
+display: block;
+position: relative;
+height: 62px;
+width: 177px;
 }
 .side--item a.active{
   background-color:#049FD9;
@@ -24,18 +33,47 @@
   height: 62px;
   width: 177px;
 }
-.side--item a:hover{
-background-color: #64BBE3;
-color:#FFFFFF;
-display: block;
-position: relative;
-height: 62px;
-width: 177px;
-}
-.toggle-content a{
-  
+
+.togright a{
+  position: relative;
   font-weight: bold;
   font-size:14px;
+  display: block;
+}
+.togdown a{
+  font-weight: bold;
+  font-size:14px;
+}
+.togright a.active{
+  background-color:#049FD9;
+  color:#FFFFFF;
+  display: block;
+}
+.toggle-item a{
+  font-weight: normal;
+  margin: 28px 0px 0px 0px;
+  
+  height: 35px;
+}
+.togdown a:hover{
+  background-color: initial;
+  color:#049FD9;
+  position: absolute;
+}
+.toggle-item a:hover{
+  background-color: #64BBE3;
+    color: #FFFFFF;
+    display: block;
+    position: absolute;
+    height: 35px;
+}
+.toggle-item a.active{
+  background-color: #049FD9;
+  color: #FFFFFF;
+  display: block;
+  position: absolute;
+  height: 35px;
+  margin: 34px 0px 0px 0px;
 }
 .dropdown-divider {
   margin :0px 0px 0px -20px;
