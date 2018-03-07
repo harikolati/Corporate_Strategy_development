@@ -9,10 +9,24 @@
     background-color: #2b5592;
     border-color: #2b5592;
   }
-  #cspio-headline {
-    font-family: 'Pacifico';
-    font-weight: 400;
-    font-size: 40px;
-    color: hsl(214, 74%, 43%);
-    line-height: 1.00em;
+  .avatar {
+    display: block;
+    border-radius: 25px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    border: 5px solid #FFF;
   }
+  
+  img {
+    height: 250px; 
+    width: 250px
+  }
+  .jive-color{
+    color: #0377A1;
+  }
+   .panel--bordered {
+    border: 2px solid #FFF;
+    border-radius: 25px;
+    
+  }
+  
