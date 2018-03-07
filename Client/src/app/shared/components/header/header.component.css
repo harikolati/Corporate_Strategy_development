@@ -1,19 +1,25 @@
-.header, .btn--small {
-  background-color: #f2f2f2;
+.header-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 56px;
+  height: 110px; }
+.header--compressed .header-bar {
+  height: 60px;
+ }
+.header--compressed .header-bar__logo {
+    margin: 0 20px 0 0;
 }
-.btn--small span {
-  color: #34adde;
-  padding: 5px;
+.header-heading .page-title {
+  font-size: 28px;
+  
 }
-.btn:hover {
-  background-color: #f2f2f2!important;
+/* .header-toolbar{
+  margin:0px -70px 0px 0px;
+} */
+.btn.btn--icon.btn--small > span[class^="icon-"] {
+  font-size: 1.4rem; 
 }
-.header .page-title {
-  margin-left: 10px;
-}
-.btn--small .icon-cog{
-  padding: 0px 5px 0px 25px;
-}
-.btn--small .icon-contact{
-padding: 0px 20px 0px 0px;
-} 
