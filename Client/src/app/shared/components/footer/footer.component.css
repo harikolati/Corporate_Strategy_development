@@ -1,0 +1,9 @@
+.footer.footer--compressed {
+    padding: 10px 0;
+    
+}
+.footer.footer--new .footer__links ul.list li a {
+    color: #626469;
+    font-size: 13px;
+    font-family: "CiscoSansTT";
+}
