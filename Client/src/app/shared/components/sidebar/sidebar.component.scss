@@ -1,16 +1,19 @@
 .side--nav{
   background-color: #FFFFFF;
-    width: 210px;
-   height:487px;
+   height: 100%;
+   width: 200px;
+   position: fixed;
+   overflow-x: hidden;
 }
+
 .side--item{
   height: 62px;
-  width:210px;
+  width:200px;
   margin: 0px 0px 0px -20px;
 }
 .toggle-content{
   height: 75px;
-  width:210px;
+  width:200px;
   margin: 0px 0px 0px -20px;
 }
 .toggle-content a{
@@ -38,7 +41,7 @@ color:#FFFFFF;
 display: block;
 position: relative;
 height: 62px;
-width: 210px;
+width: 200px;
 }
 .side--item a.active{
   background-color:#049FD9;
@@ -46,7 +49,7 @@ width: 210px;
   display: block;
   position: relative;
   height: 62px;
-  width: 210px;
+  width: 200px;
 }
 
 /* .togright a{
@@ -80,7 +83,7 @@ width: 210px;
   display: block;
   position: relative;
   height: 75px;
-  width: 210px;
+  width: 200px;
 }
 .togdown a:hover{
   background-color: initial;
