@@ -1,1 +1,41 @@
+.right{
+    text-align: right;
+    margin: -36px 0px 0px 0px;
+    padding: 0px 15px 0px 0px;
+}
+.header--bar{
+    
+    height: 60px;
+    margin: 10px 0px 0px 0px;
+    padding: 0px 0px 0px 15px;
+}
+.header-bar-main {
+    margin: -28px 0px 0px 86px;
+}
+.icon-alert , .icon-cog{
+    color:#FFFFFF;
+  }
+  .thumb--small {
+    width: 30px;
+    height: 30px;
+  }
+.space{
+    padding:0px 15px 0px 0px;
+}
+.header-bar__logo {
+      
+    width: 61px;
+    height: 32px;
+} 
+.header-bar__logo span.icon-cisco{
+    height:32px;
+  }
+.header-bar-main .page-title {
+    font-size: 28px;
+    font-family: CiscoSans-ExtraLight;
+    color: #626469;
+    
+  }
 
+
+  
