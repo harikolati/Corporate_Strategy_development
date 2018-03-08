@@ -1,5 +1,7 @@
 :host /deep/ .modal__body{
-    max-height:250px;
+    max-height:350px;
+    overflow-y: auto;
+    overflow-x:hidden;
 }
 
 :host /deep/ .modal__title {
@@ -15,3 +17,10 @@
 :host /deep/ .modal .modal__dialog {
     max-width: 500px !important;
 }
+:host /deep/ .modal .modal__content{
+    padding:30px 30px !important;
+}
+:host /deep/ .modal .modal__content .modal__footer{
+    margin-top:20px !important;
+}
+

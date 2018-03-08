@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService } from '../../../platform/components/services/data.service';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import {Router} from '@angular/router';
+import { environment } from '../../../../environments/environment';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -11,9 +15,28 @@ import { Component, OnInit } from '@angular/core';
  */
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public userId;
+  showDropDown=false;
+  constructor(private _dataService : DataService,private router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {    
+    this.getUserId();       
+}//end ng()
 
+getUserId() {
+  this._dataService.getUserId().subscribe(data => {
+      this.userId =  data;
+     
+  })
 }
+onLogout() {
+  //this.router.navigate(['logout'])
+  window.location.href=environment.logoutUrl;
+  
+}
+ DropDown(){
+    this.showDropDown=!this.showDropDown;}
+
+
+ 
+}//end comp

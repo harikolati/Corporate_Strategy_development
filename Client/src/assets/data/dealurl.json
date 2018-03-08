@@ -1,0 +1,9 @@
+[
+    {
+      
+      "activeDealsUrl": "deals/dealRole/active?userName=Hiranmayi%20Thacker",
+      "followedDealsUrl":"deals/dealRole/followed?userName=Hiranmayi%20Thacker",
+      "inactiveDealsUrl":"deals/dealRole/inActive?userName=Hiranmayi%20Thacker",
+      "allDealsUrl":"deals/dealRole/active?userName=Hiranmayi%20Thacker"
+    }
+  ]

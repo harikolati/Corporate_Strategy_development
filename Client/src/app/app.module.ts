@@ -15,6 +15,7 @@ import {
     CuiSpinnerModule
 } from "@cisco-ngx/cui-components";
 import {CheckboxModule, ContextMenuModule, DataTableModule, DropdownModule, TooltipModule} from "primeng/primeng";
+import {TableModule} from 'primeng/table';
 import {AccessSetupComponent} from "./dip/components/access-setup/access-setup.component";
 import {AccessCompanyComponent} from "./dip/components/access-setup/access-company/access-company.component";
 import {AccessModulesComponent} from "./dip/components/access-setup/access-modules/access-modules.component";
@@ -29,14 +30,15 @@ import {HttpClientModule} from "@angular/common/http";
 import { DipViewComponent } from './dip/components/dip-view/dip-view.component';
 import {DipInitializerService} from "./dip/components/dip-shared/dip-initializer.service";
 import {DipResolve} from "./dip/components/dip-shared/dip.resolve";
-import { NewTransactionsComponent } from './dip/components/new-transactions/new-transactions.component';
+import { NewTransactionsComponent } from './dip/components/transactions-upload/new-transactions/new-transactions.component';
 import {ModulesAndRolesComponent
 } from './dip/components/access-setup/modules-and-roles/modules-and-roles.component';
 import { DefineFieldsModalComponent } from './dip/components/template-upload-download/define-fields-modal/define-fields-modal.component';
-
+import { StatusReportComponent } from './dip/components/status-report/status-report.component';
+import { TransactionsDetailsComponent } from './dip/components/transactions-upload/transactions-details/transactions-details.component';
+import { CreateNewTransactionComponent } from './dip/components/transactions-upload/create-new-transaction/create-new-transaction.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-
 import { MyDealsComponent } from './platform/components/my-deals/my-deals.component';
 import { AllDealsComponent } from './platform/components/all-deals/all-deals.component';
 import { MethodologyComponent } from './platform/components/methodology/methodology.component';
@@ -50,8 +52,13 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AnnouncementComponent } from './platform/components/announcement/announcement.component';
 import { Configuration } from '../App.Config';
+import { APP_INITIALIZER } from '@angular/core';
+import { environment } from '../environments/environment';
+import { DataService } from './platform/components/services/data.service';
 
 
+
+import {TransactionsService} from "./dip/components/transactions-upload/transactions.service";
 
 @NgModule({
     declarations: [
@@ -73,6 +80,9 @@ import { Configuration } from '../App.Config';
         NewTransactionsComponent,
         ModulesAndRolesComponent,
         DefineFieldsModalComponent,
+        TransactionsDetailsComponent,
+        StatusReportComponent,
+        CreateNewTransactionComponent,
         MyDealsComponent, AllDealsComponent, MethodologyComponent, LearninganddevelopmentComponent, 
         InitiativesComponent, QuickToolsComponent, AllToolsComponent, AnnouncementComponent,SidebarComponent,DealComponent
     ],
@@ -83,26 +93,28 @@ import { Configuration } from '../App.Config';
         ReactiveFormsModule,
         CommonModule,
         HttpClientModule,
+        HttpModule,
         CuiInputModule,
         CuiAlertModule,
         DataTableModule,
         DropdownModule,
         CheckboxModule,
+        TableModule,
         ContextMenuModule,
         CuiDialogModule,
         CuiSpinnerModule,
         CuiProgressbarModule,
         CuiSelectModule,
         TooltipModule,
-        HttpModule,HttpClientModule,
         NgxPaginationModule
     ],
     providers: [
         TemplateUploadDownloadService,
         DataAccessService,
         DipInitializerService,
+        TransactionsService,
         DipResolve,
-        DealService,{provide : 'Configuration' , useValue: Configuration}
+        DealService,DataService,{provide : 'Configuration' , useValue: Configuration}
     ],
     bootstrap: [AppComponent]
 })

@@ -1,0 +1,50 @@
+<div class="panel">
+ <div class="row">
+  <div class="col-12">
+      <div class="row">
+          <div class="col-2 custom-filter-css">
+              <input id="text" type="text" [(ngModel)]="selectedTemplate"
+                     (ngModelChange)="onTemplateTypeSelection($event)">
+          </div>
+          <div class="col-2 custom-filter-css">
+              <input id="text1" type="text" [(ngModel)]="selectedTemplate"
+                     (ngModelChange)="onTemplateTypeSelection($event)">
+          </div>
+          <div class="col-2 custom-filter-css">
+              <input id="text2" type="text" [(ngModel)]="selectedTemplate"
+                     (ngModelChange)="onTemplateTypeSelection($event)">
+          </div>
+          <div class="col-2 custom-filter-css">
+              <input id="text3" type="text" [(ngModel)]="selectedTemplate"
+                     (ngModelChange)="onTemplateTypeSelection($event)">
+          </div>
+          <div class="col-2 custom-filter-css">
+              <input id="text4" type="text"[(ngModel)]="selectedTemplate"
+                     (ngModelChange)="onTemplateTypeSelection($event)" >
+          </div>
+      </div>
+  </div>
+     <div class="col-12">
+         <div class="row">
+             <div class="col-12">
+                 <p-table [columns]="cols" [value]="car">
+                     <ng-template pTemplate="header" let-columns>
+                         <tr>
+                             <th *ngFor="let col of columns">
+                                 {{col.header}}
+                             </th>
+                         </tr>
+                     </ng-template>
+                     <ng-template pTemplate="body" let-rowData let-columns="columns">
+                         <tr>
+                             <td *ngFor="let col of columns">
+                                 {{rowData[col.field]}}
+                             </td>
+                         </tr>
+                     </ng-template>
+                 </p-table>
+             </div>
+         </div>
+     </div>
+ </div>
+</div>

@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpModule } from '@angular/http';
+import { NO_ERRORS_SCHEMA }          from '@angular/core';
 import { AnnouncementComponent } from './announcement.component';
 import { Configuration } from '../../../../App.Config';
 import { DebugElement } from '@angular/core';
@@ -24,7 +25,7 @@ describe('AnnouncementComponent', () => {
     fixture = TestBed.createComponent(AnnouncementComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    debugElement = fixture.debugElement.query(By.css('b'));
+    debugElement = fixture.debugElement.query(By.css('span'));
     htmlElement= debugElement.nativeElement;
   });
 

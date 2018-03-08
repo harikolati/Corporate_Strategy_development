@@ -47,7 +47,7 @@ export class DataAccessService {
         return this._http.get(_searchUrl, this.dipInitializer.serviceHeaders)
     }
     getAllCompany() {
-        let _searchUrl = globalObject.baseUrl + '/access/getacquisitions?acquisitions=M';
+        let _searchUrl = globalObject.baseUrl + '/acquisitions/getacquisitions?acquisitions=';
         return this._http.get(_searchUrl, this.dipInitializer.serviceHeaders)
     }
     saveUserAccess(data){

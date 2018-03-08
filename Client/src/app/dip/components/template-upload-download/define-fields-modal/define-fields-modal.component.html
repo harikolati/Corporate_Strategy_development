@@ -8,20 +8,11 @@
         <p class="p-text-style">Rename each flex field used in case</p>
       </div>
       <div class="modal__body">
-        <form>
-          <div class="form-group">
+        <form [formGroup]="flexForm">
+          <div class="form-group" *ngFor="let field of flexFields">
             <div class="form-group__text">
-              <input type="text" required>
-              <label>dip_flex_1</label>
-              <div class="required-block">
-                <span class="icon-asterisk"></span>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-group__text">
-              <input type="password" required>
-              <label>dip_flex_2</label>
+              <input [formControlName]="field.formControlName">
+              <label>{{field.name}}</label>
               <div class="required-block">
                 <span class="icon-asterisk"></span>
               </div>
@@ -35,7 +26,7 @@
             <button class="btn btn--small btn--default" (click)="closeModal()">Close</button>
           </div>
           <div class="col-6">
-            <button class="btn btn--small btn--success">Save</button>
+            <button (click)="saveFlexFields()" class="btn btn--small btn--success">Save</button>
           </div>
         </div>
       </div>

@@ -13,8 +13,7 @@
     display: block;
     border-radius: 25px;
     box-sizing: border-box;
-    background-color: #FFF;
-    border: 5px solid #FFF;
+  
   }
   
   img {
@@ -22,7 +21,7 @@
     width: 250px
   }
   .jive-color{
-    color: #0377A1;
+    color: #049fd9;
   }
    .panel--bordered {
     border: 2px solid #FFF;

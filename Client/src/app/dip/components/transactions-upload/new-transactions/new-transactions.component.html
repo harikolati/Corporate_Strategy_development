@@ -1,0 +1,201 @@
+<div class="row">
+	
+	<div class="col-12">
+		<div class="panel panel--dkblue" *ngIf="formOptions?.header">
+			<h6 style="text-align: center">New Transaction</h6>
+		</div>
+	</div>
+	<div class="col-12 form-container">
+		<form class="col-12" [formGroup]="transactionForm" (ngSubmit)="submitForm(transactionForm.value)">
+			<div class="col-12">
+				<div class="row justify-content-between">
+					<div class="col-4">
+						<div class="row justify-content-start">
+							<div class="col">
+								<span *ngIf="formOptions.formExpand" class="transaction-action-button" [ngClass]="isFormExpanded ? 'icon-remove-contain' : 'icon-add-contain'" (click)="toggleExpandMode()"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="row justify-content-end">
+							<div class="col-6" *ngIf="formOptions?.activeInactiveSwitch">
+								<label class="switch switch--small" >
+									<input type="checkbox" checked name="switch5">
+									<span class="switch__input"></span>
+									<span class="switch__label">ACTIVE</span>
+								</label>
+							</div>
+							<div class="col-3 ">
+								<span (click)="toggleEdit()" class="transaction-action-button" [ngClass]="isEditMode ? 'icon-save' : 'icon-edit'"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="row">
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.transactionName">
+								<div class="form-group form-group--helper">
+									<div class="form-group__text">
+										<input id="trans_name" formControlName="transName" type="text">
+										<label for="trans_name">Transaction Name</label>
+										<div class="required-block">
+											<span class="icon-asterisk" title="This is a required field"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.transactionCode">
+								<div class="form-group form-group--helper">
+									<div class="form-group__text">
+										<input id="trans_code" formControlName="transCode" type="text">
+										<label for="trans_code">Transaction Code</label>
+										<div class="required-block">
+											<span class="icon-asterisk" title="This is a required field"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.transactionType">
+								<div class="form-group form-group--helper">
+									<div class="form-group__text select">
+										<select name="trans_type" formControlName="transType">
+											<option value="0" selected>Select an Option</option>
+											<option value="option1">Option 1</option>
+											<option value="option2">Option 2</option>
+											<option value="option3">Option 3</option>
+										</select>
+										<label for="trans_type">Transaction Type</label>
+										<div class="required-block">
+											<span class="icon-asterisk" title="This is a required field"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.publicAnnounce && isFormExpanded">
+								<div class="form-group form-group--helper">
+									<div class="form-group__text">
+										<input id="public_announce" type="text" formControlName="publicAnnounce"
+										       required>
+										<label for="public_announce">Public Announce</label>
+										<div class="required-block">
+											<span class="icon-asterisk" title="This is a required field"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.segment">
+								<div class="form-group form-group--helper">
+									<div class="form-group__text select">
+										<select name="select2" formControlName="segment">
+											<option value="0" selected>Select an Option</option>
+											<option value="option1">Option 1</option>
+											<option value="option2">Option 2</option>
+											<option value="option3">Option 3</option>
+										</select>
+										<label for="select2">Segment</label>
+										<div class="required-block">
+											<span class="icon-asterisk" title="This is a required field"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.addressOne && isFormExpanded">
+								<div class="form-group">
+									<div class="form-group__text">
+										<input id="address1" type="text" formControlName="address1">
+										<label for="address1">Address 1</label>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.addressTwo && isFormExpanded">
+								<div class="form-group">
+									<div class="form-group__text">
+										<input id="address2" type="text" formControlName="address2">
+										<label for="address2">Address 2</label>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.addressThree && isFormExpanded">
+								<div class="form-group">
+									<div class="form-group__text">
+										<input id="address3" type="text" formControlName="address3">
+										<label for="address3">Address 3</label>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.city && isFormExpanded">
+								<div class="form-group">
+									<div class="form-group__text">
+										<input id="city" type="text" formControlName="city">
+										<label for="city">City</label>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.county && isFormExpanded">
+								<div class="form-group">
+									<div class="form-group__text">
+										<input id="county" type="text" formControlName="county">
+										<label for="county">County</label>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.state && isFormExpanded">
+								<div class="form-group">
+									<div class="form-group__text">
+										<input id="state" type="text" formControlName="state">
+										<label for="state">State</label>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.country && isFormExpanded">
+								<div class="form-group">
+									<div class="form-group__text">
+										<input id="country" type="text" formControlName="country">
+										<label for="country">Country</label>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.zip && isFormExpanded">
+								<div class="form-group">
+									<div class="form-group__text">
+										<input id="pin_code" type="text" formControlName="pincode">
+										<label for="pin_code">ZIP</label>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.createdOn && isFormExpanded">
+								<div class="form-group">
+									<div class="form-group__text">
+										<input id="created_on" type="text" formControlName="createdOn">
+										<label for="created_on">Created On</label>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.primaryContact">
+								<div class="form-group form-group--helper">
+									<div class="form-group__text">
+										<input id="contact" type="text" formControlName="primaryContact">
+										<label for="contact">Primary Contact</label>
+									</div>
+								</div>
+							</div>
+							<div [ngClass]="formOptions?.inputWidth" *ngIf="inputsRequired?.lastModified">
+								<div class="form-group form-group--helper">
+									<div class="form-group__text">
+										<input id="contact" type="text" formControlName="lastModified">
+										<label for="contact">Last Modified</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+  
+

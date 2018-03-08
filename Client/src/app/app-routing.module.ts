@@ -13,8 +13,11 @@ import {RoleManagementComponent} from "./dip/components/access-setup/role-manage
 import {TransactionsUploadComponent} from "./dip/components/transactions-upload/transactions-upload.component";
 import {DipViewComponent} from "./dip/components/dip-view/dip-view.component";
 import {DipResolve} from "./dip/components/dip-shared/dip.resolve";
-import {NewTransactionsComponent} from "./dip/components/new-transactions/new-transactions.component";
+import {NewTransactionsComponent} from "./dip/components/transactions-upload/new-transactions/new-transactions.component";
 import {ModulesAndRolesComponent} from "./dip/components/access-setup/modules-and-roles/modules-and-roles.component";
+import {StatusReportComponent} from "./dip/components/status-report/status-report.component";
+import {TransactionsDetailsComponent} from "./dip/components/transactions-upload/transactions-details/transactions-details.component";
+import {CreateNewTransactionComponent} from "./dip/components/transactions-upload/create-new-transaction/create-new-transaction.component";
 
 
 import { MyDealsComponent } from './platform/components/my-deals/my-deals.component';
@@ -38,9 +41,14 @@ export const routes: Routes = [
     }, children: [
         { path: '', redirectTo: 'upload', pathMatch: 'full' },
         {path:'upload', component:TemplateUploadDownloadComponent},
-        {path:'transactions', component:NewTransactionsComponent},
+        {path:'status', component:StatusReportComponent},
+        {path:'transactions', component:TransactionsUploadComponent, children:[
+            {path:'', redirectTo:'view-transaction',pathMatch:'full'},
+            {path: 'view-transaction', component:TransactionsDetailsComponent},
+            {path:'new-transaction', component:CreateNewTransactionComponent}
+        ]},
         {path: 'admin', component:AccessSetupComponent, children: [
-            { path: '', redirectTo: 'modules-roles', pathMatch: 'full' },
+            {path: '', redirectTo: 'modules-roles', pathMatch: 'full' },
             {path: 'modules-roles', component: ModulesAndRolesComponent},
             {path: 'company', component: AccessCompanyComponent},
             {path: 'access-management', component: RoleManagementComponent}

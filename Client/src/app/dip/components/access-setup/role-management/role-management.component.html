@@ -37,7 +37,7 @@
           <p-column field="acquisition_name" header="Company Name" [editable]="true">
             <ng-template let-col let-company="rowData" pTemplate="editor">
               <select *ngIf="!(company.role_name?.toLowerCase() == 'super user' || (company.user_id && company.module_name && company.role_name && company.acquisition_name))" [(ngModel)]="company.acquisition_name" name="select1" class="custom-select" (ngModelChange)="onEditComplete(company.user_id, company.module_name, company.role_name, $event, company.rowId)">
-                <option [value]="company.acquisition_name" *ngFor="let company of companyData">{{company.acquisition_name}}</option>
+                <option [value]="company.adl_acquisition_name" *ngFor="let company of companyData">{{company.adl_acquisition_name}}</option>
               </select>
               <span *ngIf="company.role_name?.toLowerCase() == 'super user' || (company.user_id && company.module_name && company.role_name && company.acquisition_name)">{{company.acquisition_name}}</span>
             </ng-template>

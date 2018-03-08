@@ -33,7 +33,8 @@ export class DipInitializerService {
       observable.then(data => {
           this.tokenInfo = data;
           this.serviceHeaders = {
-              headers: new HttpHeaders().set('Authorization', 'Bearer ' + this.tokenInfo.access_token).set("content-type", "application/json"),
+              headers: new HttpHeaders().set('Authorization', 'Bearer ' + this.tokenInfo.access_token),
+              reportProgress:true
           };
           console.log(this.serviceHeaders);
       })

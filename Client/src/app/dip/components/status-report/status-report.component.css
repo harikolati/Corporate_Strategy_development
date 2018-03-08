@@ -1,0 +1,53 @@
+:host /deep/ .custom-filter-css input {
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    margin: 5px 0px 20px 0px;
+    height: 30px;
+    padding: 5px;
+}
+
+:host /deep/ .custom-filter-css input{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+:host /deep/ .custom-filter-css input ~ label::after{
+    background: transparent;
+}
+:host /deep/ .ui-table .ui-table-thead > tr > th{
+    background-color: #dfdfdf;
+    color: black;
+}
+:host /deep/ tr > td, tr > th{
+    border: 1px solid #dfdfdf !important;
+}
+:host /deep/ .ui-table{
+    border-bottom:1px solid #dfdfdf !important;
+}
+:host /deep/ .ui-table .ui-table-data>tr>td{
+//padding: 10px 20px !important;
+//font-size: 1.4em;
+    font-size:0.85em;
+}
+
+:host /deep/ .ui-state-highlight {
+    border: 1px solid #049fd9;
+    background: rgba(4,159,217,.2);
+    color: #222222;
+}
+
+:host /deep/ tr.ui-state-highlight>td:first-child {
+    border-left: 4px solid #049fd9 !important;
+}
+
+:host /deep/ tr.ui-state-highlight>td {
+    border-top-color: #049fd9 !important;
+    border-bottom-color: #049fd9 !important;
+}
+
+:host /deep/ .ui-table .ui-table-thead>tr>th{
+//padding: 10px 20px !important;
+//font-size: 1.4em;
+    font-size:0.85em;
+}
+:host /deep/ .ui-table .ui-table-tbody > tr:nth-child(even) {background: #f2f2f2}
