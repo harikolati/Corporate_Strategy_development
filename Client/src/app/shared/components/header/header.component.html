@@ -6,35 +6,28 @@
         </a>
 
         <div class="header-bar-main">
-            <h1 class="page-title">One CSO</h1>
+            <h1 class="page-title">OneCSO</h1>
 </div>
     </div>
     <div class="right">
-            <!-- <div class="dropdown">
-                    <button class="btn btn--primary btn--dropdown">Divider</button>
-                    <div class="dropdown__menu">
-                        <a>Action One</a>
-                        <a>Action Two</a>
-                        <div class="dropdown__divider"></div>
-                        <a>Action Three</a>
-                    </div>
-                </div> -->
-            <p>{{userId}}</p>
-  
-            <a >
-            <img class="thumb thumb--small" src="http://wwwin.cisco.com/dir/photo/zoom/shisubbi.jpg">
-          </a>
         
+           
+  
+          <!-- <a *ngIf="userId">
+            <img class="thumb thumb--small" src="http://wwwin.cisco.com/dir/photo/zoom/{{userId}}.jpg">
+          </a> -->
+          <a class="btn btn--small btn--icon logo-blue" >
+            <span class="icon-contact"></span>
+          </a>
         <span class="space"></span>
         <a class="btn btn--small btn--icon">
             <span class="icon-alert"></span>
         </a>
         <span class="space"></span>
         <a class="btn btn--small btn--icon">
-            <span class="icon-cog"></span>
+            <span class="icon-cog" (click)="onLogout()" title="Logout"></span>
         </a>
-       <!--  <button class="btn btn--primary" (click)="onLogout()">Logout</button> -->
-         
+             
   
         </div>
       </div>

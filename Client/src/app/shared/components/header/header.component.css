@@ -12,7 +12,7 @@
 .header-bar-main {
     margin: -28px 0px 0px 86px;
 }
-.icon-alert , .icon-cog{
+.icon-alert , .icon-cog , .icon-contact{
     color:#FFFFFF;
   }
   .thumb--small {
@@ -32,7 +32,7 @@
   }
 .header-bar-main .page-title {
     font-size: 28px;
-    font-family: CiscoSans-ExtraLight;
+    font-family: CiscoSansTT;
     color: #626469;
     
   }
