@@ -1,35 +1,30 @@
 <div class="header--bar">
-
-    <div class="left">
-        <a class="header-bar__logo">
-            <span class="icon-cisco"></span>
-        </a>
-
-        <div class="header-bar-main">
-            <h1 class="page-title">OneCSO</h1>
-</div>
+  <div class="left">
+    <a class="header-bar__logo">
+      <span class="icon-cisco"></span>
+    </a>
+    <div class="header-bar-main">
+      <h1 class="page-title">OneCSO</h1>
     </div>
-    <div class="right">
-        
-           
-  
-          <!-- <a *ngIf="userId">
-            <img class="thumb thumb--small" src="http://wwwin.cisco.com/dir/photo/zoom/{{userId}}.jpg">
-          </a> -->
-          <a class="btn btn--small btn--icon logo-blue" >
-            <span class="icon-contact"></span>
-          </a>
-        <span class="space"></span>
-        <a class="btn btn--small btn--icon">
-            <span class="icon-alert"></span>
-        </a>
-        <span class="space"></span>
-        <a class="btn btn--small btn--icon">
-            <span class="icon-cog" (click)="onLogout()" title="Logout"></span>
-        </a>
-             
-  
-        </div>
-      </div>
-    
+  </div>
 
+  <div class="right">
+  <!-- <a *ngIf="userId">
+                <img class="thumb thumb--small" src="http://wwwin.cisco.com/dir/photo/zoom/{{userId}}.jpg">
+              </a> -->
+    <a class="btn btn--small btn--icon logo-blue" style="position:relative;">
+      <span class="icon-contact" style="position: absolute;"></span>
+      <div class="dropdown-alert" style="position: absolute; padding-top:60px;">
+        <a (click)="onLogout()" style="background-color: gray; color: white; padding: 4px;">Log Out</a>
+      </div>
+    </a>
+    <span class="space"></span>
+    <a class="btn btn--small btn--icon">
+      <span class="icon-alert"></span>
+    </a>
+    <span class="space"></span>
+    <a class="btn btn--small btn--icon">
+      <span class="icon-cog"></span>
+    </a>
+  </div>
+</div>

@@ -32,9 +32,15 @@
   }
 .header-bar-main .page-title {
     font-size: 28px;
-    font-family: CiscoSansTT;
+    
     color: #626469;
     
   }
+  .dropdown-alert {
+      display: none;
+  }
+  .logo-blue:hover .dropdown-alert {
+    display: block;
+} 
  
   
