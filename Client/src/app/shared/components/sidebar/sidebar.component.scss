@@ -6,7 +6,7 @@
    overflow-x: hidden;
 }
 
-.side--item{
+.side--item , .side--item-ld{
   height: 62px;
   width:200px;
   margin: 0px 0px 0px -20px;
@@ -15,6 +15,7 @@
   height: 75px;
   width:200px;
   margin: 0px 0px 0px -20px;
+  
 }
 .toggle-content a{
 
@@ -23,19 +24,21 @@
   font-size:14px;
   display: block;
   color:#049FD9;
-  padding:11px;
+  padding: 14px 0px 0px 32px;
 }
 .side--item a{
   color:#049FD9;
-  
-  font-size:16px;
-  padding: 11px;
+  font-size:16px;  
+  padding: 0px 0px 0px 34px;
+  line-height: 66px;
+}
+.side--item-ld a{
+  color:#049FD9; 
+  font-size:16px;  
+  padding: 4px 0px 0px 34px;
   
 }
-
-
-
-.side--item a:hover{
+.side--item a:hover,.side--item-ld a:hover{
 background-color: #64BBE3;
 color:#FFFFFF;
 display: block;
@@ -43,7 +46,7 @@ position: relative;
 height: 62px;
 width: 200px;
 }
-.side--item a.active{
+.side--item a.active, .side--item-ld a.active{
   background-color:#049FD9;
   color:#FFFFFF;
   display: block;
@@ -51,30 +54,12 @@ width: 200px;
   height: 62px;
   width: 200px;
 }
-
-/* .togright a{
-  position: relative;
-  font-weight: bold;
-  font-size:14px;
-  display: block;
-  color:#049FD9;
-  padding:11px;
+.toggle-item{
+  padding:5px 0px 0px 0px;
 }
-.togdown a{
-  font-weight: bold;
-  font-size:14px;
-  color:#049FD9;
-  padding:11px;
-} */
-/* .togright a.active{
-  background-color:#049FD9;
-  color:#FFFFFF;
-  display: block;
-} */
 .toggle-item a{
   font-weight: normal;
-  
-  
+  font-size: 14px;
   height: 35px;
 }
 .togright a:hover{
@@ -88,7 +73,6 @@ width: 200px;
 .togdown a:hover{
   background-color: initial;
   color:#049FD9;
-  
 }
 .toggle-item a:hover{
   background-color: #64BBE3;
