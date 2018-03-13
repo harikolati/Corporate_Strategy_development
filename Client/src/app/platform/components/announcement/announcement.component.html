@@ -1,22 +1,19 @@
-
 <div class="row">
-  <div class="col-md-12">
-<div  style="padding: 14px 0 10px 18px;">
-    <div class=" hero hero--loose hero--background-3 bodycomp" style="height:7em; line-height:16px;border-radius: 4px;">
-            <div class="container">
-                <div class="hero__content">
-             <p style="margin-top: -52px;">
-               <span class="headline">Announcement Headline
-               <a (click)="destroy()"><span class="icon-close icon-small"></span></a></span>
-               <span class="newsfeed">{{newsfeed.news}}</span>
-               <span class="details">Introduction and details about the announcement &nbsp;&nbsp;&nbsp; <a href="https://cisco.jiveon.com" target="_blank"><u>Find out more></u></a></span>
-            </p>
-                </div>
+    <div class="col-md-12">
+        <div class="alert-msg">
+            <div class="alert__icon icon-info-circle"></div>
+            <div class="alert__message">
+                    <p>
+                    Announcement Headline<br>
+                    <span class="newsfeed">{{newsfeed.news}}</span>
+                    
+                            <a href="https://cisco.jiveon.com"
+                                target="_blank">
+                                <u>learn more></u>
+                            </a>
+                        </p>
             </div>
+            <div (click)="destroy()" class="alert__close icon-close"></div>
         </div>
     </div>
 </div>
-</div>
-        
-        
-        
