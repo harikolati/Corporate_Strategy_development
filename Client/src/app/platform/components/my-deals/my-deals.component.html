@@ -1,154 +1,117 @@
-<div class="container">
-<div class="centralize">
-  <div class="avatar">
-    <img src="./assets/img/settings.png">
-  </div>
-  <div>
-    <h6>THIS PAGE IS CURRENTLY UNDER CONSTRUCTION</h6>
-    <h6>FOR MORE UPDATES AND ROADMAP SEE OUR
-      <a class="jive-color" href="https://cisco.jiveon.com/docs/DOC-1866022" target="_blank">JIVE PAGE</a> HERE
-    </h6>
-  </div>
-</div>
-</div>
-
-
-<!-- <app-announcement *ngIf="childExists" (pleaseDeleteMeEvent)="deleteHandler()"></app-announcement>
-<h3>{{errorMsg}}</h3>
+ <app-announcement *ngIf="childExists" (pleaseDeleteMeEvent)="deleteHandler()"></app-announcement> 
+ <app-summary></app-summary> 
 
 
 <div class="row">
-        <div class="col-md-12">
-    <div class="panel-group" >
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-         <span class="panel-heading-style"> ACTIVE DEALS({{activeDealsCount}})</span>
+    <div class="col-md-12 panel-group panel-group--compressed">
+        <div class="panel panel--mdgray">
+            <h6>Active Deals</h6>
+        </div>
+         
           <div class="btn-group pull-right">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="icon-more icon-small"></span></a>                
-                <ul class="dropdown-menu" role="menu">
-                        <li><a href="#" class="fontsmall">Edit</a></li>
-                        <li><a href="#" class="fontsmall">Customise</a></li>
-                        <li><a href="#" class="fontsmall">Reorder</a></li>                  
-                      </ul>
+              <span class="icon-thumbnail-view icon-small"></span>
+              <span class="divider"></span>
+              <span class="icon-devices icon-small"></span>
+              <span class="divider"></span>
+              <a data-toggle="collapse" href="#collapse1">
+              <span class="icon-chevron-right-circle icon-small"></span>
+            </a>
+          
               </div>
         </div>
-
-      <div class="panel-body">
-          <div class="row panel-three">               
-              <div  *ngFor="let deal of activeDeals | paginate: { itemsPerPage: 4, currentPage: activeDealsCurrpg,id: 'active' }; let i =index ">                  
-              <div class="col">
-                    <app-deal [dealData]="deal"></app-deal>
-            </div>          
-            </div>
-      
-
-       </div>
-      </div>
-
-      <div class="text-center">
-            <pagination-controls (pageChange)="activeDealsCurrpg = $event" id= "active"></pagination-controls>
-     </div>
-     
-
-
-
-    </div>
-  </div>
 </div>
-
-
-<div class="container" >
-<div class="row">
-
-  
-    <div class="col-md-6">
-    <div class="panel-group">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-            <span class="panel-heading-style">FOLLOWED DEALS({{followedDealsCount}})</span>
-      <div class="btn-group pull-right">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="icon-more icon-small"></span></a>                
-            <ul class="dropdown-menu" role="menu">
-                    <li><a href="#" class="fontsmall">Edit</a></li>
-                    <li><a href="#" class="fontsmall">Customise</a></li>
-                    <li><a href="#" class="fontsmall">Reorder</a></li>                  
-                  </ul>
+        <div id="collapse1" class="panel-collapse collapse">
+          <div class="row">
+            <div class="col-md-4">  
+          <div class="panel-body">
+                <table>
+                  
+                 
+                  <tr><td> <div class="heading">Deal Lorem ipsum dolor</div>
+                   </td></tr>
+                   <tr><td> <ul>
+                      <li>Overdue Tasks</li>
+                      <li>Risk</li>
+                      <li>Issues</li>
+                      <li>Action Items</li>
+                    </ul>
+                  </td></tr> 
+                <tr><td>
+                  <div class="item-count">
+                    <span class="number">17</span>
+                    <span class="verti-divider"></span>
+                    <span class="number">4</span>
+                    <span class="verti-divider"></span>
+                    <span class="number">5</span>
+                    <span class="verti-divider"></span>
+                    <span class="number">6</span>
+                    <span class="verti-divider"></span>
+                    
+                  </div>
+                </td></tr>  
+                <tr>
+                  <div class="status">
+                    <td class="status-heading1">
+                 
+                    <span>
+                      Upcoming Milestone<br>
+                      <p>orderability-2/21</p>
+                    <p>EE Steering Committee- 3/27</p>
+                    </span>
+                    
+                 
+                  </td>
+                  <td>
+                 
+                      <span class="status-heading2">
+                        % Completed<br>
+                        <p>27</p>
+                      </span>
+                      
+                  
+                </td>
+              </div></tr>
+              <tr>
+                <div class="items">
+                  <td>
+                    <span class="img-title">GTM/Offer<br>
+                    <img src="./assets/img/Offer_Umber.png"></span>
+                  </td>
+                  <td>
+                      <span class="img-title">Culture/Callab<br>
+                      <img src="./assets/img/Collab_Red.png"></span>
+                    </td>
+                    <td>
+                        <span class="img-title">Capabilities<br>
+                        <img src="./assets/img/Capabilities_Green.png"></span>
+                      </td>
+                </div>
+              </tr>
+              <tr>
+                  <div class="items">
+                    <td>
+                      <span class="img-title">Roadmap<br>
+                      <img src="./assets/img/Roadmap_Umber.png"></span>
+                    </td>
+                    <td>
+                        <span class="img-title">VDDS<br>
+                        <img src="./assets/img/VDDS_Green.png"></span>
+                      </td>
+                      <td>
+                          <span class="img-title">End State<br>
+                          <img src="./assets/img/EndState_Red.png"></span>
+                        </td>
+                  </div>
+                </tr>
+                <tr>
+                    <div class="col buttons-align-center">
+                        <button class="btn btn--primary btn--small">View Deal DNA</button>
+                      <button class="btn btn--primary-ghost btn--small">View Deal Detail</button>
+                    </div>
+                </tr>
+                </table>  
+                </div>
+            </div>
+            
           </div>
         </div>
-      <div class="panel-body">
-          <div class="row">
-         <div *ngIf="followedDeals.length">
-              <div  *ngFor="let deal of followedDeals | paginate: { itemsPerPage: 2, currentPage: followDealsCurrpg ,id:'followed'}; let i =index">
-                  
-              <div class="col">
-                    <app-deal [dealData]="deal"></app-deal>
-                </div>          
-            </div>
-           </div>
-     </div>
-      </div>
-      <div class="text-center">
-            <pagination-controls (pageChange)="followDealsCurrpg = $event" id="followed"></pagination-controls>
-        </div>
-</div>
-      </div>          
-      </div>
-
-      
-      <div class="col-md-6">
-          <div class="panel-group">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-                    <span class="panel-heading-style">INACTIVE DEALS({{inactiveDealsCount}})</span>
-            <div class="btn-group pull-right">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="icon-more icon-small"></span></a>                
-                    <ul class="dropdown-menu" role="menu">
-                            <li><a href="#" class="fontsmall">Edit</a></li>
-                            <li><a href="#" class="fontsmall">Customise</a></li>
-                            <li><a href="#" class="fontsmall">Reorder</a></li>                  
-                          </ul>
-                  </div>
-                </div> 
-            <div class="panel-body">  
-                <div class="row">
-                 <div class="toggleactive" *ngIf="InactiveDeals.length">
-                         
-                      <div class="inactive-toggle-text">
-                        <a [ngClass]="{'my-class': isClassVisible }" (click)="showCompletedDealsDiv(true)"> 
-                              COMPLETED </a>
-                              <span class="my-class">|</span>
-                      <a [ngClass]="{'my-class': !isClassVisible }"  (click)="showCompletedDealsDiv(false)">ON HOLD</a>
-                   </div>
-                    <div *ngIf="showCompletedDealsFlg;then showCompletedTemplate else showOnHoldTemplate"></div>
-                    
-                      <ng-template #showCompletedTemplate >
-                          <div  *ngFor="let deal of InactiveCompDeals  | paginate: { itemsPerPage: 2, currentPage: inActiveDealsCurrpg ,id:'inactive'}; let i =index">                        
-                              <div class="col">
-                                      <app-deal [dealData]="deal"></app-deal>
-                              </div>                
-                              </div>
-                      </ng-template> 
-
-                      <ng-template #showOnHoldTemplate >
-                          <div  *ngFor="let deal of InactiveOnHoldDeals  | paginate: { itemsPerPage: 2, currentPage: inActiveDealsCurrpg ,id:'inactive'}; let i =index">                        
-                              <div class="col">
-                                      <app-deal [dealData]="deal"></app-deal>
-                              </div>                
-                              </div>
-                      </ng-template>                     
-
-                                  
-                </div>   
-                </div>   
-            </div>
-            <div class="text-center">
-                    <pagination-controls (pageChange)="inActiveDealsCurrpg = $event" id="inactive"></pagination-controls>
-                </div> 
-            </div>
-
-    </div>
-  </div>
-
-</div>
-</div>
-</div> -->

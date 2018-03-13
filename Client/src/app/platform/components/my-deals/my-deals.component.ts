@@ -2,7 +2,7 @@ import { Component, OnInit,ChangeDetectionStrategy ,Output,EventEmitter} from '@
 import { DealService } from '../services/deal.service';
 import { DataService } from '../services/data.service';
 import { Deal } from '../services/Deal';
-import { Data } from '../services/Data';
+import { Data } from '../services/data';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../../../environments/environment';
@@ -22,13 +22,13 @@ import 'rxjs/add/operator/map';
 export class MyDealsComponent implements OnInit {
 
   
-  /* childExists: boolean = true;
+  childExists: boolean = true;
   
   private deleteHandler(): void {
     this.childExists = false;
   }
   @Output() toggleactive = new EventEmitter<Deal>();
-  
+  /* 
   public activeDeals : Deal[];
   public followedDeals: Deal[];
   public InactiveDeals : Deal[];
