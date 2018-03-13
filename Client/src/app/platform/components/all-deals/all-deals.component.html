@@ -1,46 +1,140 @@
-<div class="container">
-        <div class="centralize">
-          <div class="avatar">
-            <img src="./assets/img/settings.png">
-          </div>
-          <div>
-            <h6>THIS PAGE IS CURRENTLY UNDER CONSTRUCTION</h6>
-            <h6>FOR MORE UPDATES AND ROADMAP SEE OUR
-                <a class="jive-color" href="https://cisco.jiveon.com/docs/DOC-1866022" target="_blank">JIVE PAGE</a> HERE
-            </h6>
-          </div>
-        </div>
-        </div>
-<!-- 
-<app-announcement *ngIf="childExists" (pleaseDeleteMeEvent)="deleteHandler()"></app-announcement>
-<h3>{{errorMsg}}</h3>
 
-<div class="container">
-    <div class="panel-group" style="width: 125%">
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-                <span class="panel-heading-style">ALL DEALS({{allDealsCount}})</span>
-        <div class="btn-group pull-right">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-more icon-small"></span></a>                
-                <ul class="dropdown-menu" role="menu">
-                        <li><a href="#" class="fontsmall">Edit</a></li>
-                        <li><a href="#" class="fontsmall">Customise</a></li>
-                        <li><a href="#" class="fontsmall">Reorder</a></li>                  
-                      </ul>
+      <div class="row">
+          <div class="col-md-12 ">
+             
+              <div class="panel panel--mdgray">
+              
+                  <span>All Deals</span>
+                  <div class="pull-right">
+                      <span>Select Filters</span>
+                    <a class="icon-filter icon-medium" style="color: #049fd9" data-toggle="collapse" href="#filtercollapse"> </a>
+                    <span>|</span>
+                    <span class="icon-thumbnail-view icon-medium" style="color: #049fd9"></span>
+                    <span>|</span>
+                    <span class="icon-devices icon-medium"></span>
+                </div>
+                 
+                </div>  
+            </div>
+            </div>   
+            <div class="row">
+                <div class="col-md-12 "> 
+                <div id="filtercollapse" >
+                    <div class="panel panel--bordered">
+                       
+
+                        <div class="form-group">
+                            <div class="row">
+                                          <div class="col">
+                                              <div class="form-group__text select">
+                                                  <select name="select1">
+                                                      <option value="0" selected>Business Entity</option>
+                                                      <option value="option1">Option 1</option>
+                                                      <option value="option2">Option 2</option>
+                                                      <option value="option3">Option 3</option>
+                                                  </select>
+                                              </div>
+                                      </div>
+                                      <div class="col">
+                                              <div class="form-group__text select">
+                                                  <select name="select1">
+                                                      <option value="0" selected>Market Segment/Technlogy</option>
+                                                      <option value="option1">Option 1</option>
+                                                      <option value="option2">Option 2</option>
+                                                      <option value="option3">Option 3</option>
+                                                  </select>
+                                              </div>
+                                      </div>
+                                      <div class="col">
+                                          <div class="form-group__text select">
+                                              <select name="select1">
+                                                  <option value="0" selected>Archetype</option>
+                                                  <option value="option1">Option 1</option>
+                                                  <option value="option2">Option 2</option>
+                                                  <option value="option3">Option 3</option>
+                                              </select>
+                                          </div>
+                                  </div>
+                                  <div class="col">
+                                          <div class="form-group__text select">
+                                              <select name="select1">
+                                                  <option value="0" selected>Geography</option>
+                                                  <option value="option1">Option 1</option>
+                                                  <option value="option2">Option 2</option>
+                                                  <option value="option3">Option 3</option>
+                                              </select>
+                                          </div>
+                                  </div>
+                                  <div class="col">
+                                      <div class="form-group__text select">
+                                          <select name="select1">
+                                              <option value="0" selected>Size</option>
+                                              <option value="option1">Option 1</option>
+                                              <option value="option2">Option 2</option>
+                                              <option value="option3">Option 3</option>
+                                          </select>
+                                      </div>
+                              </div>
+                              <div class="col">
+                                      <div class="form-group__text select">
+                                          <select name="select1">
+                                              <option value="0" selected>Content</option>
+                                              <option value="option1">Option 1</option>
+                                              <option value="option2">Option 2</option>
+                                              <option value="option3">Option 3</option>
+                                          </select>
+                                      </div>
+                              </div>
+
+                              <div class="col">
+                                  <button class="btn btn--small btn--gray-ghost">Add Filters</button>
+                                </div>
+                                <span>|</span>
+                                <div class="col">
+                                  <a style="color: #049fd9">Advance Filters</a>
+                              </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
               </div>
-            </div>
-      <div class="panel-body">
-          <div class="row panel-three">
-              <div  *ngFor="let deal of allDeals ; let i =index">
-                  
-              <div class="col">
-                    <app-deal [dealData]="deal"></app-deal>
-            </div>
-          </div>
-      
-       </div>
 
+</div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+                  <div class="panel panel--mdgray"> 
+                  <div class="row">                       
+                      <div class="col-md-9">                        
+                          <div class="pull-left">
+                              <button class="btn btn--small">Business Entity 2 <div class="alert__close icon-close"></div></button>
+                              <button class="btn btn--small">Market Segment 3 <div class="alert__close icon-close"></div></button>
+                              <button class="btn btn--small">Geography 1 <div class="alert__close icon-close"></div></button>                     
+                              <button class="btn btn--small">Size 10 <div class="alert__close icon-close"></div></button>                         
+                          </div>
+                      </div>
+
+                      <div class="col-md-3">
+                        <div class="pull-right">
+                              <a style="color: #049fd9">Clear All</a>
+                              <span>|</span>
+                             <button class="btn btn--small btn--primary">Apply</button>
+                        </div>
+                     </div>
+                       
+                  </div>                  
+                    </div>
+
+              
+          </div>
+         
       </div>
-    </div>
-  </div>
-</div> -->
+        
+         
+
+        
+ 
+
