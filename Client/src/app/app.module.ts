@@ -59,6 +59,8 @@ import { DataService } from './platform/components/services/data.service';
 
 
 import {TransactionsService} from "./dip/components/transactions-upload/transactions.service";
+import { StatusTableComponent } from './dip/components/transactions-upload/status-table/status-table.component';
+import { SummaryComponent } from './platform/components/summary/summary.component';
 
 @NgModule({
     declarations: [
@@ -84,7 +86,7 @@ import {TransactionsService} from "./dip/components/transactions-upload/transact
         StatusReportComponent,
         CreateNewTransactionComponent,
         MyDealsComponent, AllDealsComponent, MethodologyComponent, LearninganddevelopmentComponent, 
-        InitiativesComponent, QuickToolsComponent, AllToolsComponent, AnnouncementComponent,SidebarComponent,DealComponent
+        InitiativesComponent, QuickToolsComponent, AllToolsComponent, AnnouncementComponent,SidebarComponent,DealComponent, StatusTableComponent, SummaryComponent
     ],
     imports: [
         BrowserModule,
