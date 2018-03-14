@@ -1,101 +1,18 @@
-/* .show-on-hover:hover > ul.dropdown-menu {
-  display: block;    
+.all-deals-panel-heading{
+  font-size: 16px;
+  font-weight: 500;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1440px;
-    max-width: 124%; } }
-
-.toggleactive a{
-color: #9ca4ab;  
+.panel-icons-divider{  
+  border-right: 1px solid #c3bfbf;
+  line-height: 10px;
+  margin:  0px 6px 0px 6px;
 }
-.my-class {
-      color:#337ab7 !important;
-      font-weight:bold;       
-    }
-.inactive-toggle-text {      
-      padding: 12px 18px;
-    }
-.panel-group .panel{
-      margin-top: 1em;
-    }
-.panel-primary>.panel-heading {
-color: #fff;
-background-color: #2b5592;
-border-color: #2b5592;
+.alert__icon, .alert__close {
+  font-size: 1.2rem;  
 }
-.row {
-margin: auto;
-
+.deal-title{
+  color: #58585b;
+  font-size: 14px;
+  height: 44px;
 }
-
-.dropdown-menu {   
-min-width: 110px;   
-}
-
-.btn--primary-ghost {
-  border: 1px  #049fd9;    
-}
-
-.fontsmall {
-font-size: x-small;
-white-space: nowrap;
-}
-.fontsmall-bold {
-font-size: x-small;
-white-space: nowrap;
-font-weight: bold;  
-}
-
-.panel-heading {
-padding: 4px 8px;
-}
-
-.panel-three>div{
-  width: 33%;
-}
-.panel-three .row .col{
-  padding: 0px;
-  font-size: 8px;
-  padding-left: 4px;
-}
-.panel-three .panel-button .fontsmall{
-  font-size: 8px;
-}
-.panel-group .panel{
-  padding: 0;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-
-.panel-heading-style{
-font-size: 12px;
-font-weight: 500;
-}
-.icon-more{
-color: white;
--webkit-transform: rotate(90deg);
-} */
-
-.centralize {
-  text-align: center;
-  margin: 0 auto;
-}
-.avatar {
-  background-color: white;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin: 40px auto;
-}
-
-.avatar img {
-  height: 125px; 
-  width: 125px;
-  margin: 35px;
-}
-.jive-color{
-  color: #0377A1;
-}
-
