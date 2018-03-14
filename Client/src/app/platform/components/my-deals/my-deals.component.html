@@ -1,117 +1,309 @@
- <app-announcement *ngIf="childExists" (pleaseDeleteMeEvent)="deleteHandler()"></app-announcement> 
- <app-summary></app-summary> 
+<app-announcement *ngIf="childExists" (pleaseDeleteMeEvent)="deleteHandler()"></app-announcement>
+<app-summary></app-summary>
 
-
+<!-- Active Deals -->
 <div class="row">
-    <div class="col-md-12 panel-group panel-group--compressed">
-        <div class="panel panel--mdgray">
-            <h6>Active Deals</h6>
-        </div>
-         
-          <div class="btn-group pull-right">
-              <span class="icon-thumbnail-view icon-small"></span>
-              <span class="divider"></span>
-              <span class="icon-devices icon-small"></span>
-              <span class="divider"></span>
-              <a data-toggle="collapse" href="#collapse1">
-              <span class="icon-chevron-right-circle icon-small"></span>
-            </a>
-          
-              </div>
-        </div>
+  <div class="col-md-12 panel-group panel-group--compressed">
+    <div class="panel panel--mdgray">
+      <h6>Active Deals</h6>
+    </div>
+
+    <div class="btn-group pull-right">
+      <span class="icon-thumbnail-view icon-small"></span>
+      <span class="divider"></span>
+      <img src="./assets/img/Table View Grey.png">
+      <span class="divider"></span>
+      <a data-toggle="collapse" href="#collapse1">
+        <span class="icon-chevron-right-circle icon-small"></span>
+      </a>
+
+    </div>
+  </div>
 </div>
-        <div id="collapse1" class="panel-collapse collapse">
-          <div class="row">
-            <div class="col-md-4">  
-          <div class="panel-body">
-                <table>
-                  
-                 
-                  <tr><td> <div class="heading">Deal Lorem ipsum dolor</div>
-                   </td></tr>
-                   <tr><td> <ul>
-                      <li>Overdue Tasks</li>
-                      <li>Risk</li>
-                      <li>Issues</li>
-                      <li>Action Items</li>
-                    </ul>
-                  </td></tr> 
-                <tr><td>
-                  <div class="item-count">
-                    <span class="number">17</span>
-                    <span class="verti-divider"></span>
-                    <span class="number">4</span>
-                    <span class="verti-divider"></span>
-                    <span class="number">5</span>
-                    <span class="verti-divider"></span>
-                    <span class="number">6</span>
-                    <span class="verti-divider"></span>
-                    
-                  </div>
-                </td></tr>  
-                <tr>
-                  <div class="status">
-                    <td class="status-heading1">
-                 
-                    <span>
-                      Upcoming Milestone<br>
-                      <p>orderability-2/21</p>
-                    <p>EE Steering Committee- 3/27</p>
-                    </span>
-                    
-                 
-                  </td>
-                  <td>
-                 
-                      <span class="status-heading2">
-                        % Completed<br>
-                        <p>27</p>
-                      </span>
-                      
-                  
-                </td>
-              </div></tr>
-              <tr>
-                <div class="items">
-                  <td>
-                    <span class="img-title">GTM/Offer<br>
-                    <img src="./assets/img/Offer_Umber.png"></span>
-                  </td>
-                  <td>
-                      <span class="img-title">Culture/Callab<br>
-                      <img src="./assets/img/Collab_Red.png"></span>
-                    </td>
-                    <td>
-                        <span class="img-title">Capabilities<br>
-                        <img src="./assets/img/Capabilities_Green.png"></span>
-                      </td>
-                </div>
-              </tr>
-              <tr>
-                  <div class="items">
-                    <td>
-                      <span class="img-title">Roadmap<br>
-                      <img src="./assets/img/Roadmap_Umber.png"></span>
-                    </td>
-                    <td>
-                        <span class="img-title">VDDS<br>
-                        <img src="./assets/img/VDDS_Green.png"></span>
-                      </td>
-                      <td>
-                          <span class="img-title">End State<br>
-                          <img src="./assets/img/EndState_Red.png"></span>
-                        </td>
-                  </div>
-                </tr>
-                <tr>
-                    <div class="col buttons-align-center">
-                        <button class="btn btn--primary btn--small">View Deal DNA</button>
-                      <button class="btn btn--primary-ghost btn--small">View Deal Detail</button>
-                    </div>
-                </tr>
-                </table>  
-                </div>
-            </div>
-            
+<!-- Active Deals Cart -->
+<div id="collapse1" class="panel-collapse collapse">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel-body">
+        <div class="row image-icon">
+            <img src="./assets/img/perspica.png">
+        </div>
+        <div class="row">
+          <div class="heading"> Deal Lorem ipsum dolor
+            <span class="heading-divider"> </span>
           </div>
         </div>
+        <div class="row">
+          <div class="list">
+            <ul>
+              <li>Overdue Tasks</li>
+              <li>Risk</li>
+              <li>Issues</li>
+              <li>Action Items</li>
+            </ul>
+            <span class="list-divider"> </span>
+            <div class="item-count">
+              <span class="number">17</span>
+              <span class="verti-divider"></span>
+              <span class="number">4</span>
+              <span class="verti-divider"></span>
+              <span class="number">5</span>
+              <span class="verti-divider"></span>
+              <span class="number">6</span>
+              <span class="verti-divider"></span>
+
+            </div>
+          </div>
+        </div>
+        <div class="row status" style="height:70px;">
+          <div class="col-md-7">
+            <div class="status-heading1">
+
+              Upcoming Milestone orderability-2/21 EE Steering Committee- 3/27
+
+            </div>
+          </div>
+          <div class="col-md-5">
+            <span class="status-heading2">
+              % Completed
+              <br>
+              <p>27</p>
+            </span>
+          </div>
+
+        </div>
+        <div class="row items">
+            <div class="col-md-4 item-divider"> 
+                <span >GTM/Offer<br>
+                  <img src="./assets/img/Offer_Umber.png"></span>
+            </div>
+            <div class="col-md-4 item-divider"> 
+                <span >Culture/Callab<br>
+                  <img src="./assets/img/Collab_Red.png"></span>
+             </div>
+             <div class="col-md-4"> 
+                <span >Capabilities<br>
+                  <img src="./assets/img/Capabilities_Green.png"></span>  
+             </div>
+        </div>
+        <div class="row items">
+            <div class="col-md-4 item-divider"> 
+                <span >Roadmap<br>
+                  <img src="./assets/img/Roadmap_Umber.png"></span>
+            </div>
+            <div class="col-md-4 item-divider"> 
+                <span >VDDS<br>
+                  <img src="./assets/img/VDDS_Green.png"></span>
+             </div>
+             <div class="col-md-4"> 
+                <span >End State<br>
+                  <img src="./assets/img/EndState_Red.png"></span>
+             </div>
+        </div>
+        <div class="row">
+          <div class="col buttons-align-center" style="height:53px;">
+            <button class="btn btn--small">View Deal DNA</button>
+            <button class="btn btn--primary-ghost btn--small">View Deal Detail</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<!-- Followed Deals -->
+<div class="row">
+  <div class="col-md-12 panel-group panel-group--compressed">
+    <div class="panel panel--mdgray">
+      <h6>Followed Deals</h6>
+    </div>
+
+    <div class="btn-group pull-right">
+      <span class="icon-thumbnail-view icon-small"></span>
+      <span class="divider"></span>
+      <img src="./assets/img/Table View Grey.png">
+      <span class="divider"></span>
+      <a data-toggle="collapse" href="#collapse2">
+        <span class="icon-chevron-right-circle icon-small"></span>
+      </a>
+
+    </div>
+  </div>
+</div>
+<!-- Followed Deals CArt-->
+
+<div id="collapse2" class="panel-collapse collapse">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel-body">
+            <div class="row image-icon">
+                <img src="./assets/img/perspica.png">
+            </div>
+          <div class="row">
+            <div class="heading"> Deal Lorem ipsum dolor
+              <span class="heading-divider"> </span>
+            </div>
+          </div>
+          <div class="row">
+              <div class="list--view">
+                <p>BU Name : <span class="value">Lorem ipsum dolor sit amet</span></p>
+                <p>Type : <span class="value">Product</span></p>
+                <p>Archetype : <span class="value">Opportunity Evaluation</span></p>
+                <p>Stage1 : <span class="value">Full Itegration</span></p>
+                </div>
+          </div>
+          <div class="row items">
+              <div class="col-md-4 item-divider"> 
+                  <span >GTM/Offer<br>
+                    <img src="./assets/img/Offer_Umber.png"></span>
+              </div>
+              <div class="col-md-4 item-divider"> 
+                  <span >Culture/Callab<br>
+                    <img src="./assets/img/Collab_Red.png"></span>
+               </div>
+               <div class="col-md-4"> 
+                  <span >Capabilities<br>
+                    <img src="./assets/img/Capabilities_Green.png"></span>  
+               </div>
+          </div>
+          <div class="row items">
+              <div class="col-md-4 item-divider"> 
+                  <span >Roadmap<br>
+                    <img src="./assets/img/Roadmap_Umber.png"></span>
+              </div>
+              <div class="col-md-4 item-divider"> 
+                  <span >VDDS<br>
+                    <img src="./assets/img/VDDS_Green.png"></span>
+               </div>
+               <div class="col-md-4"> 
+                  <span >End State<br>
+                    <img src="./assets/img/EndState_Red.png"></span>
+               </div>
+          </div>
+                  <div class="row">
+                      <div class="col buttons-align-center" style="height:53px;">
+                  <button class="btn btn--small">View DNA</button>
+                  <button class="btn btn--primary-ghost btn--small">View Detail</button>
+                  <button class="btn btn--gray-ghost btn--small">View APEX</button>
+                  </div></div>
+                </div>
+              </div>
+          
+          
+            </div>
+          </div>
+
+<!-- Inactive Deals -->
+<div class="row">
+    <div class="col-md-12 panel-group panel-group--compressed">
+      <div class="panel panel--mdgray">
+        <h6>Inactive Deals</h6>
+      </div>
+  
+      <div class="btn-group pull-right">
+        <span class="icon-thumbnail-view icon-small"></span>
+        <span class="divider"></span>
+        <img src="./assets/img/Table View Grey.png">
+        <span class="divider"></span>
+        <a data-toggle="collapse" href="#collapse3">
+          <span class="icon-chevron-right-circle icon-small"></span>
+        </a>
+  
+      </div>
+    </div>
+  </div>
+
+  <!-- Inactive Deals Cart -->
+
+  <div id="collapse3" class="panel-collapse collapse">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel-body">
+            <div class="row image-icon">
+                <img src="./assets/img/perspica.png">
+            </div>
+            <div class="row">
+              <div class="heading"> Deal Lorem ipsum dolor
+                <span class="heading-divider"> </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="list">
+                <ul>
+                  <li>Overdue Tasks</li>
+                  <li>Risk</li>
+                  <li>Issues</li>
+                  <li>Action Items</li>
+                </ul>
+                <span class="list-divider"> </span>
+                <div class="item-count">
+                  <span class="number">17</span>
+                  <span class="verti-divider"></span>
+                  <span class="number">4</span>
+                  <span class="verti-divider"></span>
+                  <span class="number">5</span>
+                  <span class="verti-divider"></span>
+                  <span class="number">6</span>
+                  <span class="verti-divider"></span>
+    
+                </div>
+              </div>
+            </div>
+            <div class="row status" style="height:70px;">
+              <div class="col-md-7">
+                <div class="status-heading1">
+    
+                  Upcoming Milestone orderability-2/21 EE Steering Committee- 3/27
+    
+                </div>
+              </div>
+              <div class="col-md-5">
+                <span class="status-heading2">
+                  % Completed
+                  <br>
+                  <p>27</p>
+                </span>
+              </div>
+    
+            </div>
+            <div class="row items">
+                <div class="col-md-4 item-divider"> 
+                    <span >GTM/Offer<br>
+                      <img src="./assets/img/Offer_Umber.png"></span>
+                </div>
+                <div class="col-md-4 item-divider"> 
+                    <span >Culture/Callab<br>
+                      <img src="./assets/img/Collab_Red.png"></span>
+                 </div>
+                 <div class="col-md-4"> 
+                    <span >Capabilities<br>
+                      <img src="./assets/img/Capabilities_Green.png"></span>  
+                 </div>
+            </div>
+            <div class="row items">
+                <div class="col-md-4 item-divider"> 
+                    <span >Roadmap<br>
+                      <img src="./assets/img/Roadmap_Umber.png"></span>
+                </div>
+                <div class="col-md-4 item-divider"> 
+                    <span >VDDS<br>
+                      <img src="./assets/img/VDDS_Green.png"></span>
+                 </div>
+                 <div class="col-md-4"> 
+                    <span >End State<br>
+                      <img src="./assets/img/EndState_Red.png"></span>
+                 </div>
+            </div>
+            <div class="row">
+              <div class="col buttons-align-center" style="height:53px;">
+                <button class="btn btn--small">View Deal DNA</button>
+                <button class="btn btn--primary-ghost btn--small">View Deal Detail</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    
+      </div>
+    </div>
