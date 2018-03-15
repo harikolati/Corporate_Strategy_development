@@ -1,6 +1,12 @@
+
+.panel--mdgray{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
 .all-deals-panel-heading{
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 20px; 
+  font-weight: 500; 
 }
 
 .panel-icons-divider{  
@@ -19,22 +25,31 @@
 .items{
   border-bottom: 1px solid #d8d8d8;
   height: 77px;
-  padding: 0px 0px 11px 0px;
-  margin: 11px 0px 0px 3px;
+  padding: 4px 0px 6px 0px;  
+  text-align: center;
 }
 .item-divider{
   border-right: 1px solid #d8d8d8;
 }
 .heading{ 
-  margin: 0px 0px 0px 32px;
-  border-bottom: 1px solid #d8d8d8;
-  height: 44px;
-  color:#58585B;
-  font-size:14px;
+  border-bottom: 1px solid #d8d8d8; 
+  font-weight: 600; 
 }
 .heading-divider{
   padding: 0px 0px 0px 139px;
 }
-.image-icon{
-  padding:0px 0px 0px 8em;
+
+.img-size{
+  height: 32px;
+  width: 115px;
+}
+.icon-medium:before { 
+  font-size: 2.2rem;
+}
+.all-deals-count{
+ color: #049fd9;
+ padding-left: 6px;
+}
+.panel{
+  border-radius: 6px;
 }
