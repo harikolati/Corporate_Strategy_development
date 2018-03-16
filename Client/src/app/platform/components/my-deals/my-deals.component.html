@@ -9,7 +9,7 @@
     <ul class="tabs">
       <li id="tab-title" class="tab">
         <a>
-          <div class="tab__heading" title="Summary">Deal Summary
+          <div class="tab__heading" title="Summary">Deals Summary
           </div>
           <span class="div-border"></span>
         </a>
@@ -70,17 +70,18 @@
     <div class="btn-group pull-right">
       <span class="icon-thumbnail-view icon-small"></span>
       <span class="divider"></span>
-      <img src="./assets/img/Table View Grey.png" style="height:18px;">
+      <img [src]="show ? './assets/img/Table View Grey.png' : './assets/img/Table View Blue.png'" style="height:18px;">
       <span class="divider"></span>
-      <a data-toggle="collapse" href="#collapse1">
-        <span class="icon-chevron-right-circle icon-small"></span>
+      <a (click)="toggle()">
+        <span [ngClass]="show ? 'icon-chevron-right-circle icon-small' : 'icon-chevron-right-circle icon-small icon-rotate'"></span>
       </a>
+
 
     </div>
   </div>
 </div>
 <!-- Active Deals Cart -->
-<div id="collapse1" class="panel-collapse collapse">
+<ng-container *ngIf="show">
   <br>
   <div class="col-xl-12">
     <div class="row">
@@ -95,34 +96,43 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <span class="heading-divider"> </span>
+               
               </div>
+              
             </div>
+            <hr>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
-          <div class="row">
-            <div class="list">
-              <ul>
-                <li>Overdue Tasks</li>
-                <li>Risk</li>
-                <li>Issues</li>
-                <li>Action Items</li>
-              </ul>
-
-
-              <span class="number">17</span>
-              <span class="verti-divider"></span>
-              <span class="number">4</span>
-              <span class="verti-divider"></span>
-              <span class="number">5</span>
-              <span class="verti-divider"></span>
-              <span class="number">6</span>
-
-              <span class="hori-divider"></span>
+          <div class="row tasks">
+            <div class="col-md-4 item-title1">
+              <span>Overdue Tasks</span>
+              <div class="verti-divider">
+                <div class="number1">17</div>
+              </div>
             </div>
+            <div class="col-md-2 item-title2">
+              <span>Risk</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-2 item-title2">
+              <span>Issues</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-4 item-title1">
+              <span>Action Items</span>
+              <div class="number1">17
+              </div>
+            </div>
+            <span class="hori-divider"></span>
+
           </div>
+
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -202,34 +212,41 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <span class="heading-divider"> </span>
+                <!-- <span class="heading-divider"> </span> -->
               </div>
             </div>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
-          <div class="row">
-            <div class="list">
-              <ul>
-                <li>Overdue Tasks</li>
-                <li>Risk</li>
-                <li>Issues</li>
-                <li>Action Items</li>
-              </ul>
-
-
-              <span class="number">17</span>
-              <span class="verti-divider"></span>
-              <span class="number">4</span>
-              <span class="verti-divider"></span>
-              <span class="number">5</span>
-              <span class="verti-divider"></span>
-              <span class="number">6</span>
-
-              <span class="hori-divider"></span>
+          <div class="row tasks">
+            <div class="col-md-4 item-title1">
+              <span>Overdue Tasks</span>
+              <div class="verti-divider">
+                <div class="number1">17</div>
+              </div>
             </div>
+            <div class="col-md-2 item-title2">
+              <span>Risk</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-2 item-title2">
+              <span>Issues</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-4 item-title1">
+              <span>Action Items</span>
+              <div class="number1">17
+              </div>
+            </div>
+            <span class="hori-divider"></span>
+
           </div>
+
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -291,7 +308,7 @@
             </div>
           </div>
           <br>
-          <div style="text-align: center;    height: 53px;">
+          <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>
             <button class="btn btn--gray-ghost btn--small">View APEX</button>
@@ -309,34 +326,41 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <span class="heading-divider"> </span>
+                <!-- <span class="heading-divider"> </span> -->
               </div>
             </div>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
-          <div class="row">
-            <div class="list">
-              <ul>
-                <li>Overdue Tasks</li>
-                <li>Risk</li>
-                <li>Issues</li>
-                <li>Action Items</li>
-              </ul>
-
-
-              <span class="number">17</span>
-              <span class="verti-divider"></span>
-              <span class="number">4</span>
-              <span class="verti-divider"></span>
-              <span class="number">5</span>
-              <span class="verti-divider"></span>
-              <span class="number">6</span>
-
-              <span class="hori-divider"></span>
+          <div class="row tasks">
+            <div class="col-md-4 item-title1">
+              <span>Overdue Tasks</span>
+              <div class="verti-divider">
+                <div class="number1">17</div>
+              </div>
             </div>
+            <div class="col-md-2 item-title2">
+              <span>Risk</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-2 item-title2">
+              <span>Issues</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-4 item-title1">
+              <span>Action Items</span>
+              <div class="number1">17
+              </div>
+            </div>
+            <span class="hori-divider"></span>
+
           </div>
+
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -398,7 +422,7 @@
             </div>
           </div>
           <br>
-          <div style="text-align: center;height: 53px;">
+          <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>
             <button class="btn btn--gray-ghost btn--small">View APEX</button>
@@ -407,7 +431,7 @@
       </div>
     </div>
   </div>
-</div>
+</ng-container>
 <!-- Followed Deals -->
 <br>
 <div class="col-xl-12">
@@ -419,10 +443,10 @@
     <div class="btn-group pull-right">
       <span class="icon-thumbnail-view icon-small"></span>
       <span class="divider"></span>
-      <img src="./assets/img/Table View Grey.png" style="height:18px;">
+      <img [src]="showFollow ? './assets/img/Table View Grey.png' : './assets/img/Table View Blue.png'" style="height:18px;">
       <span class="divider"></span>
-      <a data-toggle="collapse" href="#collapse2">
-        <span class="icon-chevron-right-circle icon-small"></span>
+      <a (click)="toggleFollow()">
+        <span [ngClass]="showFollow ? 'icon-chevron-right-circle icon-small' : 'icon-chevron-right-circle icon-small icon-rotate'"></span>
       </a>
 
     </div>
@@ -430,7 +454,7 @@
 </div>
 <!-- Followed Deals CArt-->
 
-<div id="collapse2" class="panel-collapse collapse">
+<ng-container *ngIf="showFollow">
   <br>
   <div class="col-xl-12">
     <div class="row">
@@ -452,35 +476,25 @@
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
+
           <div class="row">
             <div class="list--view">
-              <p>BU Name
-                <span class="colon">:</span>
-                <span class="value">Lorem ipsum dolor sit amet</span>
-              </p>
-              <p>Type
-                <span class="colon">:</span>
-                <span class="value">Product</span>
-              </p>
-              <p>Archetype
-                <span class="colon">:</span>
-                <span class="value">Opportunity Evaluation</span>
-              </p>
-              <p>Stage1
-                <span class="colon">:</span>
-                <span class="value">Full Itegration</span>
-              </p>
+              <ul class="list-group list-group-flush ">
+                <li class="list-group-item" style="border: none;">
+                  <strong>BU Name</strong> : Lorem ipsum dolor sit amet
+                </li>
+                <li class="list-group-item" style="border: none;">
+                  <strong>Type</strong>: Product
+                </li>
+                <li class="list-group-item" style="border: none;">
+                  <strong>Archetype</strong>: Opportunity Evaluation
+                </li>
+                <li class="list-group-item" style="border: none;">
+                  <strong>Stage 1</strong>: Full Itegration
+                </li>
+              </ul>
             </div>
           </div>
-          <!-- <p>Type :
-                <span class="value">Product</span>
-              </p>
-              <p>Archetype :
-                <span class="value">Opportunity Evaluation</span>
-              </p>
-              <p>Stage1 :
-                <span class="value">Full Itegration</span>
-              </p> -->
 
           <div class="row items">
             <div class="col-md-4 item-divider">
@@ -551,22 +565,20 @@
           </div>
           <div class="row">
             <div class="list--view">
-              <p>BU Name
-                <span class="colon">:</span>
-                <span class="value">Lorem ipsum dolor sit amet</span>
-              </p>
-              <p>Type
-                <span class="colon">:</span>
-                <span class="value">Product</span>
-              </p>
-              <p>Archetype
-                <span class="colon">:</span>
-                <span class="value">Opportunity Evaluation</span>
-              </p>
-              <p>Stage1
-                <span class="colon">:</span>
-                <span class="value">Full Itegration</span>
-              </p>
+              <ul class="list-group list-group-flush ">
+                <li class="list-group-item" style="border: none;">
+                  <strong>BU Name</strong> : Lorem ipsum dolor sit amet
+                </li>
+                <li class="list-group-item" style="border: none;">
+                  <strong>Type</strong>: Product
+                </li>
+                <li class="list-group-item" style="border: none;">
+                  <strong>Archetype</strong>: Opportunity Evaluation
+                </li>
+                <li class="list-group-item" style="border: none;">
+                  <strong>Stage 1</strong>: Full Itegration
+                </li>
+              </ul>
             </div>
           </div>
           <!-- <p>Type :
@@ -648,33 +660,22 @@
           </div>
           <div class="row">
             <div class="list--view">
-              <p>BU Name
-                <span class="colon">:</span>
-                <span class="value">Lorem ipsum dolor sit amet</span>
-              </p>
-              <p>Type
-                <span class="colon">:</span>
-                <span class="value">Product</span>
-              </p>
-              <p>Archetype
-                <span class="colon">:</span>
-                <span class="value">Opportunity Evaluation</span>
-              </p>
-              <p>Stage1
-                <span class="colon">:</span>
-                <span class="value">Full Itegration</span>
-              </p>
+              <ul class="list-group list-group-flush ">
+                <li class="list-group-item" style="border: none;">
+                  <strong>BU Name</strong> : Lorem ipsum dolor sit amet
+                </li>
+                <li class="list-group-item" style="border: none;">
+                  <strong>Type</strong>: Product
+                </li>
+                <li class="list-group-item" style="border: none;">
+                  <strong>Archetype</strong>: Opportunity Evaluation
+                </li>
+                <li class="list-group-item" style="border: none;">
+                  <strong>Stage 1</strong>: Full Itegration
+                </li>
+              </ul>
             </div>
           </div>
-          <!-- <p>Type :
-                  <span class="value">Product</span>
-                </p>
-                <p>Archetype :
-                  <span class="value">Opportunity Evaluation</span>
-                </p>
-                <p>Stage1 :
-                  <span class="value">Full Itegration</span>
-                </p> -->
 
           <div class="row items">
             <div class="col-md-4 item-divider">
@@ -727,7 +728,7 @@
       </div>
     </div>
   </div>
-</div>
+</ng-container>
 
 <!-- Inactive Deals -->
 <br>
@@ -740,10 +741,10 @@
     <div class="btn-group pull-right">
       <span class="icon-thumbnail-view icon-small"></span>
       <span class="divider"></span>
-      <img src="./assets/img/Table View Grey.png" style="height:18px;">
+      <img [src]="showInactive ? './assets/img/Table View Grey.png' : './assets/img/Table View Blue.png'" style="height:18px;">
       <span class="divider"></span>
-      <a data-toggle="collapse" href="#collapse3">
-        <span class="icon-chevron-right-circle icon-small"></span>
+      <a (click)="toggleInactive()">
+        <span [ngClass]="showInactive ? 'icon-chevron-right-circle icon-small' : 'icon-chevron-right-circle icon-small icon-rotate'"></span>
       </a>
 
     </div>
@@ -752,7 +753,7 @@
 
 <!-- Inactive Deals Cart -->
 
-<div id="collapse3" class="panel-collapse collapse">
+<ng-container *ngIf="showInactive">
   <br>
   <div class="col-xl-12">
     <div class="row">
@@ -767,34 +768,41 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <span class="heading-divider"> </span>
+                <!-- <span class="heading-divider"> </span> -->
               </div>
             </div>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
-          <div class="row">
-            <div class="list">
-              <ul>
-                <li>Overdue Tasks</li>
-                <li>Risk</li>
-                <li>Issues</li>
-                <li>Action Items</li>
-              </ul>
-
-
-              <span class="number">17</span>
-              <span class="verti-divider"></span>
-              <span class="number">4</span>
-              <span class="verti-divider"></span>
-              <span class="number">5</span>
-              <span class="verti-divider"></span>
-              <span class="number">6</span>
-
-              <span class="hori-divider"></span>
+          <div class="row tasks">
+            <div class="col-md-4 item-title1">
+              <span>Overdue Tasks</span>
+              <div class="verti-divider">
+                <div class="number1">17</div>
+              </div>
             </div>
+            <div class="col-md-2 item-title2">
+              <span>Risk</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-2 item-title2">
+              <span>Issues</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-4 item-title1">
+              <span>Action Items</span>
+              <div class="number1">17
+              </div>
+            </div>
+            <span class="hori-divider"></span>
+
           </div>
+
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -856,7 +864,7 @@
             </div>
           </div>
           <br>
-          <div style="text-align: center;height: 53px;">
+          <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>
             <button class="btn btn--gray-ghost btn--small">View APEX</button>
@@ -874,34 +882,41 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <span class="heading-divider"> </span>
+                <!-- <span class="heading-divider"> </span> -->
               </div>
             </div>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
-          <div class="row">
-            <div class="list">
-              <ul>
-                <li>Overdue Tasks</li>
-                <li>Risk</li>
-                <li>Issues</li>
-                <li>Action Items</li>
-              </ul>
-
-
-              <span class="number">17</span>
-              <span class="verti-divider"></span>
-              <span class="number">4</span>
-              <span class="verti-divider"></span>
-              <span class="number">5</span>
-              <span class="verti-divider"></span>
-              <span class="number">6</span>
-
-              <span class="hori-divider"></span>
+          <div class="row tasks">
+            <div class="col-md-4 item-title1">
+              <span>Overdue Tasks</span>
+              <div class="verti-divider">
+                <div class="number1">17</div>
+              </div>
             </div>
+            <div class="col-md-2 item-title2">
+              <span>Risk</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-2 item-title2">
+              <span>Issues</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-4 item-title1">
+              <span>Action Items</span>
+              <div class="number1">17
+              </div>
+            </div>
+            <span class="hori-divider"></span>
+
           </div>
+
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -963,7 +978,7 @@
             </div>
           </div>
           <br>
-          <div style="text-align: center;height: 53px;">
+          <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>
             <button class="btn btn--gray-ghost btn--small">View APEX</button>
@@ -981,34 +996,41 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <span class="heading-divider"> </span>
+                <!-- <span class="heading-divider"> </span> -->
               </div>
             </div>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
-          <div class="row">
-            <div class="list">
-              <ul>
-                <li>Overdue Tasks</li>
-                <li>Risk</li>
-                <li>Issues</li>
-                <li>Action Items</li>
-              </ul>
-
-
-              <span class="number">17</span>
-              <span class="verti-divider"></span>
-              <span class="number">4</span>
-              <span class="verti-divider"></span>
-              <span class="number">5</span>
-              <span class="verti-divider"></span>
-              <span class="number">6</span>
-
-              <span class="hori-divider"></span>
+          <div class="row tasks">
+            <div class="col-md-4 item-title1">
+              <span>Overdue Tasks</span>
+              <div class="verti-divider">
+                <div class="number1">17</div>
+              </div>
             </div>
+            <div class="col-md-2 item-title2">
+              <span>Risk</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-2 item-title2">
+              <span>Issues</span>
+              <div class="verti-divider">
+                <div class="number2">17</div>
+              </div>
+            </div>
+            <div class="col-md-4 item-title1">
+              <span>Action Items</span>
+              <div class="number1">17
+              </div>
+            </div>
+            <span class="hori-divider"></span>
+
           </div>
+
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -1070,7 +1092,7 @@
             </div>
           </div>
           <br>
-          <div style="text-align: center;">
+          <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>
             <button class="btn btn--gray-ghost btn--small">View APEX</button>
@@ -1079,4 +1101,4 @@
       </div>
     </div>
   </div>
-</div>
+</ng-container>
