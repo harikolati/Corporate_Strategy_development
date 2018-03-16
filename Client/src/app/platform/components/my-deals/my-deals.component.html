@@ -26,7 +26,7 @@
       </li>
 
       <li id="tab-Active" class="tab active">
-        <a>
+        <a (click)="toggle()">
           <div class="tab__heading" title="Active">Active
             <span class="num">3</span>
           </div>
@@ -34,9 +34,9 @@
         </a>
       </li>
 
-      <li id="tab-Followed" class="tab">
-        <a>
-          <div class="tab__heading" title="Followed">Followed
+      <li id="tab-Follow" class="tab">
+        <a (click)="toggleFollow()">
+          <div class="tab__heading" title="Follow">Followed
             <span class="num">3</span>
           </div>
           <span class="div-border"></span>
@@ -44,7 +44,7 @@
       </li>
 
       <li id="tab-Inactive" class="tab">
-        <a>
+        <a (click)="toggleInactive()">
           <div class="tab__heading" title="Inactive">Inactive
             <span class="num">3</span>
           </div>
@@ -60,6 +60,7 @@
 
 <!-- Active Deals -->
 <br>
+
 <div class="col-xl-12">
   <div class="panel panel--mdgray">
 
@@ -68,21 +69,24 @@
     </span>
 
     <div class="btn-group pull-right">
-      <span class="icon-thumbnail-view icon-small"></span>
+
+      <span [ngClass]="show ? 'icon-thumbnail-view icon-small icon-color' : 'icon-thumbnail-view icon-small'"></span>
       <span class="divider"></span>
       <img [src]="show ? './assets/img/Table View Grey.png' : './assets/img/Table View Blue.png'" style="height:18px;">
       <span class="divider"></span>
       <a (click)="toggle()">
-        <span [ngClass]="show ? 'icon-chevron-right-circle icon-small' : 'icon-chevron-right-circle icon-small icon-rotate'"></span>
+        <span [ngClass]="show ? 'icon-chevron-right-circle icon-small icon-rotate' : 'icon-chevron-right-circle icon-small'"></span>
       </a>
 
 
     </div>
   </div>
 </div>
+
 <!-- Active Deals Cart -->
 <ng-container *ngIf="show">
   <br>
+  
   <div class="col-xl-12">
     <div class="row">
       <div class="col-xl-4">
@@ -96,15 +100,13 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-               
               </div>
-              
             </div>
-            <hr>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
+          <hr>
           <div class="row tasks">
             <div class="col-md-4 item-title1">
               <span>Overdue Tasks</span>
@@ -132,7 +134,7 @@
             <span class="hori-divider"></span>
 
           </div>
-
+          <hr>
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -152,7 +154,7 @@
             </div>
 
           </div>
-
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>GTM/Offer</p>
@@ -173,6 +175,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>Roadmap</p>
@@ -193,7 +196,8 @@
               </div>
             </div>
           </div>
-          <br>
+          <hr>
+
           <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>
@@ -212,13 +216,13 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <!-- <span class="heading-divider"> </span> -->
               </div>
             </div>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
+          <hr>
           <div class="row tasks">
             <div class="col-md-4 item-title1">
               <span>Overdue Tasks</span>
@@ -246,7 +250,7 @@
             <span class="hori-divider"></span>
 
           </div>
-
+          <hr>
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -266,7 +270,7 @@
             </div>
 
           </div>
-
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>GTM/Offer</p>
@@ -287,6 +291,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>Roadmap</p>
@@ -307,7 +312,8 @@
               </div>
             </div>
           </div>
-          <br>
+          <hr>
+
           <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>
@@ -326,13 +332,13 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <!-- <span class="heading-divider"> </span> -->
               </div>
             </div>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
+          <hr>
           <div class="row tasks">
             <div class="col-md-4 item-title1">
               <span>Overdue Tasks</span>
@@ -360,7 +366,7 @@
             <span class="hori-divider"></span>
 
           </div>
-
+          <hr>
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -380,7 +386,7 @@
             </div>
 
           </div>
-
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>GTM/Offer</p>
@@ -401,6 +407,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>Roadmap</p>
@@ -421,7 +428,8 @@
               </div>
             </div>
           </div>
-          <br>
+          <hr>
+
           <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>
@@ -431,6 +439,7 @@
       </div>
     </div>
   </div>
+  
 </ng-container>
 <!-- Followed Deals -->
 <br>
@@ -441,12 +450,12 @@
     </span>
 
     <div class="btn-group pull-right">
-      <span class="icon-thumbnail-view icon-small"></span>
+      <span [ngClass]="showFollow ? 'icon-thumbnail-view icon-small icon-color' : 'icon-thumbnail-view icon-small'"></span>
       <span class="divider"></span>
       <img [src]="showFollow ? './assets/img/Table View Grey.png' : './assets/img/Table View Blue.png'" style="height:18px;">
       <span class="divider"></span>
       <a (click)="toggleFollow()">
-        <span [ngClass]="showFollow ? 'icon-chevron-right-circle icon-small' : 'icon-chevron-right-circle icon-small icon-rotate'"></span>
+        <span [ngClass]="showFollow ? 'icon-chevron-right-circle icon-small icon-rotate' : 'icon-chevron-right-circle icon-small'"></span>
       </a>
 
     </div>
@@ -476,7 +485,7 @@
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
-
+          <hr>
           <div class="row">
             <div class="list--view">
               <ul class="list-group list-group-flush ">
@@ -495,7 +504,7 @@
               </ul>
             </div>
           </div>
-
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>GTM/Offer</p>
@@ -516,6 +525,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>Roadmap</p>
@@ -536,6 +546,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row">
             <div class="col buttons-align-center" style="height:53px;text-align: center;">
               <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
@@ -563,6 +574,7 @@
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
+          <hr>
           <div class="row">
             <div class="list--view">
               <ul class="list-group list-group-flush ">
@@ -581,16 +593,7 @@
               </ul>
             </div>
           </div>
-          <!-- <p>Type :
-                  <span class="value">Product</span>
-                </p>
-                <p>Archetype :
-                  <span class="value">Opportunity Evaluation</span>
-                </p>
-                <p>Stage1 :
-                  <span class="value">Full Itegration</span>
-                </p> -->
-
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>GTM/Offer</p>
@@ -611,6 +614,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>Roadmap</p>
@@ -631,6 +635,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row">
             <div class="col buttons-align-center" style="height:53px;text-align: center;">
               <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
@@ -658,6 +663,7 @@
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
+          <hr>
           <div class="row">
             <div class="list--view">
               <ul class="list-group list-group-flush ">
@@ -676,7 +682,7 @@
               </ul>
             </div>
           </div>
-
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>GTM/Offer</p>
@@ -697,6 +703,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>Roadmap</p>
@@ -717,6 +724,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row">
             <div class="col buttons-align-center" style="height:53px;text-align: center;">
               <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
@@ -739,12 +747,12 @@
     </span>
 
     <div class="btn-group pull-right">
-      <span class="icon-thumbnail-view icon-small"></span>
+      <span [ngClass]="showInactive ? 'icon-thumbnail-view icon-small icon-color' : 'icon-thumbnail-view icon-small'"></span>
       <span class="divider"></span>
       <img [src]="showInactive ? './assets/img/Table View Grey.png' : './assets/img/Table View Blue.png'" style="height:18px;">
       <span class="divider"></span>
       <a (click)="toggleInactive()">
-        <span [ngClass]="showInactive ? 'icon-chevron-right-circle icon-small' : 'icon-chevron-right-circle icon-small icon-rotate'"></span>
+        <span [ngClass]="showInactive ? 'icon-chevron-right-circle icon-small icon-rotate' : 'icon-chevron-right-circle icon-small'"></span>
       </a>
 
     </div>
@@ -768,13 +776,13 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <!-- <span class="heading-divider"> </span> -->
               </div>
             </div>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
+          <hr>
           <div class="row tasks">
             <div class="col-md-4 item-title1">
               <span>Overdue Tasks</span>
@@ -802,7 +810,7 @@
             <span class="hori-divider"></span>
 
           </div>
-
+          <hr>
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -822,7 +830,7 @@
             </div>
 
           </div>
-
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>GTM/Offer</p>
@@ -843,6 +851,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>Roadmap</p>
@@ -863,7 +872,8 @@
               </div>
             </div>
           </div>
-          <br>
+          <hr>
+
           <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>
@@ -882,13 +892,13 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <!-- <span class="heading-divider"> </span> -->
               </div>
             </div>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
+          <hr>
           <div class="row tasks">
             <div class="col-md-4 item-title1">
               <span>Overdue Tasks</span>
@@ -916,7 +926,7 @@
             <span class="hori-divider"></span>
 
           </div>
-
+          <hr>
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -936,7 +946,7 @@
             </div>
 
           </div>
-
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>GTM/Offer</p>
@@ -957,6 +967,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>Roadmap</p>
@@ -977,7 +988,8 @@
               </div>
             </div>
           </div>
-          <br>
+          <hr>
+
           <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>
@@ -996,13 +1008,13 @@
           <div class="row">
             <div class="col-md-10">
               <div class="heading"> Deal Lorem ipsum dolor
-                <!-- <span class="heading-divider"> </span> -->
               </div>
             </div>
             <div class="col-md-2 pull-right">
               <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
+          <hr>
           <div class="row tasks">
             <div class="col-md-4 item-title1">
               <span>Overdue Tasks</span>
@@ -1030,7 +1042,7 @@
             <span class="hori-divider"></span>
 
           </div>
-
+          <hr>
           <div class="row status">
             <div class="col-md-7">
               <div class="status-heading1">
@@ -1050,7 +1062,7 @@
             </div>
 
           </div>
-
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>GTM/Offer</p>
@@ -1071,6 +1083,7 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row items">
             <div class="col-md-4 item-divider">
               <p>Roadmap</p>
@@ -1091,7 +1104,8 @@
               </div>
             </div>
           </div>
-          <br>
+          <hr>
+
           <div style="text-align: center;     height: 53px;">
             <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
             <button class="btn btn--primary-ghost btn--small">View Detail</button>

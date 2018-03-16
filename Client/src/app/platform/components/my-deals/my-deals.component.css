@@ -1,9 +1,5 @@
 /* summary css */
-strong{
-  display:inline-block;
-  width:90px;
 
-}
 .secondary-tabs{
 box-shadow: 0px 2px 0px 0px #D8D8D8;
 display: inline-flex;
@@ -19,9 +15,12 @@ ul.tabs > #tab-total.active > a, ul.tabs > #tab-total:hover > a
   box-shadow: none;
   color: #58585b;
 }
-/* ul.tabs li{
-  padding: 0px 4px 0px 4px;
-} */
+
+ ul.tabs > li > a.active{
+      box-shadow: 0 -5px 0 #049fd9 inset;
+    color: #0377A1;
+    font-weight:normal
+} 
 #tab-title{
   margin: 15px 10px 3px 9px;
 
@@ -30,7 +29,7 @@ ul.tabs > #tab-total.active > a, ul.tabs > #tab-total:hover > a
 .icon-right{
   margin: 16px 0px 0px 18em;
 }
-.div-border{
+.div-border{ 
   border-right: 1px solid #D8D8D8;
        padding: 0px 0px 36px 10px;
 }
@@ -62,9 +61,10 @@ ul.tabs > #tab-total.active > a, ul.tabs > #tab-total:hover > a
 
 /* cart view */
 
+hr{
+  margin:10px 10px;
+}
 .heading{ 
-  
-  border-bottom: 1px solid #d8d8d8;
   height: 44px;
   color:#58585B;
   margin: 0px -43px 0px 15px;
@@ -91,11 +91,18 @@ ul.tabs > #tab-total.active > a, ul.tabs > #tab-total:hover > a
   border-radius: 5px;
  
 }
+strong{
+  display:inline-block;
+  width:90px;
+
+}
+.icon-color{
+  color:#049FD9;
+}
 .colon{
 padding: 0px 16px;
 }
 .items{
-  border-bottom: 1px solid #d8d8d8;
   height: 77px;
   padding: 4px 0px 6px 0px;  
   text-align: center;
@@ -106,7 +113,7 @@ padding: 0px 16px;
 }
 
 .status{
-  border-bottom: 1px solid #D8D8D8;
+  
   height:61px;
  margin: 9px 0px 0px 6px;
 }
@@ -138,10 +145,7 @@ ul{
   border-bottom:1px solid #d8d8d8; 
   margin: 0px 21px 0px 22px;
 } 
-.list--view{
-  
-  border-bottom:1px solid #d8d8d8; 
-}
+
 .list--view strong{
 font-weight: bold;
 color:#58585b;
@@ -197,7 +201,7 @@ color:#58585b;
 }
 
 .tasks{
-  border-bottom: 1px solid #d8d8d8;
+  
   height: 77px;
   padding: 2px 0px -8px 0px;
   text-align: center;
