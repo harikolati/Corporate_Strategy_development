@@ -21,13 +21,30 @@ import 'rxjs/add/operator/map';
 
 export class MyDealsComponent implements OnInit {
 
-  
+  public show:boolean = false;
+  public showFollow:boolean = false;
+  public showInactive:boolean = false;
+  public buttonName:any = 'Show';
+
   childExists: boolean = true;
   
   private deleteHandler(): void {
     this.childExists = false;
   }
   @Output() toggleactive = new EventEmitter<Deal>();
+  toggle() {
+    console.log('toggle')
+    this.show = !this.show;
+  }
+  toggleFollow() {
+    
+    this.showFollow = !this.showFollow;
+  }
+  toggleInactive() {
+    
+    this.showInactive = !this.showInactive;
+  }
+
   /* 
   public activeDeals : Deal[];
   public followedDeals: Deal[];
