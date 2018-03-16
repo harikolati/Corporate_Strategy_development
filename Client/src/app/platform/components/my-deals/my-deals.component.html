@@ -2,66 +2,70 @@
 <!-- <app-summary></app-summary> -->
 <br>
 <!-- Summary -->
- 
+
 <div class="col-xl-12">
+
   <div class="secondary-tabs">
-    <ul class="tabs" style="padding: 0px 0px 2px 13px;">
-      <li class="tab">
-        <div class="tab__heading">Deal Summary
-          <span class="div-border"></span>
-        </div>
-      </li>
-
-      <li class="tab">
-        <div class="tab__heading">Total
-          <span class="num">5</span>
-          <a>View All</a>
-          <span class="div-border"></span>
-        </div>
-      </li>
-
-      <li class="tab active">
+    <ul class="tabs">
+      <li id="tab-title" class="tab">
         <a>
-          <div class="tab__heading" title="Tab Title 1">Active
-            <span class="num">3</span>
-            <span class="div-border"></span>
+          <div class="tab__heading" title="Summary">Deal Summary
           </div>
-
+          <span class="div-border"></span>
         </a>
-
-
       </li>
 
-      <li class="tab">
+      <li id="tab-total" class="tab">
         <a>
-          <div class="tab__heading" title="Tab Title 2">Followed
+          <div class="tab__heading" title="total">Total
             <span class="num">5</span>
-            <span class="div-border"></span>
+            <a class="value">View All</a>
           </div>
-
+          <span class="div-border"></span>
         </a>
-
       </li>
 
-      <li class="tab">
+      <li id="tab-Active" class="tab active">
         <a>
-          <div class="tab__heading" title="Tab Title 3">InActive
-            <span class="num">4</span>
+          <div class="tab__heading" title="Active">Active
+            <span class="num">3</span>
           </div>
-
+          <span class="div-border"></span>
         </a>
+      </li>
 
+      <li id="tab-Followed" class="tab">
+        <a>
+          <div class="tab__heading" title="Followed">Followed
+            <span class="num">3</span>
+          </div>
+          <span class="div-border"></span>
+        </a>
+      </li>
+
+      <li id="tab-Inactive" class="tab">
+        <a>
+          <div class="tab__heading" title="Inactive">Inactive
+            <span class="num">3</span>
+          </div>
+        </a>
       </li>
     </ul>
+    <div class="icon-right">
+      <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
+    </div>
   </div>
-</div> 
+
+</div>
 
 <!-- Active Deals -->
 <br>
 <div class="col-xl-12">
   <div class="panel panel--mdgray">
-   
-    <span class="active-deals-panel-heading">Active Deals <span class="count">3</span></span>
+
+    <span class="active-deals-panel-heading">Active Deals
+      <span class="count">3</span>
+    </span>
 
     <div class="btn-group pull-right">
       <span class="icon-thumbnail-view icon-small"></span>
@@ -408,7 +412,9 @@
 <br>
 <div class="col-xl-12">
   <div class="panel panel--mdgray">
-    <span class="active-deals-panel-heading">Followed Deals <span class="count">3</span></span>
+    <span class="active-deals-panel-heading">Followed Deals
+      <span class="count">3</span>
+    </span>
 
     <div class="btn-group pull-right">
       <span class="icon-thumbnail-view icon-small"></span>
@@ -727,7 +733,9 @@
 <br>
 <div class="col-xl-12">
   <div class="panel panel--mdgray">
-    <span class="active-deals-panel-heading">Inactive Deals <span class="count">3</span></span>
+    <span class="active-deals-panel-heading">Inactive Deals
+      <span class="count">3</span>
+    </span>
 
     <div class="btn-group pull-right">
       <span class="icon-thumbnail-view icon-small"></span>
@@ -745,6 +753,7 @@
 <!-- Inactive Deals Cart -->
 
 <div id="collapse3" class="panel-collapse collapse">
+  <br>
   <div class="col-xl-12">
     <div class="row">
       <div class="col-xl-4">
@@ -962,112 +971,112 @@
         </div>
       </div>
       <div class="col-xl-4">
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-md-12">
-                <img src="./assets/img/perspica.png" class="img-size">
-              </div>
-  
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12">
+              <img src="./assets/img/perspica.png" class="img-size">
             </div>
-            <div class="row">
-              <div class="col-md-10">
-                <div class="heading"> Deal Lorem ipsum dolor
-                  <span class="heading-divider"> </span>
-                </div>
-              </div>
-              <div class="col-md-2 pull-right">
-                <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
+
+          </div>
+          <div class="row">
+            <div class="col-md-10">
+              <div class="heading"> Deal Lorem ipsum dolor
+                <span class="heading-divider"> </span>
               </div>
             </div>
-            <div class="row">
-              <div class="list">
-                <ul>
-                  <li>Overdue Tasks</li>
-                  <li>Risk</li>
-                  <li>Issues</li>
-                  <li>Action Items</li>
-                </ul>
-  
-  
-                <span class="number">17</span>
-                <span class="verti-divider"></span>
-                <span class="number">4</span>
-                <span class="verti-divider"></span>
-                <span class="number">5</span>
-                <span class="verti-divider"></span>
-                <span class="number">6</span>
-  
-                <span class="hori-divider"></span>
-              </div>
-            </div>
-            <div class="row status">
-              <div class="col-md-7">
-                <div class="status-heading1">
-  
-                  Upcoming Milestone
-                  <br> orderability-2/21
-                  <br> EE Steering Committee- 3/27
-  
-                </div>
-              </div>
-              <div class="col-md-5">
-                <span class="status-heading2">
-                  % Completed
-                  <br>
-                  <span class="number">27</span>
-                </span>
-              </div>
-  
-            </div>
-  
-            <div class="row items">
-              <div class="col-md-4 item-divider">
-                <p>GTM/Offer</p>
-                <div>
-                  <img src="./assets/img/Offer_Umber.png">
-                </div>
-              </div>
-              <div class="col-md-4 item-divider">
-                <p>Culture/Callab</p>
-                <div>
-                  <img src="./assets/img/Collab_Red.png">
-                </div>
-              </div>
-              <div class="col-md-4">
-                <p>Capabilities</p>
-                <div>
-                  <img src="./assets/img/Capabilities_Green.png">
-                </div>
-              </div>
-            </div>
-            <div class="row items">
-              <div class="col-md-4 item-divider">
-                <p>Roadmap</p>
-                <div>
-                  <img src="./assets/img/Roadmap_Umber.png">
-                </div>
-              </div>
-              <div class="col-md-4 item-divider">
-                <p>VDDS</p>
-                <div>
-                  <img src="./assets/img/VDDS_Green.png">
-                </div>
-              </div>
-              <div class="col-md-4">
-                <p>End State</p>
-                <div>
-                  <img src="./assets/img/EndState_Red.png">
-                </div>
-              </div>
-            </div>
-            <br>
-            <div style="text-align: center;">
-              <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
-              <button class="btn btn--primary-ghost btn--small">View Detail</button>
-              <button class="btn btn--gray-ghost btn--small">View APEX</button>
+            <div class="col-md-2 pull-right">
+              <span class="icon-more icon-medium" style="transform:rotate(90deg);"></span>
             </div>
           </div>
+          <div class="row">
+            <div class="list">
+              <ul>
+                <li>Overdue Tasks</li>
+                <li>Risk</li>
+                <li>Issues</li>
+                <li>Action Items</li>
+              </ul>
+
+
+              <span class="number">17</span>
+              <span class="verti-divider"></span>
+              <span class="number">4</span>
+              <span class="verti-divider"></span>
+              <span class="number">5</span>
+              <span class="verti-divider"></span>
+              <span class="number">6</span>
+
+              <span class="hori-divider"></span>
+            </div>
+          </div>
+          <div class="row status">
+            <div class="col-md-7">
+              <div class="status-heading1">
+
+                Upcoming Milestone
+                <br> orderability-2/21
+                <br> EE Steering Committee- 3/27
+
+              </div>
+            </div>
+            <div class="col-md-5">
+              <span class="status-heading2">
+                % Completed
+                <br>
+                <span class="number">27</span>
+              </span>
+            </div>
+
+          </div>
+
+          <div class="row items">
+            <div class="col-md-4 item-divider">
+              <p>GTM/Offer</p>
+              <div>
+                <img src="./assets/img/Offer_Umber.png">
+              </div>
+            </div>
+            <div class="col-md-4 item-divider">
+              <p>Culture/Callab</p>
+              <div>
+                <img src="./assets/img/Collab_Red.png">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <p>Capabilities</p>
+              <div>
+                <img src="./assets/img/Capabilities_Green.png">
+              </div>
+            </div>
+          </div>
+          <div class="row items">
+            <div class="col-md-4 item-divider">
+              <p>Roadmap</p>
+              <div>
+                <img src="./assets/img/Roadmap_Umber.png">
+              </div>
+            </div>
+            <div class="col-md-4 item-divider">
+              <p>VDDS</p>
+              <div>
+                <img src="./assets/img/VDDS_Green.png">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <p>End State</p>
+              <div>
+                <img src="./assets/img/EndState_Red.png">
+              </div>
+            </div>
+          </div>
+          <br>
+          <div style="text-align: center;">
+            <button class="btn btn--small" style="margin:8px 0px 0px 0px;">View DNA</button>
+            <button class="btn btn--primary-ghost btn--small">View Detail</button>
+            <button class="btn btn--gray-ghost btn--small">View APEX</button>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </div>
