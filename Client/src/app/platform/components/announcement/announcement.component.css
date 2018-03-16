@@ -1,16 +1,11 @@
 .alert-msg{
-    position: relative;
+    
     background-color: white;
     border: 1px solid #D8D8D8;
     box-shadow: 0px 2px 0px 0px #D8D8D8;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    top:15px;
     border-radius: 5px;
 }
 .alert__icon , .alert__close
