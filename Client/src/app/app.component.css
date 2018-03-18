@@ -9,4 +9,7 @@ header {
     position: absolute;
     bottom: 0px; 
     
+  } 
+  main{
+    margin-bottom: 50px;
   }
