@@ -19,13 +19,13 @@
         <a>
           <div class="tab__heading" title="total">Total
             <span class="num">5</span>
-            <a class="value">View All</a>
+            <a class="value" (click)="toggleAll()">View All</a>
           </div>
           <span class="div-border"></span>
         </a>
-      </li>
+      </li> 
 
-      <li id="tab-Active" class="tab active">
+      <li id="tab-Active" [ngClass]="{'active': isActive}">
         <a (click)="toggle()">
           <div class="tab__heading" title="Active">Active
             <span class="num">3</span>
@@ -34,7 +34,7 @@
         </a>
       </li>
 
-      <li id="tab-Follow" class="tab">
+      <li id="tab-Follow" [ngClass]="{'active': isFollow}">
         <a (click)="toggleFollow()">
           <div class="tab__heading" title="Follow">Followed
             <span class="num">3</span>
@@ -43,7 +43,7 @@
         </a>
       </li>
 
-      <li id="tab-Inactive" class="tab">
+      <li id="tab-Inactive" [ngClass]="{'active': isInactive}">
         <a (click)="toggleInactive()">
           <div class="tab__heading" title="Inactive">Inactive
             <span class="num">3</span>

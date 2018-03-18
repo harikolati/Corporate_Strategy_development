@@ -10,9 +10,7 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-my-deals',
   templateUrl: './my-deals.component.html',
-  styleUrls: ['./my-deals.component.css'],
-  providers:[DealService,DataService],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./my-deals.component.css']
 })
 /**
  * @class: MyDealsComponent
@@ -25,7 +23,10 @@ export class MyDealsComponent implements OnInit {
   public showFollow:boolean = false;
   public showInactive:boolean = false;
   public buttonName:any = 'Show';
-
+  
+  public isActive: boolean = true;
+  public isFollow: boolean = false;
+  public isInactive: boolean = false;
   childExists: boolean = true;
   
   private deleteHandler(): void {
@@ -33,17 +34,31 @@ export class MyDealsComponent implements OnInit {
   }
   @Output() toggleactive = new EventEmitter<Deal>();
   toggle() {
-    console.log('toggle')
     this.show = !this.show;
+    this.showFollow=false;
+    this.showInactive=false;
+    
   }
   toggleFollow() {
-    
     this.showFollow = !this.showFollow;
+    this.show=false;
+    this.showInactive=false;
+    this.isActive = !this.isActive;
+    this.isFollow = !this.isFollow;
   }
   toggleInactive() {
-    
+    this.showInactive = !this.showInactive;
+    this.show=false;
+    this.showFollow=false;
+    this.isActive = !this.isActive;
+    this.isInactive = !this.isInactive;
+  }
+  toggleAll(){
+    this.show = !this.show;
+    this.showFollow = !this.showFollow;
     this.showInactive = !this.showInactive;
   }
+
 
   /* 
   public activeDeals : Deal[];
